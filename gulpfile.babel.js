@@ -43,6 +43,7 @@ gulp.task('stylesDev', ()=>{
     return gulp.src('./dev/scss/app.scss')
         .pipe(plumber())
         .pipe(sass(sassOptionsDev))
+        .pipe(postcss(postCssPlugins))
         .pipe(gulp.dest('./public/css'))
         .pipe(server.stream())
 })
@@ -77,17 +78,18 @@ gulp.task('pug-min', ()=>{
 
 //Tarea para compilar es6 para todos los navegadores, crea un solo script y ofusca el código.
 gulp.task('babel', ()=>{
-    return gulp.src('./dev/js/*.js')
+    return gulp.src(['./dev/js/initialize.js', './dev/js/*.js'])
     .pipe(plumber())
     .pipe(babel({
         presets:['env']
     }))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('./public/js'))
 })
 
 //Tarea para compilar es6 para todos los navegadores, crea un solo script y ofusca el código.
 gulp.task('babel-min', ()=>{
-    return gulp.src('./dev/js/*.js')
+    return gulp.src(['./dev/js/initialize.js', './dev/js/*.js'])
     .pipe(plumber())
     .pipe(babel({
         presets:['env']
