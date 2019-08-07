@@ -1,4 +1,5 @@
-# Gulp-Boilerplate
+# Jungle Beige
+## Frontend Repo
 Boilerplate hecho en Gulp para crear páginas estáticas desde 0 con preprocesadores como Pug, SCSS y Babel.
 
 El beneficio principal de usar esta herramienta es escribir menos código con la ayuda de los preprocesadores, importando módulos reutilizables de código y levantar un servidor local mientras programas que recargue automáticamente el navegador y los archivos a la par que editas el código.
