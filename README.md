@@ -50,7 +50,7 @@ foo@bar:~$ gulp
 
 ### Obtener archivos finales de producción
 
-Cuando termines el proyecto y quieras obtener los archivos finales de producción para subir al servidor, borra tu carpeta `public/`, edita la constante  `const production` de `false` a `true` en el archivo `gulpfile.babel.js` y corre el siguiente código en tu terminal:
+Cuando termines el proyecto y quieras obtener los archivos finales de producción para subir al servidor, borra tu carpeta `public/` para asegurar que los archivos que se eliminaron durante el desarrollo también se eliminen del ambiente de producción y corre el siguiente código en tu terminal:
 ```console
 foo@bar:~$ gulp build
 ```
