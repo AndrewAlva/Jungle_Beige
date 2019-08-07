@@ -28,12 +28,12 @@ Otra de las ventajas de este desarrollo es su compatibilidad en configuración e
 
 1. Clona este repositorio en tu entorno de desarrollo, simplemente puedes ejecutar en terminal:
 ```console
-foo@bar:~$ git clone https://github.com/AndrewAlva/Gulp-Boilerplate.git
+foo@bar:~$ git clone https://github.com/AndrewAlva/Jungle_Beige.git
 ```
 
 2. Cambia de ubicación al folder del proyecto, después, instala las dependencias necesarios por medio de npm:
 ```console
-foo@bar:~$ cd Gulp-Boilerplate
+foo@bar:~$ cd Jungle_Beige
 foo@bar:~$ npm install
 ```
 
