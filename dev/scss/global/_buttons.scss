@@ -1,7 +1,9 @@
 // Navigation Buttons
 .btn-wrapper{
+	cursor: pointer;
 	width: 95px;
 	height: 29px;
+	font-family: 'TitlingGothicFB light';
 	font-size: 12px;
 	color: $cream;
 	background-color: $black;

@@ -3,6 +3,7 @@ extends _templates/layout.pug
 block content
 	.index-wrapper
 		.bg-wrapper-shader.home-bg
+
 		//- mobile display
 		.display-wrapper
 			.display-type
@@ -14,8 +15,10 @@ block content
 					span &
 					span consult
 			p.about-title for <br> lifestyle industries such <span>as fashion, entertainment</span> and more.
-		//- button
-	button.btn-wrapper.btn-pages
-		span.btn-animate-up Our Work
-		//- span.btn-animate-up
-		//- 	+close-icon
+	
+	//- button
+	a(href="ourwork.html")
+		button.btn-wrapper.btn-pages
+			span.btn-animate-up Our Work
+			//- span.btn-animate-up
+			//- 	+close-icon
