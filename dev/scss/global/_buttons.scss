@@ -1,0 +1,201 @@
+// Navigation Buttons
+.btn-wrapper{
+	width: 95px;
+	height: 29px;
+	font-size: 12px;
+	color: $cream;
+	background-color: $black;
+	border-radius: 15px;
+	border-style: none;
+	overflow: hidden;
+	position: relative;
+	span{
+		display: block;
+		line-height: 0;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	svg {
+		path, rect{
+			fill:$cream;
+		}
+	}
+	&:hover{
+		color: $black;
+		background-color: $cream;
+		svg {
+			path, rect{
+				fill: $black;
+			}
+		}
+		// animation time
+		.btn-animate-up{
+			-webkit-animation: animateup .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+			animation: animateup .6s cubic-bezier(.21,0,0,1);
+		}
+	}
+}
+
+// center btn
+.btn-pages{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	@media (min-width: 768px) {
+		top: 50%;
+		left: 40px;
+		transform: translateY(-50%);
+	}
+}
+
+.btn-icon{
+	padding: 8px;
+}
+
+// links general btn
+a{
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'TitlingGothicFB light';
+}
+
+.link-page{
+	color: $cream;
+}
+
+// link btn
+.line-link{
+	position: relative;
+	float: right;
+	&:before,
+	&:after{
+		position: absolute;
+		content: "";
+		background: $cream;
+		height: 2px;
+		width: 0;
+		bottom: -4px;
+		transition: all .25s;
+	}
+	&:before{
+		left: 50%;
+	}
+	&:after{
+		right: 50%;
+	}
+	&:active{
+		&:before,
+		&:after{
+			width: 50%;
+		}
+	}
+}
+
+// link arrow
+[class*="arrow-"]{
+	svg{
+		fill: $cream;
+	}
+}
+
+.arrow-up{
+	color: $black;
+	display: inline-block;
+	span{
+		text-align: right;
+		display: block;
+		margin-bottom: 12px;
+	}
+}
+
+.arrow-right, .arrow-right-long{
+	color: $black;
+	font-size: 16px;
+	// font-family: 'TitlingGothicFB light';
+	display: inline-block;
+}
+
+.arrow-right{	
+	span{
+		margin-left: 12px;
+	}
+}
+
+.arrow-right-long{
+	span{
+		margin-left: 30px;
+	}
+}
+
+.arrow-scroll{
+	span{
+		margin-left: 12px;
+	}
+}
+
+// video player btn
+.btn-circle{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: solid 2px $black;
+	&:hover{
+		background-color: $black;
+		color: $cream;
+		svg{
+			path, rect{
+				fill: $cream;
+			}
+		}
+	}
+}
+
+// list slider btn
+nav.slider-wrapper{
+	li.dot-slider{
+		width: 5px;
+		height: 5px;
+		background-color: $orange;
+		display: block;
+		border-radius: 50%;
+		margin-bottom: 33px;
+		margin-left: 30px;
+		position: relative;
+		&:before{
+			content: "";
+			width: 5px;
+			height: 5px;
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			z-index: -1;
+			border-radius: 50%;
+			border:solid 2px $orange;
+			opacity: 0;
+		}
+		&:hover{
+			background-color: transparent;
+			&:before{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// animation keyframes btn wrapper
+// animation up
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animateup {
+	0% {top: 100%; color: $cream;}
+	100% {top: 50%;}
+}
+
+/* Standard syntax */
+@keyframes animateup {
+	0% {top: 100%; color: $cream;}
+	100% {top: 50%;}
+}

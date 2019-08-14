@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'TitlingGothicFB Standar';
+    src: url('../fonts/TitlingGothicFBNormal-Standard.woff2') format('woff2'),
+        url('../fonts/TitlingGothicFBNormal-Standard.woff') format('woff'),
+        url('../fonts/TitlingGothicFBNormal-Standard.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitlingGothicFB light';
+    src: url('../fonts/TitlingGothicFBNormal-Light.woff2') format('woff2'),
+        url('../fonts/TitlingGothicFBNormal-Light.woff') format('woff'),
+        url('../fonts/TitlingGothicFBNormal-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nocturne Serif ExtraBold';
+    src: url('../fonts/NocturneSerif-ExtraBold.woff2') format('woff2'),
+        url('../fonts/NocturneSerif-ExtraBold.woff') format('woff'),
+        url('../fonts/NocturneSerif-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+

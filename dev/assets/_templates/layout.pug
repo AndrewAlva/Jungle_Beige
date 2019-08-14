@@ -22,12 +22,12 @@ html(class='no-js')
 		link(rel='stylesheet', href='css/app.css')
 
 	body
-		//- header
-		h1 Mbrt Gulp Boilerplate
-
+		include ../_modules/icons.pug
+		include ../_modules/header.pug
+		include ../_modules/footer.pug
 		//- content
 		#main-wrapper
 			block content
-
+			
 		//- scripts
 		script(src='js/app.js')

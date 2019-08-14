@@ -1,0 +1,50 @@
+.display, .h1, .h2, .s1, .s2, .t1{
+	letter-spacing: 20px;
+}
+
+.display{
+	font-size: 165px;
+	line-height: auto;
+	font-family: 'TitlingGothicFB light';
+}
+
+.h1{
+	font-size: 50px;
+	line-height: 50;
+	font-family: 'Nocturne Serif ExtraBold';
+}
+
+.h2{
+	font-size: 30px;
+	line-height: 50;
+	font-family: 'Nocturne Serif ExtraBold';
+}
+
+.s1{
+	font-size: 22px;
+	line-height: 25;
+}
+
+.s2{
+	font-size: 16px;
+	line-height: 16;
+}
+
+.t1{
+	font-size: 12px;
+	line-height: 15;
+
+}
+
+// font weight classes
+.light-font{
+	font-family: 'TitlingGothicFB light';
+}
+
+.standar-font{
+	font-family: 'TitlingGothicFB Standar';
+}
+
+.extraBold-font{
+	font-family: 'Nocturne Serif ExtraBold';
+}

@@ -8,5 +8,14 @@
 @import 'global/vars';
 @import 'global/mixins';
 @import 'global/default';
+@import 'global/type';
+@import 'global/fonts';
+@import 'global/buttons';
+@import 'global/grid';
 
-@import 'views/home';
+@import 'views/_home';
+@import 'views/_ourwork';
+
+@import 'modules/_header';
+@import 'modules/_nav';
+@import 'modules/_footer'

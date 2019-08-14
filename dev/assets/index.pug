@@ -1,5 +1,21 @@
 extends _templates/layout.pug
 
 block content
-	#home
-		h3 index.pug loaded.
+	.index-wrapper
+		.bg-wrapper-shader.home-bg
+		//- mobile display
+		.display-wrapper
+			.display-type
+				h2.display-w w
+				h2.display-e e
+			.title-wrapper
+				.span-container
+					span create
+					span &
+					span consult
+			p.about-title for <br> lifestyle industries such <span>as fashion, entertainment</span> and more.
+		//- button
+	button.btn-wrapper.btn-pages
+		span.btn-animate-up Our Work
+		//- span.btn-animate-up
+		//- 	+close-icon

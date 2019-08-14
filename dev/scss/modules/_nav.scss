@@ -1,0 +1,27 @@
+nav.nav-wrapper{
+	width: 20px;
+	height: 14px;
+	padding: 3px 0;
+	display: inline-block;
+	float: right;
+	// background-color: yellow;
+	[class^="menu-line-"]{		
+		background-color: $cream;
+		height: 2px;
+		// margin: 2px 0;
+		position: relative;
+		display: block
+	}
+	.menu-line-1{
+		width: 20px;
+		margin-bottom: 2px;
+	}
+	.menu-line-2{
+		width: 10px;
+		float: right;
+		margin-top: 2px;
+	}
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
