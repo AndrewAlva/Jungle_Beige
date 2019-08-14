@@ -1,14 +1,21 @@
 extends _templates/layout.pug
 
 block content
-	.work-wrapper.snj-container-fluid
+	.work-section.snj-container-fluid
 		.row
-			.project-wrapper.snj-col-md-10.offset-md-1
-				p 03
-				h2 Digital / Web Design
-				a.arrow-right(href="")
-					+next-arrow-90
-					span See Project
+			//- background shader wrapper
+			.bg-wrapper-shader.work-bg
+			//- projects wrapper
+			.works-list.snj-col-10.offset-1.snj-col-md-8.offset-md-2
+				.project-wrapper
+					p.number-project 03
+					.name-project 
+						h2 Digital / 
+						h2 Web Design
+					a.arrow-right-long(href="")
+						+next-arrow-300
+						span See case
+				//- +project-wrapper("03", "Digital /", " Web Design")
 			button.btn-wrapper.btn-pages
 				span.btn-animate-up
 					+close-icon

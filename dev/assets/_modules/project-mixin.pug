@@ -1,0 +1,11 @@
+extends _templates/layout.pug
+
+block content
+	mixin project-wrapper(number, name1, name2)
+		p.number-project #{number}
+		.name-project 
+			h2 #{name1}
+			h2 #{name2}
+		a.arrow-right-long(href="")
+			+next-arrow-300
+			span See case

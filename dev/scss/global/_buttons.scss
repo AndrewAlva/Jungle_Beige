@@ -113,9 +113,12 @@ a{
 
 .arrow-right, .arrow-right-long{
 	color: $black;
-	font-size: 16px;
+	font-size: 12px;
 	// font-family: 'TitlingGothicFB light';
 	display: inline-block;
+	@media(min-width: 768px){
+		font-size: 16px;
+	}
 }
 
 .arrow-right{	

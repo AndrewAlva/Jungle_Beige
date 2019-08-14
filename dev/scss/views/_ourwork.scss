@@ -1,9 +1,58 @@
-.work-wrapper{
-	width: 100%;
+.work-section{
 	height: 100%;
+}
+.work-bg{
 	background-image: url("../img/work_background.jpg");
-	background-repeat: no-repeat;
-	background-position: center top;
 	background-size: 500%;
 	background-position: 50% 15%;
+	@media(min-width: 768px){
+		background-size: 100%;
+		background-position: 0% 30%;
+	}
+}
+.works-list{
+	padding-top: 40px;
+}
+
+.project-wrapper{
+	margin-top: 20px;
+	color: $cream;
+	p.number-project{
+		font-size: 16px;
+		font-family: 'TitlingGothicFB light';
+		// background: red;
+	}
+	@media(min-width: 768px){
+		margin-top: 100px;
+		p.number-project{
+			font-size: 22px;
+		}
+	}
+	.name-project{
+		margin: 10px 0;
+		font-family: 'Nocturne Serif ExtraBold';
+		font-size: 22px;
+		// background-color: green;
+		h2{
+		display: block;
+		}
+		@media(min-width: 768px){
+			margin: 20px 0 26px;
+			font-size: 50px;
+			h2{
+				display: inline-block;
+				// float: left;
+			}
+		}
+	}
+	a.arrow-right-long{
+		float: right;
+		color: $cream;
+		// background-color: cyan;
+		svg{
+			// rect{
+			// 	width: 81.99px;
+			// }
+		}
+	}
 }
