@@ -14,12 +14,14 @@
 	padding-top: 40px;
 }
 
+// project
 .project-wrapper{
 	margin-top: 20px;
 	color: $cream;
 	p.number-project{
 		font-size: 16px;
 		font-family: 'TitlingGothicFB light';
+		color: red;
 		// background: red;
 	}
 	@media(min-width: 768px){
@@ -34,7 +36,7 @@
 		font-size: 22px;
 		// background-color: green;
 		h2{
-		display: block;
+			display: block;
 		}
 		@media(min-width: 768px){
 			margin: 20px 0 26px;
@@ -45,14 +47,16 @@
 			}
 		}
 	}
+	// arrow
 	a.arrow-right-long{
 		float: right;
 		color: $cream;
-		// background-color: cyan;
-		svg{
-			// rect{
-			// 	width: 81.99px;
-			// }
+		background-color: cyan;
+		.rectangle-arrow{
+			display: inline-block;
+			width: 300px;
+			height: 2px;
+			background: red;
 		}
 	}
 }

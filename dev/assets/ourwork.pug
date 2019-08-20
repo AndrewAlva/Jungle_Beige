@@ -7,15 +7,9 @@ block content
 			.bg-wrapper-shader.work-bg
 			//- projects wrapper
 			.works-list.snj-col-10.offset-1.snj-col-md-8.offset-md-2
-				.project-wrapper
-					p.number-project 03
-					.name-project 
-						h2 Digital / 
-						h2 Web Design
-					a.arrow-right-long(href="")
-						+next-arrow-300
-						span See case
-				//- +project-wrapper("03", "Digital /", " Web Design")
+				+project-intro("03", "Digital /", " Web Design")
+				+project-intro("04", "Digital /", " Web Design")
+				+project-intro("05", "Digital /", " Web Design")
 			
 	button.btn-wrapper.btn-pages(onclick="history.back()")
 		span.btn-animate-up
