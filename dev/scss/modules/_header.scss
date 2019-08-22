@@ -1,19 +1,26 @@
 header{
 	position: relative;
 	z-index: 1000;
+	position: fixed;
 }
 #header-wrapper{
-	// margin-top: 40px;
 	width: 100%;
 	// background-color: red;
 	padding-top: 13px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
 	@media (min-width: 768px){
 		padding-top: 40px;
 	}
-
+	.logo-wrapper{
+		line-height: 0;
+	}
 	svg.logo-jb{
 		width: 96px;
+		// background-color: teal;
 
 		@media (min-width: 768px){
 			width: 134px;

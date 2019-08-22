@@ -1,10 +1,11 @@
-mixin project-intro(number, name1, name2)
+mixin project-intro(number, name1, name2, linkTo, callTo)
 	.project-wrapper
-		p.number-project #{number}
+		p.number-project.up-translate #{number}
 		.name-project 
-			h2 #{name1}
-			h2 #{name2}
-		a.arrow-right-long(href="")
-			.rectangle-arrow
-			+icon-arrow
-			span See case
+			h2.up-translate #{name1}
+			h2.up-translate #{name2}
+		a.arrow-right-long.right-translate(href=linkTo)
+			.arrow-wrapper
+				.rectangle-arrow
+				+icon-arrow
+			span #{callTo}

@@ -1,0 +1,26 @@
+extends _templates/layout.pug
+
+block content
+	.about-section.snj-container
+		.row
+			//- background shader wrapper
+			.bg-wrapper-shader.about-bg
+
+			.about-wrapper
+
+				nav.slider-wrapper
+					ul.slider-list
+						li.dot-slider.active-dot
+						li.dot-slider
+						li.dot-slider
+						li.dot-slider
+						li.dot-slider
+						li.dot-slider
+
+				//- about
+				+about-component("hola", "Our Moto", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+
+	a(href="ourwork.html")
+		button.btn-wrapper.btn-pages
+			span.btn-animate-up Our Work
+				//- +close-icon

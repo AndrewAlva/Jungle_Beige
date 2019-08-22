@@ -7,10 +7,13 @@ block content
 			.bg-wrapper-shader.work-bg
 			//- projects wrapper
 			.works-list.snj-col-10.offset-1.snj-col-md-8.offset-md-2
-				+project-intro("03", "Digital /", " Web Design")
-				+project-intro("04", "Digital /", " Web Design")
-				+project-intro("05", "Digital /", " Web Design")
-			
+				.wrap-project-wrapper
+					+project-intro("01", "Content /", " & Campaign Creation", "/","See case")
+					+project-intro("02", "Event curation ", " & Design","/", "Let’s talk")
+					+project-intro("02", "Event curation ", " & Design",",", "See case")
+					+project-intro("04", "Social Media ", " (360º)","/", "See case studies")
+					+project-intro("05", "Digital ", " Web Design","/", "See case studies")
+					+project-intro("06", "Drop us ", "a line","/", "Let’s talk.")
 	button.btn-wrapper.btn-pages(onclick="history.back()")
 		span.btn-animate-up
 			+close-icon
