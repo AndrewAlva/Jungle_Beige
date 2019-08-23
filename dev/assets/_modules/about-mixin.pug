@@ -1,19 +1,17 @@
 mixin about-component(name, subtitle, about, linkedin, tw, ig)
 	.about-component
-		section.header-about.snj-col-9.offset-1
+		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
 			h1 #{name}
 			h2 #{subtitle}
 
-		.offset-1.snj-col-1
+
+		section.about-info.snj-col-8.offset-1.snj-col-md-6.offset-md-3.snj-col-lg-3.offset-lg-1
 			.separator-line
-
-		section.text-about.snj-col-7.offset-2
 			p #{about}
-
-		section.social-wrapper.snj-col-7.offset-2
-			a(href=linkedin)
-				+link-icon
-			a(href=tw)
-				+tw-icon
-			a(href=ig)
-				+ins-icon
+			.social-wrapper
+				a(href=linkedin)
+					+link-icon
+				a(href=tw)
+					+tw-icon
+				a(href=ig)
+					+ins-icon
