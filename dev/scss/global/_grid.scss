@@ -3,7 +3,13 @@
 
 // Added "snj-" prefix to
 // container, row, cols
-
+.grid-line{
+  [class*="snj-col-"]{
+    border-right: solid 1px red;
+    border-left: solid 1px red;
+    // height: 100%;
+  }
+}
 .snj-container {
   width: 100%;
   margin-right: auto;

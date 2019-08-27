@@ -1,0 +1,114 @@
+.ourwork-sections-detail{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
+// background
+.background-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+.worksections-bg{
+	background-image: url("../img/bg-work-section.jpg");
+}
+//wrapper project section
+.sections-p-wrapper{
+	position: relative;
+	height: 60vh;
+	background: $orange;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: $cream;
+	@media(min-width: 992px){
+		height: 50vh;
+		width: 83.34%;
+		float: right;
+		white-space: nowrap;
+	}
+	.center-wrapper{
+		@media(min-width: 768px){
+			display: flex;
+			align-items: center;
+		}
+	}
+	// mixin wrapper project section
+	.about-work{
+		position: relative;
+		@media(min-width: 768px){
+			display: inline-block;
+		}
+		h2{
+			font-family: 'TitlingGothicFB Standar';
+			font-size: 12px;
+			padding-bottom: 10px;
+			width: 55.55%;
+			position: relative;
+			z-index: 10;
+			@media(min-width:768px){
+				width: 66.66%;
+			}
+		}
+		h1{
+			font-family: 'Nocturne Serif ExtraBold';
+			font-size: 22px;
+			padding-bottom: 20px;
+			letter-spacing: .1px;
+			position: relative;
+			z-index: 10;
+			@media(min-width: 768px){
+				padding-bottom: 28px;
+				font-size: 30px;
+				letter-spacing: 1px;
+				
+			}
+		}
+		p{
+			font-family: 'TitlingGothicFB light';
+			font-size: 120px;
+			color: $black;
+			text-align: left;
+			// letter-spacing: 20px;
+			letter-spacing: .1em;
+			line-height: 73px;
+			position: absolute;
+			left: 22.22%;
+			bottom: 0;
+			transform: translateX(-5px);
+			@media(min-width: 768px){
+				left: 33.33%;
+				font-size: 165px;
+				line-height: 102px;
+				transform: translateX(-8px);
+			}
+		}
+	}
+
+	a.arrow-right{
+		padding-top: 20px;
+		transform: translateX(-20px);
+		// background-color: red;
+		@media(min-width: 992px){
+			// transform: translateX(0);
+			padding: 0;
+		}
+	}
+}
+[class*="project-bg-"]{	
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.project-bg-1{
+	background-image: url("../img/project_1_bg.jpg");
+}
+.project-bg-2{
+	background-image: url("../img/project_2_bg.jpg");
+}

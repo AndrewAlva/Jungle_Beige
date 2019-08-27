@@ -1,4 +1,4 @@
-.work-section{
+.ourwork{
 	height: 100%;
 }
 .work-bg{
@@ -41,12 +41,10 @@
 	.name-project{
 		margin: 10px 0;
 		font-family: 'Nocturne Serif ExtraBold';
-		// overflow: hidden;
 		// background-color: green;
 		h2{
 			font-size: 22px;
 			display: block;
-			// transform: translateY(0px);
 		}
 		@media(min-width: 768px){
 			margin: 20px 0 26px;
@@ -60,48 +58,14 @@
 		}
 	}
 	// arrow
-	a.arrow-right-long{
-		color: $cream;
-		// background-color: firebrick;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
+	a.arrow-right{
 		justify-content: flex-end;
-		@media(min-width: 992px){
-			// padding-right: 62px;quitar o no------------------------
-		}
 		.arrow-wrapper{
-			// background: purple;
-			position: relative;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-end;
-			align-items: center;
-			width: 110px;
-			.rectangle-arrow{
-				display: inline-block;
-				height: 2px;
-				width: 81.99px;
-				margin-right: 1px;
-				background: $cream;
-			}
 			@media(min-width: 768px){
 				width: 320px;
 				.rectangle-arrow{
 					width: 291.99px;
 				}
-			}
-			svg.icon-arrow{
-				flex-shrink: 0;
-				width: 7px;
-				height: 12px;
-			}
-		}
-		// quitar, no quitar----------------
-		span{
-			width: 120px;
-			@media(min-width: 992px){
-				width: 202px;
 			}
 		}
 	}
@@ -123,7 +87,6 @@
 			-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
 			animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
 		}
-
 	}
 }
 

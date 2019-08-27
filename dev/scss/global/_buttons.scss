@@ -96,7 +96,7 @@ a{
 	}
 }
 
-// link arrow
+// link arrow - - - - - - - - - - - - - - - 
 [class*="arrow-"]{
 	svg{
 		fill: $cream;
@@ -112,32 +112,65 @@ a{
 		margin-bottom: 12px;
 	}
 }
-
-.arrow-right, .arrow-right-long{
-	color: $black;
-	font-size: 12px;
-	// font-family: 'TitlingGothicFB light';
-	display: inline-block;
-	@media(min-width: 768px){
-		font-size: 16px;
-	}
-}
-
-.arrow-right{	
-	span{
-		margin-left: 12px;
-	}
-}
-
-.arrow-right-long{
-	span{
-		margin-left: 30px;
-	}
-}
-
+// ---------
 .arrow-scroll{
 	span{
 		margin-left: 12px;
+	}
+}
+
+.arrow-right{
+	color: $cream;
+	display: inline-block;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	@media(min-width: 768px){
+		font-size: 16px;
+	}
+	&:hover{
+		&.rectangle-arrow{
+			-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+			animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
+		}
+		&.right-translate{
+			-webkit-animation: rightTranslate .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+			animation: rightTranslate .6s cubic-bezier(.21,0,0,1);
+		}	
+	}
+	// span margin left, version 90px and 300px
+	.arrow-wrapper{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		width: 110px;
+		cursor: pointer;
+		.rectangle-arrow{
+			display: inline-block;
+			height: 2px;
+			width: 81.99px;
+			margin-right: 1px;
+			background: $cream;
+		}
+
+		svg.icon-arrow{
+			flex-shrink: 0;
+			width: 7px;
+			height: 12px;
+		}
+	}
+
+	span{
+		width: 120px;
+		margin-left: 12px;
+		font-size: 12px;
+		@media(min-width: 992px){
+			width: 202px;
+			margin-left: 30px;
+			font-size: 16px;
+		}
 	}
 }
 
@@ -219,3 +252,4 @@ nav.slider-wrapper{
 	0% {top: 100%; color: $cream;}
 	100% {top: 50%;}
 }
+
