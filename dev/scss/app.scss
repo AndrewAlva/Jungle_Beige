@@ -12,12 +12,16 @@
 @import 'global/fonts';
 @import 'global/buttons';
 @import 'global/grid';
+@import 'global/_helpers';
+@import 'global/_components';
 
 @import 'views/_home';
 @import 'views/_ourwork';
 @import 'views/_about';
 @import 'views/_ourwork-sections';
 @import 'views/_contact';
+@import 'views/_message';
+@import 'views/_thanks';
 
 @import 'modules/_header';
 @import 'modules/_nav';

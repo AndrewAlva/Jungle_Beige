@@ -1,0 +1,19 @@
+extends _templates/layout.pug
+
+block content
+	.thanks-section.snj-container-fluid
+		.row
+			.snj-col-9.offset-1.snj-col-md-6.offset-md-2
+				h2.title-block Thanks
+				p.subtitle-block We’ll get back to you as soon we possibly can.Meanwhile check our stuff.
+				.social-wrapper
+					a(href=linkedin)
+						+link-icon
+					a(href=tw)
+						+tw-icon
+					a(href=ig)
+						+ins-icon
+			a(href="ourwork.html")
+				button.btn-wrapper.btn-pages
+					span.btn-animate-up Our Work
+						//- +close-icon

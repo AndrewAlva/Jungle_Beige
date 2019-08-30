@@ -1,0 +1,30 @@
+.thanks-section{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #cdbda5;
+	color: $dark-brown;
+	h2.title-block{
+		color: $black;
+		padding-bottom: 20px;
+	}
+	p{
+		padding-left: 11.11%;
+		margin-bottom: 20px;
+	}
+	.social-wrapper{
+		padding: 20px 11.11% 0;
+		svg{
+			fill: $dark-brown;
+		}
+		@media(min-width: 768px){
+			padding: 10px 0;
+			width: calc(33.33% - 5px);
+			float: right;
+		a{
+			padding: 0;
+			}
+		}
+	}
+}
