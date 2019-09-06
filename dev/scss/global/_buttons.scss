@@ -178,15 +178,15 @@ a{
 	height: 90px;
 	border-radius: 50%;
 	background-color: transparent;
-	border: solid 2px $black;
+	border: solid 2px $cream;
 	&:hover{
-		background-color: $black;
+		background-color: $cream;
 		color: $cream;
-		svg{
-			path, rect{
-				fill: $cream;
-			}
-		}
+		// svg{
+		// 	path, rect{
+		// 		fill: $cream;
+		// 	}
+		// }
 	}
 }
 // list dot slider
