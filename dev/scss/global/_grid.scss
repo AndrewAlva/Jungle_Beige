@@ -47,8 +47,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  // margin-right: - $snj-grid__gutterHalfWidth;
-  // margin-left: - $snj-grid__gutterHalfWidth;
+  margin-right: - $snj-grid__gutterWidth;
+  margin-left: - $snj-grid__gutterWidth;
 }
 
 .no-gutters {
