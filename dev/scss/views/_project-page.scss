@@ -14,9 +14,15 @@ section.project-about{
 	height: 525px;
 	width: 100%;
 	padding: 137px 10px 270px;
-	// .p-about-bg{
-	// 	background-image: url("../img/project_1_bg.jpg");
-	// }
+	background-image: url("../img/project_1_bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	@media(min-width: 768px){
+		padding: 240px 0;
+		height: 761px;
+		padding: 0 5px;
+	}
 	.info-wrapper{
 		text-align: center;
 		z-index: 2;
@@ -31,23 +37,31 @@ section.project-about{
 			margin-left: 20%;
 		}
 		span{
-			// position: absolute;
+			position: absolute;
 			color: $black;
 			font-size: 165px;
 			line-height: 0;
 			font-family: 'TitlingGothicFB light';
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%)
+		}
+		@media(min-width: 768px){
+			h1{
+				font-size: 30px;
+			}
+			h2{
+				width: 50%;
+				margin-left: 25%;
+			}
 		}
 	}
 	aside.especifications{
 		background-color: $brown;
 		width: 100%;
 		font-size: 12px;
-		// height: 276px;
 		padding: 40px calc(10% - 5px);
 		transform: translateY(calc(100% - 73px));
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: center;
 		.especific-item{
 			padding: 20px 0 20px calc(10% + 5px);
 			position: relative;
@@ -63,6 +77,22 @@ section.project-about{
 				width: 10px;
 				height: 2px;
 				background-color: $cream;
+			}
+		}
+		@media(min-width: 768px){
+			background-color: transparent;
+			padding: 0;
+			transform: translateY(0);
+			display: flex;
+			flex-direction: row;
+			.especific-item{
+				width: 16.66%;
+				padding: 20px 5px;
+				&:nth-child(2){
+					width: 33.33%;
+					margin-left: 16.66%;
+					margin-right: 16.66%;
+				}
 			}
 		}
 	}
@@ -146,12 +176,54 @@ section.sliderwrapper{
 section.video-wrapper{
 	height: 300px;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: url("../img/project-img-5.jpg");
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 20px;
 	button{
+		display: block;
+		margin: 0 auto;
+		outline: none;
 		svg{
 			fill:$cream;
+			&.pause-video{
+				display: none;
+			}
 		}
 	}
 }
 section.footer-project{
-
+	width: 100%;
+	height: 307px;
+	padding: 78px 0 20px;
+	color: $dark-orange;
+	background-color: $orange;
+	font-family: 'TitlingGothicFB Standar';
+	text-align: center;
+	position: relative;
+	a.arrow-up{
+		display: none;
+	}
+	h3{
+		font-family: 'Nocturne Serif ExtraBold';
+		color: $cream;
+		font-size: 22px;
+		padding: 10px 0px;
+	}
+	h4{
+		padding-bottom: 40px;
+	}
+	a{
+		color: $cream;
+	}
+	.copyright{
+		position: absolute;
+		bottom: 20px;
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
 }
