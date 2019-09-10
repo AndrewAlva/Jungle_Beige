@@ -2,12 +2,12 @@ extends _templates/layout.pug
 
 block content
 	.snj-container-fluid.project-page
-		.snj-row
+		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
 				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
 					h2.subtitle-block Social content & Graphic Design
-					h1.title-block Puma Middle East
+					h1.project-title Puma Middle East
 					span 01
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					div.especific-item
@@ -20,14 +20,21 @@ block content
 						h4 Year
 						h5 2017
 			section.project-description
-				.snj-col-10.offset-1.snj-col-md-6
-					h1.title-block Study case Title
-					p Lorem ipsum dolor sit amet, consecter adipiangelit, s sed do eiusmod tempor incididunt ut labq, Lorem ipst, sed do eiusmod tempor incididunt ut labore.
-					p Lorem ipsum dolor sit amet, consecter dipiscing elit, sed do eiusmod tempor incididunt ut labore. Loremor ipsum dolor sit amet, consecter adipiscing elit, sed do eiusmod tempor incididunt ut labore .
-					p Lorem ipsum dolor sit amet, consecter adipiang incididunt ut laboreem ipsum dolor sit amet, consecter diping elit, sed do eiusmod tempor un labore.
-			img.p-photo1.snj-col-12(src="", alt="")
-			img.p-photo3.snj-col-12.snj-col-md-6(src="", alt="")
-			img.p-photo2.snj-col-12.snj-col-md-6(src="", alt="")
+				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
+					h1.project-title Study case Title
+					div.paragraph-left
+						p Lorem ipsum dolor sit amet, consecter adipiangelit, s sed do eiusmod tempor incididunt ut labq, Lorem ipst, sed do eiusmod tempor incididunt ut labore.
+						p Lorem ipsum dolor sit amet, consecter dipiscing elit, sed do eiusmod tempor incididunt ut labore. Loremor ipsum dolor sit amet, consecter adipiscing elit, sed do eiusmod tempor incididunt ut labore .
+					div.paragraph-next
+						p Lorem ipsum dolor sit amet, consecter adipiang incididunt ut laboreem ipsum dolor sit amet, consecter diping elit, sed do eiusmod tempor un labore.
+						p Lorem ipsum dolor sit amet, consecter adipiang incididunt ut laboreem ipsum dolor sit amet, consecter diping elit, sed do eiusmod tempor un labore.
+			.p-photo1
+				img(src="../img/project-img-1.jpg", alt="")
+			.img-wrapper
+				.p-photo3.snj-col-12.snj-col-md-6
+					img(src="../img/project-img-2.jpg", alt="")
+				.p-photo2.snj-col-12.snj-col-md-6
+					img(src="../img/project-img-3.jpg", alt="")
 			section.sliderwrapper.snj-col-12
 				button.slide-controller.controller-prev Prev
 				button.slide-controller.controller-next Next
@@ -39,21 +46,30 @@ block content
 					.slide-item-5
 					.slide-item-6
 			section.video-wrapper.snj-col-12
+				video(src="")
 				button.btn-circle
 					+video-play-icon
 					+video-pause-icon
+			//- footer
 			section.footer-project
-				.snj-col-md-1
-					a.arrow-up(href="")
-						span.light-font Next Case
-						+next-arrow-90
-				.snj-col-md-4.snj-col-8.offset-2
+				.snj-col-md-1.arrow-container
+					a.arrow-up.left-translate.prev-case(href="")
+						span.light-font Previous Case
+						.arrow-wrapper
+							+icon-arrow
+							.rectangle-arrow
+				.snj-col-8.offset-2.snj-col-md-4.offset-md-2
 					p Next Project
 					h3 Amongst Few
 					h4 Branding & Interior Design
 					a(href="") See case
-				.snj-col-md-1
-					a.arrow-up(href="")
+				.snj-col-md-1.arrow-container
+					a.arrow-up.right-translate.next-case(href="")
 						span.light-font Next Case
-						+next-arrow-90
+						.arrow-wrapper
+							.rectangle-arrow
+							+icon-arrow
 				p.copyright © Copyright 2019
+	button.btn-wrapper.btn-pages
+		span.btn-animate-up
+			+back-icon-btn
