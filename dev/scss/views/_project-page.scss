@@ -70,6 +70,19 @@ section.project-about{
 		font-size: 12px;
 		padding: 40px calc(10% - 5px);
 		transform: translateY(calc(100% - 73px));
+		position: relative;
+		&:after{
+			content: "";
+			width: 2px;
+			height: 75px;
+			position: absolute;
+			left: 50%;
+			top: -75px;
+			background-color: $brown;
+			@media(min-width: 768px){
+				display: none;
+			}
+		}
 		.especific-item{
 			padding: 20px 0 20px calc(10% + 5px);
 			position: relative;
@@ -111,10 +124,12 @@ section.project-about{
 section.project-description{
 	background-color: $gray;
 	width: 100%;
+	display: flex;
 	padding:206px 10px 30px;
 	.project-title{
 		margin-top: 28px;
 		margin-bottom: 28px;
+		width: 100%;
 	}
 	p{
 		margin-bottom: 20px;
@@ -141,38 +156,54 @@ section.project-description{
 		}
 	}
 }
+.p-photo1{
+	width: 100%;
+	height: 525px;
+	overflow: hidden;
+	img{
+		height: 100%;
+	}
+}
 .img-wrapper{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	// justify-content:
 	@media(min-width: 768px){
 		flex-direction: row;
 	}
 }
-.p-photo1{
-	height:525px;
-	width: 100%;
-}
-.p-photo2{
+.p-photo3, .p-photo2{
 	height: 220px;
-}
-.p-photo3{
-	height: 220px;
-}
-
-[class*="p-photo"]{
 	overflow: hidden;
 	img{
-		width: 100%;
-	}
-	&:nth-child(odd){
-		margin-bottom: 20px;
+		height: 100%;
 	}
 	@media(min-width: 768px){
 		height: 525px;
+		img{
+			height: auto;
+			width: 100%;
+		}
+		&.p-photo3{
+			padding-left: 0;
+			background-color: red;
+		}		
+		&.p-photo2{
+			padding-right: 0;
+			background: green;
+		}
 	}
-
 }
+[class*="p-photo"]{
+	position: relative;
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)
+	}
+}
+
 section.sliderwrapper{
 	height: 390px;
 	width: 100%;
