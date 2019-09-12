@@ -1,4 +1,4 @@
-// Navigation Buttons
+// Navigaiconion Buttons
 .btn-wrapper{
 	cursor: pointer;
 	width: 95px;
@@ -172,22 +172,99 @@ a{
 	}
 }
 
-// video player btn
+// =================video player btn=================
 .btn-circle{
 	width: 90px;
 	height: 90px;
-	border-radius: 50%;
 	background-color: transparent;
-	border: solid 2px $cream;
-	// &:hover{
-	// 	background-color: $cream;
-	// 	color: $cream;
-	// 	// svg{
-	// 	// 	path, rect{
-	// 	// 		fill: $cream;
-	// 	// 	}
-	// 	// }
-	// }
+	border: none;
+	position: relative;
+	svg{
+		fill: $light-brown;
+	}
+	[class*="btn-c"]{
+		border-radius: 50%;
+	}
+	.btn-c-init{
+		width: 100%;
+		height: 100%;
+		@include transitions-ease(.4s)
+		border: solid 2px $light-brown;
+	}
+	svg.play-video{
+		position: absolute;
+		top: 0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		@include transitions-ease(.24s)
+	}
+	.btn-c-hover{
+		width: 0%;
+		height: 0%;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include transitions-ease(.4s);
+		overflow: hidden;
+		&:after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: green;
+			@include transitions-ease(.4s);
+			background-color: $cream;
+		}
+	}
+	span{
+		font-size: 12px;
+		color: $brown;
+		font-family: 'TitlingGothicFB Standar';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		@include transitions-ease(.4s);
+	}
+	&:hover{
+		.btn-c-init{
+			transform-origin: center;
+			transform: scale(.7);
+			transition-delay: 8ms;
+		}
+		.play-video{
+			transform: translateY(22px);
+			opacity: 0;
+		}
+		.btn-c-hover{
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			transition-delay: 8ms;
+			background-color: $light-brown;
+		}
+		span{
+			opacity: 1;
+			top:50%;
+			transition-delay: 8ms;
+			// transform: translate(-50%, 0);
+		}
+	}
+	&:active{
+		.btn-c-hover{		
+			&:after{
+				top: 0;
+				background-color: $cream;
+			}
+		}
+	}
 }
 // list dot slider
 nav.slider-wrapper{
@@ -235,19 +312,5 @@ nav.slider-wrapper{
 			}
 		}
 	}
-}
-
-// animation keyframes btn wrapper
-// animation up
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes animateup {
-	0% {top: 100%; color: $cream;}
-	100% {top: 50%;}
-}
-
-/* Standard syntax */
-@keyframes animateup {
-	0% {top: 100%; color: $cream;}
-	100% {top: 50%;}
 }
 

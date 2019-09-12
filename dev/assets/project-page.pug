@@ -10,15 +10,16 @@ block content
 					h1.project-title Puma Middle East
 					span 01
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					div.especific-item
-						h4 Cliente
-						h5 Puma						
-					div.especific-item
-						h4 Project
-						h5 Social brand building
-					div.especific-item
-						h4 Year
-						h5 2017
+					.snj-row
+						div.especific-item.snj-col-md-2
+							h4 Cliente
+							h5 Puma						
+						div.especific-item.offset-md-2.snj-col-md-4
+							h4 Project
+							h5 Social brand building
+						div.especific-item.snj-col-md-2.offset-md-2
+							h4 Year
+							h5 2017
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					h1.project-title Study case Title
@@ -31,42 +32,54 @@ block content
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
-				.p-photo3.snj-col-12.snj-col-md-6
+				.p-photo3
 					img(src="../img/project-img-2.jpg", alt="")
-				.p-photo2.snj-col-12.snj-col-md-6
+				.p-photo2
 					img(src="../img/project-img-3.jpg", alt="")
-			section.sliderwrapper.snj-col-12
-				button.slide-controller.controller-prev Prev
-				button.slide-controller.controller-next Next
-				.slider-hidden
-					.slide-item-1
-					.slide-item-2
-					.slide-item-3
-					.slide-item-4
-					.slide-item-5
-					.slide-item-6
+			include _modules/slider.pug
+			//- slider-section=================================
+			//- section.sliderwrapper.snj-col-12
+			//- 	button.slide-controller.controller-prev 
+			//- 		span.up-translate Prev
+			//- 	button.slide-controller.controller-next 
+			//- 		span.up-translate Next
+			//- 	.slider-hidden
+			//- 		.slide-item-1
+			//- 			img(src="", alt="")
+			//- 		.slide-item-2
+			//- 			img(src="", alt="")
+			//- 		.slide-item-3
+			//- 			img(src="", alt="")
+			//- 		.slide-item-4
+			//- 			img(src="", alt="")
+			//- 		.slide-item-5
+			//- 			img(src="", alt="")
+			//- 		.slide-item-6
+			//- 			img(src="", alt="")
 			section.video-wrapper.snj-col-12
 				video(src="")
 				button.btn-circle
+					.btn-c-init
 					+video-play-icon
-					+video-pause-icon
+					.btn-c-hover
+					span Play
 			//- footer
 			section.footer-project
-				.snj-col-md-1.arrow-container
-					a.arrow-up.left-translate.prev-case(href="")
-						span.light-font Previous Case
-						.arrow-wrapper
+				.snj-col-md-1.offset-md-2.arrow-container
+					a.arrow-up.prev-case(href="")
+						span.light-font.left-translate Previous Case
+						.arrow-wrapper.left-translate
 							+icon-arrow
 							.rectangle-arrow
-				.snj-col-8.offset-2.snj-col-md-4.offset-md-2
+				.description.snj-col-8.offset-2.snj-col-md-4.offset-md-1
 					p Next Project
 					h3 Amongst Few
 					h4 Branding & Interior Design
 					a(href="") See case
-				.snj-col-md-1.arrow-container
-					a.arrow-up.right-translate.next-case(href="")
-						span.light-font Next Case
-						.arrow-wrapper
+				.snj-col-md-1.offset-md-2.arrow-container
+					a.arrow-up.next-case(href="")
+						span.light-font.right-translate Next Case
+						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019

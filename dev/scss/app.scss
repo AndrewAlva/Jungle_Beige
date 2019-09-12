@@ -14,6 +14,7 @@
 @import 'global/grid';
 @import 'global/_helpers';
 @import 'global/_components';
+@import 'global/_keyframes';
 
 @import 'views/_home';
 @import 'views/_ourwork';
@@ -28,3 +29,5 @@
 @import 'modules/_nav';
 @import 'modules/_footer';
 @import 'modules/_grid-lines';
+@import 'modules/_grid-lines-full';
+@import 'modules/_slider';

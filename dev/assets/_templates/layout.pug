@@ -28,7 +28,8 @@ html(class='no-js')
 		include ../_modules/project-mixin.pug
 		include ../_modules/about-mixin.pug
 		include ../_modules/project-sections.pug
-		include ../_modules/grid-lines.pug
+		//- include ../_modules/grid-lines.pug
+		include ../_modules/grid-lines-full.pug
 		include ../_modules/arrow-right.pug
 		
 		//- content
@@ -36,6 +37,9 @@ html(class='no-js')
 			block content
 			
 		//- scripts
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.min.js')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js')
 		script(src='js/app.js')
+		script.
+			var homeSlider = new heroSlider();

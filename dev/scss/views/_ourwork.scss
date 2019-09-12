@@ -110,36 +110,3 @@
 	}
 }
 
-// up text translate
-@-webkit-keyframes upTranslate {
-	0% {transform:translateY(20px); opacity: .01}
-	100% {opacity: 1}
-}
-
-@keyframes upTranslate {
-	0% {transform:translateY(20px); opacity: .01}
-	100% {opacity: 1}
-}
-
-// right box translate
-@-webkit-keyframes rightTranslate {
-	0% {transform:translateX(-30px);}
-	100% {opacity: 1}
-}
-
-@keyframes rightTranslate {
-	0% {transform:translateX(-30px); opacity: .01}
-	100% {opacity: 1}
-}
-
-// right box translate
-@-webkit-keyframes editRectArrow {
-	0% {width: calc(100%); opacity: .01;}
-	100% {opacity: 1}
-}
-
-/* Standard syntax */
-@keyframes editRectArrow {
-	0% {width: calc(100%); opacity: .01;}
-	100% {opacity: 1}
-}

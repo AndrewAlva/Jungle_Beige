@@ -1,0 +1,56 @@
+//btn wrapper
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animateup {
+	0% {top: 100%; color: $cream;}
+	100% {top: 50%;}
+}
+
+/* Standard syntax */
+@keyframes animateup {
+	0% {top: 100%; color: $cream;}
+	100% {top: 50%;}
+}
+
+// up text translate
+@-webkit-keyframes upTranslate {
+	0% {transform:translateY(20px); opacity: .01}
+	100% {opacity: 1}
+}
+
+@keyframes upTranslate {
+	0% {transform:translateY(20px); opacity: .01}
+	100% {opacity: 1}
+}
+
+// right box translate
+@-webkit-keyframes rightTranslate {
+	0% {transform:translateX(-30px);}
+	100% {opacity: 1}
+}
+
+@keyframes rightTranslate {
+	0% {transform:translateX(-30px); opacity: .01}
+	100% {opacity: 1}
+}
+//left box translate
+@-webkit-keyframes leftTranslate {
+	0% {transform:translateX(30px);}
+	100% {opacity: 1}
+}
+
+@keyframes leftTranslate {
+	0% {transform:translateX(30px); opacity: .01}
+	100% {opacity: 1}
+}
+
+// arrow line 
+@-webkit-keyframes editRectArrow {
+	0% {width: calc(100%); opacity: .01;}
+	100% {opacity: 1}
+}
+
+/* Standard syntax */
+@keyframes editRectArrow {
+	0% {width: calc(100%); opacity: .01;}
+	100% {opacity: 1}
+}

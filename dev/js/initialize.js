@@ -12,4 +12,18 @@ window.onload = function() {
     // Do something, remove preloader perhaps
     console.log("Page fully loaded.");
     console.log("Initialize.js");
+
+    // Click interactions to move Home Slider
+	$('.to-slide').on('click', function(event){
+		console.log("to-slide clicked")
+		event.preventDefault();
+		var slide = $(this).data("slide");
+
+		if(slide=="prev" || slide=="next"){
+			if(slide=="prev") homeSlider.prev();
+			else homeSlider.next();
+		} else {
+			homeSlider.goTo(slide);
+		}
+	});
 }

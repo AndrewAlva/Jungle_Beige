@@ -1,0 +1,36 @@
+.grid-wrapper-full{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	pointer-events: none;
+
+	.snj-container-fluid{
+		width: 100%;
+		height: 100%;
+		padding: 0
+	}
+	.row{
+		display: flex;
+		width: 100%;
+		height: 100%;
+		[class*="snj-col-"]{
+			height: 100%;
+			// background-color: green;
+			&:nth-child(odd){
+				.bg-column-grid{
+					background-color: #eccb9b;
+					@media(min-width: 768px){
+						background-color: #eee0cb;
+					}
+				}
+			}
+		}
+		.bg-column-grid{
+			width: 100%;
+			height: 100%;
+			background-color: #eee0cb;
+			opacity: .3;
+		}
+	}
+}
