@@ -199,16 +199,17 @@
 		font-family: 'TitlingGothicFB light';
 		// letter-spacing: 20%;
 		width: 95px;
-		height: 56px;
+		// height: 56px;
+		height: auto;
 		display: inline-block;
 		position: absolute;
 		bottom: 1px;
 		right: 5px;
 		letter-spacing: .02em;
 		// background-color: red;
-		span{
-			letter-spacing: .05em;
-		}
+		// span{
+		// 	letter-spacing: .05em;
+		// }
 		&:before{
 			content: "..";
 			font-family: 'Nocturne Serif ExtraBold';
@@ -227,18 +228,19 @@
 		@media(min-width: 768px){
 			font-size: 12px;
 			width: 170px;
+			br{
+				display: none;
+			}
 		}
 		@media(min-width: 992px){
 			right: -4px;
 			width: 200px;
-			height: 45px;
+			// height: 45px;
 			font-size: 14px;
-			bottom: 30px;
+			// bottom: 30px;
+			bottom: 0px;
 			line-height: 16px;
 			// background-color: red;
-			br{
-				display: none;
-			}
 			&:before{
 				right: 4px;
 			}

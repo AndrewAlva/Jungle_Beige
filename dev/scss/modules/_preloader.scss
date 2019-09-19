@@ -1,0 +1,44 @@
+.preloader{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 1000;
+}
+
+// preloder dependiendo de la sección
+// brown
+.color-1{background-color: #302c28;}
+// gray
+.color-2{background-color: $gray;}
+// caqui
+.color-3{background-color: #ad976f;}
+// yellow
+.color-4{background-color: #ffb342;}
+
+.preloader.preloader-cut{
+	width: calc(83.34% - 32px)
+}
+
+// #intro{
+// 	background-color: #302c28;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	opacity: 1;
+// 	z-index: 99;
+// 	img{
+// 		display: block;
+// 		margin: 0 auto;
+// 		width: 260px;
+// 		height: 46px;
+// 		background-color: red;
+// 	}
+// }

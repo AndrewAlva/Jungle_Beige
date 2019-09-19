@@ -1,4 +1,4 @@
-mixin about-component(name, subtitle, about, linkedin, tw, ig)
+mixin about-component(name, subtitle, about, aboutMobile, linkedin, tw, ig)
 	.about-component
 		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
 			h1.title-block #{name}
@@ -10,7 +10,7 @@ mixin about-component(name, subtitle, about, linkedin, tw, ig)
 			p #{about}
 			.social-wrapper
 				a(href=linkedin)
-					+link-icon
+					+link-icon-2
 				a(href=tw)
 					+tw-icon
 				a(href=ig)

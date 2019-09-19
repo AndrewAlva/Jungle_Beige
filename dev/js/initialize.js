@@ -26,4 +26,7 @@ window.onload = function() {
 			homeSlider.goTo(slide);
 		}
 	});
+
+	// Remove preloader
+	animation.init();
 }

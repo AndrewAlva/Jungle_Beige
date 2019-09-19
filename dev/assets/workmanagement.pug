@@ -1,0 +1,20 @@
+extends _templates/layout.pug
+block preloader
+	.preloader.color-1.preloader-cut
+block content
+	.ourwork-sections-detail#management-work
+		.background-wrapper.worksections-bg
+		//- component
+		.sections-p-wrapper.project-bg-1
+			+project-sections(" Content creation & Management", "Puma", "01", "project-manage-puma.html")
+		.sections-p-wrapper.project-bg-2
+			+project-sections(" Content creation & Management", "Cartel Coffe", "02", "project-manage-coffee.html")
+		.sections-p-wrapper.project-bg-3
+			+project-sections(" Content creation & Management", "Irisin", "03", "project-manage-irisin.html")
+		.sections-p-wrapper.project-bg-4
+			+project-sections(" Content creation & Management", "Cova", "04", "project-manage-cova.html")
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.btn-animate-up
+			+back-icon-btn
+block footer
+	+footer('scroll')

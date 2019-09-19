@@ -1,7 +1,11 @@
-footer.snj-container-fluid
-	.row
+mixin footer(scroll)
+	footer.snj-container-fluid
+		//- .row
 		#footer-wrapper.snj-col-12
-			a.arrow-scroll
-				+arrow-scroll
-				span.link-page Scroll to explore
-			a.link-page.line-link(href="") Contact Us
+			if scroll
+				a.arrow-scroll.tween-up
+					+arrow-scroll
+					span.link-page Scroll to explore
+			else
+				span.link-page .
+			a.link-page.line-link.tween-up(href="contact.html") Contact Us

@@ -1,5 +1,6 @@
 extends _templates/layout.pug
-
+block preloader
+	.preloader.color-1
 block content
 	.about-section.snj-container-fluid.flex-column
 		.row
@@ -7,7 +8,7 @@ block content
 			.background-wrapper.about-bg
 
 			.about-wrapper
-
+				//- LIST BULLETS
 				nav.slider-wrapper
 					ul.slider-list
 						li.dot-slider.active-dot
@@ -16,9 +17,42 @@ block content
 						li.dot-slider
 						li.dot-slider
 						li.dot-slider
-
-				//- about
-				+about-component("Founded by brand creators", "Our Moto", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+						li.dot-slider
+						li.dot-slider
+						li.dot-slider
+						li.dot-slider
+				//- .about-component
+					section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
+						h1.title-block Founded by brand creators
+						h2.subtitle-block Our Moto
+					section.about-info.snj-col-8.offset-1.snj-col-md-6.offset-md-3.snj-col-lg-3.offset-lg-1
+						.separator-line
+						p.mobile-text Get to know us - our history, services and more… 
+						p.desktop-text Jungle Beige was founded in 2016 by Khalid Bin Hadher, Michael Taylor, Florian Moser and B.J. De Guzman. The passion and perseverance required to build culturally relevant brands and communications is in the DNA of our agency, because it’s in the DNA of our founders. Khalid has developed numerous brands from scratch, including Bikers Cafe, Airwerks and Myocum. Michael and Florian, along with Khalid, have built Amongst Few, Amongst Few Cafe and Unison Barbershop. 
+						p.desktop-text This unique background of being founded and led by actual brand creators gives us a complete understanding of what our clients experience and continually strive to achieve. It also means that we have the same intensity for producing work that is authentic to the brand, and revered by its customers.
+						p.desktop-text Our services mirror the key marketing requirements of any thriving brand: 
+						ul.desktop-text
+							li Branding & Design
+							li Campaign & Social Media Strategy 
+							li Content Creation 
+							li Event Curation 
+						.social-wrapper
+							a(href=linkedin)
+								+link-icon
+							a(href=tw)
+								+tw-icon
+							a(href=ig)
+								+ins-icon
+				//- about mixin people
+				+about-component("Khalid Bin Hadher", "Partner", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Michael Taylor", "Partner", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Florian Moser", "Partner", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("B.J. De Guzman", "Partner & Creative Director", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Ivana Moser", "Strategy, Content & Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Bharath Rameshan ", "Strategy, Content & Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Nicole Farrelly", "Strategy, Content & Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Daniel Zacatenco", "Art Direction & Photography", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
+				//- +about-component("Najeeb Khalid", "Art Direction & Videography", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
 
 	a(href="ourwork.html")
 		button.btn-wrapper.btn-pages

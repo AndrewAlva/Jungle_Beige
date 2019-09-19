@@ -24,9 +24,9 @@
 .project-wrapper{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	color: $cream;
-	opacity: 1;
-	// background: pink;
+	// background-color: red;
+	// opacity: .3;
+	a{color: $cream;}
 	p.number-project{
 		font-size: 16px;
 		font-family: 'TitlingGothicFB light';
@@ -35,14 +35,15 @@
 	@media(min-width: 768px){
 		padding-top: 50px;
 		padding-bottom: 50px;
-		opacity: .3;
+		// opacity: 0;
 		p.number-project{
 			font-size: 22px;
 		}
 	}
 	// name
 	.name-project{
-		margin: 10px 0;
+		// margin: 10px 0;
+		margin: 2px 0 10px;
 		font-family: 'Nocturne Serif ExtraBold';
 		// background-color: green;
 		h2{
@@ -61,7 +62,7 @@
 		}
 	}
 	// arrow
-	a.arrow-right{
+	.arrow-right{
 		justify-content: flex-end;
 		.arrow-wrapper{
 			@media(min-width: 768px){
@@ -91,9 +92,9 @@
 	}
 
 	&:hover{
-		opacity: 1;
 		cursor: pointer;
 		@include transitions-ease(.4s);
+		opacity: 1;
 		.up-translate{
 			// transform: translateY(30px);
 			-webkit-animation: upTranslate .6s cubic-bezier(.25,0,0,.8); /* Safari 4.0 - 8.0 */

@@ -1,0 +1,16 @@
+extends _templates/layout.pug
+block preloader
+	.preloader.color-1.preloader-cut
+block content
+	.ourwork-sections-detail#strategy-work
+		.background-wrapper.worksections-bg
+		//- component
+		.sections-p-wrapper.project-bg-1
+			+project-sections("Campaign & Social Media Strategy ", "Suede Guerrillas ", "01", "project-social-suede.html")
+		.sections-p-wrapper.project-bg-2
+			+project-sections("Campaign & Social Media Strategy ", "Power Horse", "02", "project-social-power.html")
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.btn-animate-up
+			+back-icon-btn
+block footer
+	+footer('')

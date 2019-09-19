@@ -70,7 +70,7 @@ section.project-about{
 		width: 100%;
 		font-size: 12px;
 		padding: 40px calc(10% - 5px);
-		transform: translateY(calc(100% - 73px));
+		transform: translateY(calc(100% - 113px));
 		position: relative;
 		&:after{
 			content: "";
@@ -89,7 +89,7 @@ section.project-about{
 			position: relative;
 			h4{
 				margin-bottom: 10px;
-				font-family: 'TitlingGothicFB Standar';
+				font-family: 'TitlingGothicFB Standard';
 			}
 			&:after{
 				content: "";
@@ -124,7 +124,7 @@ section.project-description{
 	background-color: $gray;
 	width: 100%;
 	display: flex;
-	padding:206px 10px 30px;
+	padding:180px 10px 30px;
 	.project-title{
 		margin-top: 28px;
 		margin-bottom: 28px;
@@ -149,7 +149,7 @@ section.project-description{
 			.paragraph-left{
 				padding-right: 5px;
 			}
-			.paragraph-next{
+			.paragraph-right{
 				padding-left: 5px;
 			}
 		}
@@ -330,7 +330,7 @@ section.footer-project{
 	padding-bottom: 20px;
 	color: $dark-orange;
 	background-color: $orange;
-	font-family: 'TitlingGothicFB Standar';
+	font-family: 'TitlingGothicFB Standard';
 	text-align: center;
 	position: relative;
 	@media(min-width: 768px){

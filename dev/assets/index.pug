@@ -6,7 +6,7 @@ block content
 
 		//- mobile display
 		.display-wrapper
-			.display-type
+			.display-type.tween-up
 				h2.display-w w
 				h2.display-e e
 			.title-wrapper
@@ -14,10 +14,11 @@ block content
 					span create
 					span &
 					span consult
-			p.about-title for <br> lifestyle industries such <span>as fashion, entertainment</span> and more.
-	
-	//- button
-	a(href="ourwork.html")
-		button.btn-wrapper.btn-pages
-			span.btn-animate-up Our Work
+			p.about-title We <br> create and consult for lifestyle cultures and industries such as fashion, hospitality, entertainment and more. 
+	//- para caundo se quiere regresar. la pagina anterior
+	//- a(href="javascript:history.back()")
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.btn-animate-up Our Work
+block footer
+	+footer('')
 		

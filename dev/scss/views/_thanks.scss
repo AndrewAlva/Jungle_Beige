@@ -7,11 +7,19 @@
 	color: $dark-brown;
 	h2.title-block{
 		color: $black;
-		padding-bottom: 20px;
+		padding-bottom: 12px;
+		line-height: 16px;
+		@media(min-width: 768px){
+			line-height: 36px;
+		}
 	}
 	p{
 		padding-left: 11.11%;
 		margin-bottom: 20px;
+		line-height: 24px;
+		@media(min-width: 768px){
+			line-height: 38px;
+		}
 	}
 	.social-wrapper{
 		padding: 20px 11.11% 0;

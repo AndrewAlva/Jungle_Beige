@@ -30,7 +30,9 @@
 		transform: translateY(-50%);
 	}
 }
+.estraClasses{
 
+}
 // about component
 .about-component{
 	font-family: 'TitlingGothicFB light';
@@ -51,10 +53,10 @@
 			h2{
 				font-size: 22px;
 				position: absolute;
-				top: -28px;
+				top: -33px;
 				left: -96px;
 				// background: red;
-				line-height: 0;
+				// line-height: 0;
 			}
 		}
 	}
@@ -85,9 +87,24 @@
 			margin-bottom: 20px;
 			@media(min-width: 992px){
 				padding-left: 0;
+				&.mobile-text{
+					display: none;
+				}
 			}
 		}
-
+		.desktop-text{
+			display: none;
+			@media(min-width:992px){
+				display: block;
+			}
+		}
+		ul{
+			padding-left: 12.5%;
+			li{
+				list-style-type: inherit;
+				text-indent: 15px;
+			}
+		}
 		.social-wrapper{
 			padding-left: 12.5%;
 			padding-top: 11px;

@@ -22,20 +22,23 @@ html(class='no-js')
 		link(rel='stylesheet', href='css/app.css')
 
 	body
+		//- include ../_modules/preloader.pug
 		include ../_modules/icons.pug
 		include ../_modules/header.pug
 		include ../_modules/footer.pug
 		include ../_modules/project-mixin.pug
 		include ../_modules/about-mixin.pug
 		include ../_modules/project-sections.pug
-		//- include ../_modules/grid-lines.pug
-		include ../_modules/grid-lines-full.pug
+		include ../_modules/grid-lines.pug
+		//- include ../_modules/grid-lines-full.pug
 		include ../_modules/arrow-right.pug
 		
 		//- content
 		#main-wrapper
+			block preloader
 			block content
-			
+		block footer
+
 		//- scripts
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.min.js')

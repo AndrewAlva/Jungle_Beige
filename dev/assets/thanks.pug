@@ -1,5 +1,6 @@
 extends _templates/layout.pug
-
+block preloader
+	.preloader.color-2
 block content
 	.thanks-section.snj-container-fluid
 		.row
@@ -8,7 +9,7 @@ block content
 				p.subtitle-block We’ll get back to you as soon we possibly can.Meanwhile check our stuff.
 				.social-wrapper
 					a(href=linkedin)
-						+link-icon
+						+link-icon-2
 					a(href=tw)
 						+tw-icon
 					a(href=ig)
@@ -17,3 +18,5 @@ block content
 				button.btn-wrapper.btn-pages
 					span.btn-animate-up Our Work
 						//- +close-icon
+block footer
+	+footer('')

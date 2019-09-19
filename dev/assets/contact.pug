@@ -1,5 +1,6 @@
 extends _templates/layout.pug
-
+block preloader
+	.preloader.color-3
 block content
 	.contact-section.snj-container-fluid
 		//- .snj-row
@@ -8,7 +9,7 @@ block content
 				section.about-block.offset-1.snj-col-10.offset-md-2.snj-col-md-5
 					h2.subtitle-block.sub-1 Get in Touch
 					h2.subtitle-block.sub-2 Contact Us
-					h1.title-block Let’s create great things
+					h1.title-block Let’s link. Let’s build…
 					.arrow-container
 						+arrow-right("/", "Drop us a line")
 
@@ -27,7 +28,8 @@ block content
 				aside.info-block-wrapper.snj-col-4.offset-2.snj-col-md-9.offset-md-1
 					.info-block
 						h3 Office
-						p No. 11, Jumeirah Centre Jumeirah 1, Dubai, UAE P.O Box 5182
+						p Dubai Design District<br> Building 7, 502A<br>Dubai, U.A.E. 
+
 					.info-block
 						h3 Number
 						p +971 (0) 4 330 0311
@@ -36,4 +38,5 @@ block content
 	a(href="ourwork.html")
 		button.btn-wrapper.btn-pages
 			span.btn-animate-up Our Work
-			
+block footer
+	+footer('')

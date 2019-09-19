@@ -25,3 +25,19 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+// animacion arriba de contenido
+.tween-up{
+	transform: translateY(20px);
+	opacity: 0;
+	display: inline-block;
+}
+.project-up{
+	transform: translateY(20px);
+	opacity: 0;
+}
+.input-line{
+	
+}
+
+// regresar a la página anterior
+// a.btn-wrapper.btn-pages(href="javascript:history.back()"

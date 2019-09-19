@@ -1,16 +1,27 @@
 //btn wrapper
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes animateup {
-	0% {top: 100%; color: $cream;}
+	48% {top: 150%;}
 	100% {top: 50%;}
 }
 
-/* Standard syntax */
 @keyframes animateup {
-	0% {top: 100%; color: $cream;}
+	48% {top: 150%;}
 	100% {top: 50%;}
 }
+// BTN WRAPPEER COLOR
+@-webkit-keyframes backgroundBtn {
+	0%{background-color: $black;}
+	40% {background-color: $dark-gray;}
+	80% {background-color: #fff;}
+	100% {background-color: #fff;}
+}
 
+@keyframes backgroundBtn {
+	0%{background-color: $black;}
+	40% {background-color: $dark-gray;}
+	80% {background-color: #fff;}
+	100% {background-color: #fff;}
+}
 // up text translate
 @-webkit-keyframes upTranslate {
 	0% {transform:translateY(20px); opacity: .01}

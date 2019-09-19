@@ -1,5 +1,6 @@
 extends _templates/layout.pug
-
+block preloader
+	.preloader.color-1
 block content
 	.ourwork.snj-container-fluid
 		.row
@@ -8,12 +9,16 @@ block content
 			//- projects wrapper
 			.works-list.snj-col-10.offset-1.snj-col-md-8.offset-md-2
 				.wrap-project-wrapper
-					+project-intro("01", "Content /", " & Campaign Creation", "/","See case", "See case")
-					+project-intro("02", "Event curation ", " & Design","/", "Let’s talk", "See case")
-					+project-intro("02", "Event curation ", " & Design",",", "See case", "See case")
-					+project-intro("04", "Social Media ", " (360º)","/", "See case studies", "See case")
-					+project-intro("05", "Digital ", " Web Design","/", "See case studies", "See case")
-					+project-intro("06", "Drop us ", "a line","/", "Let’s talk", "See case")
-	button.btn-wrapper.btn-pages(onclick="history.back()")
+					+project-intro("workbranding.html","01", "Branding Design", "","See case", "See case")
+					+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","Lets talk", "See case" )
+					+project-intro("workmanagement.html","03","Content Creation"," & Management", "See case", "See case")
+					+project-intro("workevent.html","04","Event Curation","", "See case studies","See Case")
+					//- +project-intro("01", "Branding Design", "", "workbranding.html","See case", "See case")
+					//- +project-intro("02", "Campaign ", " & Social Media Strategy","/", "Let’s talk", "See case")
+					//- +project-intro("03", "Content Creation ", " & Management",",", "See case", "See case")
+					//- +project-intro("04", "Event Curation ", " ","/", "See case studies", "See case")
+	a.btn-wrapper.btn-pages(href="javascript:history.back()")
 		span.btn-animate-up
 			+close-icon
+block footer
+	+footer('scroll')

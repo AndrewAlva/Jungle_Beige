@@ -1,12 +1,27 @@
-mixin project-intro(number, name1, name2, linkTo, callTo, callTo2)
-	.project-wrapper
-		p.number-project.up-translate #{number}
-		.name-project 
-			h2.up-translate #{name1}
-			h2.up-translate #{name2}
-		a.arrow-right.right-translate(href=linkTo)
-			.arrow-wrapper
-				.rectangle-arrow
-				+icon-arrow
-			span.callTo-1 #{callTo}
-			span.callTo-2 #{callTo2}
+//- mixin project-intro(number, name1, name2, linkTo, callTo, callTo2)
+//- 	.project-wrapper.project-up
+//- 		p.number-project.up-translate #{number}
+//- 		.name-project 
+//- 			h2.up-translate #{name1}
+//- 			h2.up-translate #{name2}
+//- 		a.arrow-right.right-translate(href=linkTo)
+//- 			.arrow-wrapper
+//- 				.rectangle-arrow
+//- 				+icon-arrow
+//- 			span.callTo-1 #{callTo}
+//- 			span.callTo-2 #{callTo2}
+
+//- nuevo para envolver todo
+mixin project-intro(linkTo, number, name1, name2, callTo, callTo2)
+	.project-wrapper.project-up
+		a(href=linkTo)
+			p.number-project.up-translate #{number}
+			.name-project 
+				h2.up-translate #{name1}
+				h2.up-translate #{name2}
+			.arrow-right.right-translate
+				.arrow-wrapper
+					.rectangle-arrow
+					+icon-arrow
+				span.callTo-1 #{callTo}
+				span.callTo-2 #{callTo2}

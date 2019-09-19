@@ -39,6 +39,11 @@
 		background-color: $cream;
 		display: none;
 	}
+	&:hover{
+		h1.title-block{
+			color: $cream;
+		}
+	}
 	@media(min-width: 768px){
 		h2.sub-1{display: none;}
 		h2.sub-2{display: block}
@@ -74,7 +79,7 @@
 		margin-bottom: 10px;
 		a{
 			font-size: 12px;
-			font-family: 'TitlingGothicFB Standar';
+			font-family: 'TitlingGothicFB Standard';
 			color: $black;
 			@include transitions-ease(.4s)
 			&:hover{
@@ -111,6 +116,7 @@
 		padding: 0;
 		margin-top: 87px;
 		display: flex;
+		font-size: 12px;
 		h3{
 			display: block;
 		}
@@ -126,6 +132,11 @@
 			}
 			&:nth-child(3){
 				padding-top: 0px;
+			}
+			@media(max-width: 768px){
+				br{
+					display: none;
+				}
 			}
 		}
 	}

@@ -31,7 +31,7 @@ const sassOptionsProd = {
 
 const postCssPlugins = [
     autoprefixer({
-        browsers:['last 3 versions']
+        // browsers:['last 3 versions']
     }),
     zIndex(),
     pseudoelements(),
