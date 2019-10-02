@@ -19,9 +19,9 @@
 section.project-about{
 	background-color: $orange;
 	color: $cream;
-	height: 525px;
+	height: 460px;
 	width: 100%;
-	padding: 137px 10px 270px;
+	padding: 138px 10px 270px;
 	background-image: url("../img/project_1_bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -29,8 +29,8 @@ section.project-about{
 	&:after{
 	}
 	@media(min-width: 768px){
-		padding: 240px 0 0;
 		height: 525px;
+		padding: 240px 0 0;
 		margin-bottom: 10px;
 		// padding: 0 5px;
 	}
@@ -43,7 +43,7 @@ section.project-about{
 		}
 		h2{
 			font-size: 12px;
-			padding-bottom: 10px;
+			padding-bottom: 6px;
 			width: 60%;
 			margin-left: 20%;
 		}
@@ -51,17 +51,20 @@ section.project-about{
 			position: absolute;
 			color: $black;
 			font-size: 165px;
-			line-height: 0;
+			line-height: 166px;
 			font-family: 'TitlingGothicFB light';
 			left: 50%;
 			top: 50%;
-			transform: translate(-50%, -50%);
+			// top: 50%;
+			// transform: translate(-50%, -50%);
+			transform: translate(-50%, -42%);
 			z-index: -1;
 		}
 		@media(min-width: 768px){
 			h2{
 				width: 50%;
 				margin-left: 25%;
+				padding-bottom: 4px;
 			}
 		}
 	}
@@ -69,9 +72,14 @@ section.project-about{
 		background-color: $brown;
 		width: 100%;
 		font-size: 12px;
-		padding: 40px calc(10% - 5px);
-		transform: translateY(calc(100% - 113px));
+		// padding: 40px calc(10% - 5px);
+		padding: 40px 0;
+		transform: translateY(calc(100% - 108px));
 		position: relative;
+		.snj-row{
+			margin-right: 0;
+			margin-left: 0;
+		}
 		&:after{
 			content: "";
 			width: 2px;
@@ -85,20 +93,28 @@ section.project-about{
 			}
 		}
 		.especific-item{
-			padding: 20px 0 20px calc(10% + 5px);
+			// padding: 20px 0 0 calc(10% + 5px);
+			padding: 22px 0 20px;
 			position: relative;
+			h4, h5{
+				font-size: 12px;
+				padding-left: 20%;
+			}
 			h4{
-				margin-bottom: 10px;
+				margin-bottom: 6px;
 				font-family: 'TitlingGothicFB Standard';
 			}
 			&:after{
 				content: "";
 				position: absolute;
 				top: 0px;
-				left: 0;
+				left: 10%;
 				width: 10px;
 				height: 2px;
 				background-color: $cream;
+			}
+			&:last-child{
+				padding-bottom: 0;
 			}
 		}
 		@media(min-width: 768px){
@@ -112,7 +128,7 @@ section.project-about{
 				margin: 0;
 			}
 			.especific-item{
-				padding: 20px 15px;
+				padding: 12px 15px;
 				&:after{
 					left: 5px;
 				}
@@ -124,7 +140,7 @@ section.project-description{
 	background-color: $gray;
 	width: 100%;
 	display: flex;
-	padding:180px 10px 30px;
+	padding:188px 10px 30px;
 	.project-title{
 		margin-top: 28px;
 		margin-bottom: 28px;
@@ -141,6 +157,7 @@ section.project-description{
 		.project-title{
 			margin-top: 50px;
 			margin-bottom: 50px;
+			width: 50%;
 		}
 		div{
 			width: 50%;
@@ -343,7 +360,7 @@ section.footer-project{
 			font-family: 'Nocturne Serif ExtraBold';
 			color: $cream;
 			font-size: 22px;
-			padding: 10px 0px;
+			padding: 8px 0 10px;
 		}
 		h4{
 			padding-bottom: 40px;
@@ -352,6 +369,7 @@ section.footer-project{
 			color: $cream;
 		}
 		@media(min-width: 768px){
+			h3{padding: 13px 0px 15px;}
 			p{color: $cream}
 			a{display: none}
 		}

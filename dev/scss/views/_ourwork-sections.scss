@@ -14,7 +14,7 @@
 	background-position: center top;
 	background-size: cover;
 }
-
+// background img full page
 .worksections-bg{
 	background-image: url("../img/bg-work-section.jpg");
 }
@@ -22,7 +22,7 @@
 //wrapper project section
 .sections-p-wrapper{
 	position: relative;
-	height: 60vh;
+	height: 62vh;
 	background: $orange;
 	display: flex;
 	flex-direction: column;
@@ -49,7 +49,7 @@
 		position: relative;
 		// background-color: red;
 		margin-left: 16.666667%;
-		width: 75%;
+		width: calc(75% - 5px);
 		@media(min-width: 768px){
 			display: inline-block;
 			margin-left: 20%;
@@ -59,11 +59,14 @@
 		h2{
 			font-family: 'TitlingGothicFB light';
 			font-size: 12px;
-			padding-bottom: 10px;
+			padding-bottom: 7px;
 			// width: 55.55%;
 			width: auto;
 			position: relative;
 			z-index: 10;
+			@media(min-width: 758px){
+				padding-bottom: 5px;
+			}
 		}
 		h1{
 			font-family: 'Nocturne Serif ExtraBold';
@@ -87,7 +90,7 @@
 			text-align: left;
 			line-height: 73px;
 			position: absolute;
-			left: calc(22.22% - 5px);
+			left: calc(22.22% - 8px);
 			bottom: 0;
 			@media(min-width: 768px){
 				font-size: 165px;
@@ -99,6 +102,7 @@
 	}
 	.arrow-container{
 		margin-left: 16.666667%;
+		display: block;
 		width: 66.666667%;
 		@media(min-width: 768px){
 			margin-left: 20%;

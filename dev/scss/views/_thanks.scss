@@ -7,31 +7,34 @@
 	color: $dark-brown;
 	h2.title-block{
 		color: $black;
-		padding-bottom: 12px;
+		padding-bottom: 16px;
 		line-height: 16px;
 		@media(min-width: 768px){
 			line-height: 36px;
+			padding-bottom: 12px;
 		}
 	}
 	p{
 		padding-left: 11.11%;
-		margin-bottom: 20px;
+		margin-bottom: 32px;
 		line-height: 24px;
 		@media(min-width: 768px){
 			line-height: 38px;
+			margin-bottom: 18px
 		}
 	}
 	.social-wrapper{
-		padding: 20px 11.11% 0;
+		padding: 0 11.11% ;
 		svg{
 			fill: $dark-brown;
 		}
 		@media(min-width: 768px){
-			padding: 10px 0;
+			padding: 0px 0;
 			width: calc(33.33% - 5px);
 			float: right;
 		a{
 			padding: 0;
+			cursor: pointer;
 			}
 		}
 	}

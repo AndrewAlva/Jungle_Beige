@@ -31,12 +31,13 @@
 	opacity: 0;
 	display: inline-block;
 }
+.tween-right{
+	opacity: 0;
+	transform: translateX(-20px);
+}
 .project-up{
 	transform: translateY(20px);
 	opacity: 0;
-}
-.input-line{
-	
 }
 
 // regresar a la página anterior

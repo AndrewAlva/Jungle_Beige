@@ -23,11 +23,20 @@ window.animation = {
             y: 0,
             opacity: 1,
         })
+        .staggerTo(".tween-right", .4, {
+            ease: Power2.easeInOut,
+            x: 0,
+            opacity: 1,
+        },.02, .8)
         .staggerTo(".project-up", .26, {
             ease: Power2.easeOut,
             y: 0,
             opacity: .3,
         },0.08)
+        .staggerTo(".bar", .4, {
+            ease: Power2.easeInOut,
+            width: "100%",
+        },0.14)
         this.hide();
         return false;
     },

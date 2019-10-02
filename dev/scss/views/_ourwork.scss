@@ -29,8 +29,18 @@
 	a{color: $cream;}
 	p.number-project{
 		font-size: 16px;
+		position: relative;
 		font-family: 'TitlingGothicFB light';
 		// background: red;
+		// &:after{
+		// 	content: "";
+		// 	width: 100px;
+		// 	height: 10px;
+		// 	position: absolute;
+		// 	background: red;
+		// 	left: 0;
+		// 	bottom: 0;
+		// }
 	}
 	@media(min-width: 768px){
 		padding-top: 50px;
@@ -42,7 +52,6 @@
 	}
 	// name
 	.name-project{
-		// margin: 10px 0;
 		margin: 2px 0 10px;
 		font-family: 'Nocturne Serif ExtraBold';
 		// background-color: green;
@@ -51,7 +60,8 @@
 			display: block;
 		}
 		@media(min-width: 768px){
-			margin: 20px 0 26px;
+			// margin: 20px 0 26px;
+			margin: 6px 0 26px;
 			h2{
 				font-size: 50px;
 				display: inline-block;
