@@ -104,7 +104,7 @@
 	&:hover{
 		cursor: pointer;
 		@include transitions-ease(.4s);
-		opacity: 1;
+		opacity: 1 !important;
 		.up-translate{
 			// transform: translateY(30px);
 			-webkit-animation: upTranslate .6s cubic-bezier(.25,0,0,.8); /* Safari 4.0 - 8.0 */
