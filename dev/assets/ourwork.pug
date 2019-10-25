@@ -1,6 +1,6 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-1
+	//- .preloader.color-1
 block content
 	.ourwork.snj-container-fluid
 		.row
@@ -10,11 +10,11 @@ block content
 			.works-list.snj-col-10.offset-1.snj-col-md-8.offset-md-2
 				.wrap-project-wrapper
 					+project-intro("workbranding.html","01", "Branding & Design", "","See case Studie", "See case")
-					+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case" )
-					+project-intro("workmanagement.html","03","Content Creation"," & Management", "See case studies", "See case")
-					+project-intro("workevent.html","04","Event Curation","", "See case studies","See Case")
+					+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
+					+project-intro("workmanagement.html","03","Content Creation"," & Management", "See case studies", "See case", {textDelay: 3, arrowDelay: 4})
+					+project-intro("workevent.html","04","Event Curation","", "See case studies","See Case",{textDelay: 4, arrowDelay: 5})
 	a.btn-wrapper.btn-pages(href="javascript:history.back()")
-		span.btn-animate-up
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+close-icon
 block footer
 	+footer('scroll')

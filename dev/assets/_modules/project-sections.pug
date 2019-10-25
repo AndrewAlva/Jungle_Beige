@@ -1,12 +1,12 @@
 mixin project-sections(subtitle, title, number, linkTo)
 	.center-wrapper
 		.about-work
-			h2 #{subtitle}
-			h1 #{title}
-			p #{number}
-		.arrow-container
+			h2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{subtitle}
+			h1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{title}
+			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{number}
+		.arrow-container.jb-cascade(data-cascade="translate-right" data-cascade-delay-mobile="2" data-cascade-delay="2")
 			a.arrow-right.right-translate(href=linkTo)
 				.arrow-wrapper
 					.rectangle-arrow
 					+icon-arrow
-				span See Case
+				span See project

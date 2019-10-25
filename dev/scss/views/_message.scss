@@ -3,11 +3,29 @@
 	background-color: $light-orange;
 	color:$dark-brown;
 	justify-content: center;
-	h2{
+	.center-wrapper{
+		margin-top: -16px;
+		@media(min-width: 768px){
+			margin-top: 40px;
+		}
+	}
+	.subtitle-block{
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 22px;
+		position: relative;
+		line-height: 16px;
+		height: 14px;
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: -22px;left: 0;
+			width: 100%;
+			height: 22px;
+			background-color: green;
+		}
 	}
 }
+// inputs
 .message-section{
 	height: 100%;
 	background-color: $light-orange;
@@ -22,6 +40,7 @@
 		.input-wrapper{
 			width: 100%;
 			// height: 33px;
+			height: 30px;
 			display: block;
 			position: relative;
 			@media(min-width: 768px){
@@ -106,6 +125,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	height: auto;
+	@media(min-width: 768px){
+		padding: 19px 0;
+	}
 	label{
 		position: relative;
 		cursor: pointer;
@@ -143,7 +166,8 @@
 }
 .message-section .arrow-container{
 	width: 100%;
-	height: 52px;
+	// height: 52px;
+	margin-top: 2px;
 	padding-left: 11.11%;
 	// background: black;
 	position: relative;
@@ -165,6 +189,7 @@
 		}
 	} 
 	@media(min-width: 768px){	
+		margin-top: 15px;
 		padding-left: 33.33%;
 		a.arrow-right{
 			transform: translateX(-15px);

@@ -1,26 +1,27 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
+				+hero-project("Event Curation","Puma","01")
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Event Curation
-					h1.project-title Puma
-					span 01
-				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					.snj-row
-						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
-						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
-						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+				//- .info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
+				//- 	h2.subtitle-block Event Curation
+				//- 	h1.project-title Puma
+				//- 	span 01
+				//- aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
+				//- 	.snj-row
+				//- 		div.especific-item.snj-col-md-2
+				//- 			h4 Cliente
+				//- 			h5 Puma						
+				//- 		div.especific-item.offset-md-2.snj-col-md-4
+				//- 			h4 Project
+				//- 			h5 Social brand building
+				//- 		div.especific-item.snj-col-md-2.offset-md-2
+				//- 			h4 Year
+				//- 			h5 2017
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					h1.project-title Puma

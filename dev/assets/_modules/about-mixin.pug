@@ -1,17 +1,18 @@
 mixin about-component(name, subtitle, about, aboutMobile, linkedin, tw, ig)
 	.about-component
-		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
+		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0")
 			h1.title-block #{name}
 			h2.subtitle-block #{subtitle}
 
 
 		section.about-info.snj-col-8.offset-1.snj-col-md-6.offset-md-3.snj-col-lg-3.offset-lg-1
 			.separator-line
-			p #{about}
+				.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
+			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") #{about}
 			.social-wrapper
-				a(href=linkedin)
+				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4" href=linkedin)
 					+link-icon-2
-				a(href=tw)
+				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="5" data-cascade-delay="5" href=tw)
 					+tw-icon
-				a(href=ig)
+				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="6" data-cascade-delay="6" href=ig)
 					+ins-icon

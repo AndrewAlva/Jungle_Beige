@@ -1,10 +1,11 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
+				+hero-project("Content Creation & Management","Cartel Coffee","02")
 				//- .background-wrapper.p-about-bg
 				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
 					h2.subtitle-block Content Creation & Management

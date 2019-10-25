@@ -8,7 +8,8 @@
 	background-size: cover;
 	background-image: url("../img/Desert.png");
 }
-// display WE
+
+// Display WE
 .display-wrapper{
 	width: 250px;
 	height: 134px;
@@ -76,11 +77,11 @@
 // Title
 	.title-wrapper{
 		width: 112px;
-		height: 46px;
+		height: 48px;
 		// background-color: green;
 		position: absolute;
-		top: 12px;
-		left: 25px;
+		top: 10px;
+		left: 24px;
 		@media(min-width: 768px){
 			top: 20px;
 			left: 46px;
@@ -88,13 +89,13 @@
 			height: 90px;
 		}
 		@media(min-width: 992px){
-			top: 30px;
+			top: 29px;
 			left: inherit;
 			width: 286px;
 			height: 94px;
 		}
 
-// span section
+		// span section (copy)
 		.span-container{
 			position: relative;
 			width: 100%;
@@ -123,7 +124,7 @@
 					font-family: 'TitlingGothicFB light';
 					font-size: 15px;
 					top: 14px;
-					right: 0;
+					right: -2px;
 				}
 				// Consult
 				&:last-child{
@@ -158,7 +159,7 @@
 					// }
 					&:nth-child(2){
 						right: inherit;
-						left: 0;
+						left: 1px;
 						bottom: 14px;
 						top: inherit;
 					}
@@ -203,47 +204,44 @@
 		height: auto;
 		display: inline-block;
 		position: absolute;
-		bottom: 1px;
+		bottom: -50px;
 		right: 5px;
 		letter-spacing: .02em;
-		// background-color: red;
-		// span{
-		// 	letter-spacing: .05em;
-		// }
+
 		&:before{
 			content: "..";
 			font-family: 'Nocturne Serif ExtraBold';
 			position: absolute;
-			right: 0;
-			bottom: 0;
+			display: inline-block;
+			position: absolute;
+			right: -2px;
+			bottom: 2px;
 			font-size: 12px;
 			letter-spacing: 2px;
-			line-height: 0;
-			// transform: translateY(-4px);
-			width: 10px;
-			height: 4px;
-			// background: red;
-			display: inline-block;
+			line-height: 0px;
+			height: 6px;
 		}
 		@media(min-width: 768px){
 			font-size: 12px;
 			width: 170px;
+			bottom: -4px;
 			br{
 				display: none;
 			}
+			&:before{
+				right: 3px;
+				bottom: 4px;
+				font-size: 20px;
+				width: 14px;
+				height: 8px;
+			}
 		}
 		@media(min-width: 992px){
-			right: -4px;
+			right: -3px;
 			width: 200px;
-			// height: 45px;
 			font-size: 14px;
-			// bottom: 30px;
-			bottom: 0px;
+			bottom: -3px;
 			line-height: 16px;
-			// background-color: red;
-			&:before{
-				right: 4px;
-			}
 		}
 	}
 }

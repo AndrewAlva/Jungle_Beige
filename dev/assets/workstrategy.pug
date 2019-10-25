@@ -1,6 +1,6 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-1.preloader-cut
+	//- .preloader.color-1.preloader-cut
 block content
 	.ourwork-sections-detail#strategy-work
 		.background-wrapper.worksections-bg
@@ -10,7 +10,7 @@ block content
 		.sections-p-wrapper.project-bg-2
 			+project-sections("Campaign & Social Media Strategy ", "Power Horse", "02", "project-social-power.html")
 	a.btn-wrapper.btn-pages(href="ourwork.html")
-		span.btn-animate-up
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('')

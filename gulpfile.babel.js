@@ -105,6 +105,12 @@ gulp.task('images', function(){
   .pipe(gulp.dest('./public/img'))
 });
 
+// Tarea para exportar imagenes de folders dentro de img de "dev" a "public"
+gulp.task('subimages', function(){
+  return gulp.src('./dev/assets/img/**/*.+(png|jpg|gif|svg)')
+  .pipe(gulp.dest('./public/img'))
+});
+
 // Tarea para exportar fuentes de "dev" a "public"
 gulp.task('fonts', function(){
   return gulp.src('./dev/assets/fonts/**')
@@ -128,14 +134,15 @@ gulp.task('server', ()=>{
     gulp.watch('./dev/assets/**/*.pug', gulp.series('pug')).on('change', server.reload)
     gulp.watch('./dev/js/*.js', gulp.series('babel')).on('change', server.reload)
     gulp.watch('./dev/assets/img/**', gulp.series('images'))
+    gulp.watch('./dev/assets/img/**', gulp.series('subimages'))
     gulp.watch('./dev/assets/fonts/**', gulp.series('fonts'))
 })
 
 
 // Tarea general para crear la carpeta "public" y levantar el servidor general con un watch activo
-gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'fonts', 'server') )
+gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'subimages', 'fonts', 'server') )
 
 
 // Tarea para exportar los archivos minificados listos para subir a servidor
-gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'fonts') )
+gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'subimages', 'fonts') )
 

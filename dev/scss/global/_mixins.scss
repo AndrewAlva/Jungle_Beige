@@ -154,3 +154,15 @@
 		flex-wrap: nowrap;
 }
 
+// mobile/Desktop animation sizes
+@mixin mobile {
+	@media (max-width: #{$mobile-max-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-min-width}) {
+		@content;
+	}
+}

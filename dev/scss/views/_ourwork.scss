@@ -1,9 +1,19 @@
 .ourwork{
 	height: 100%;
+	// &:after{
+	// 	content: "";
+	// 	position: absolute;
+	// 	top:0;
+	// 	left: 0;
+	// 	background-color: red;
+	// 	width: 100%;
+	// 	height: 88px;
+	// }
 }
 .work-bg{
-	background-image: url("../img/work_background.jpg");
+	// background-image: url("../img/work_background.jpg");
 	background-size: 500%;
+	background-color: black;
 	background-position: 50% 15%;
 	position: fixed;
 	@media(min-width: 768px){
@@ -12,10 +22,10 @@
 	}
 }
 .works-list{
-	padding-top: 47px;
+	padding-top: 46px;
 	padding-bottom: 63px;
 	@media(min-width: 768px){
-		padding-top: 50px;
+		padding-top: 36px;
 		padding-bottom: 50px;
 	}
 }
@@ -24,22 +34,32 @@
 .project-wrapper{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	// background-color: red;
-	// opacity: .3;
+	// background: aliceblue;
 	a{color: $cream;}
 	p.number-project{
 		font-size: 16px;
 		position: relative;
-		font-family: 'TitlingGothicFB light';
 		// background: red;
+		font-family: 'TitlingGothicFB light';
+		// desktop
 		// &:after{
 		// 	content: "";
-		// 	width: 100px;
-		// 	height: 10px;
 		// 	position: absolute;
-		// 	background: red;
+		// 	top: -100px;
 		// 	left: 0;
-		// 	bottom: 0;
+		// 	background-color: red;
+		// 	width: 200px;
+		// 	height: 100px;
+		// }
+		// mobile
+		// &:after{
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -20px;
+		// 	left: 0;
+		// 	background-color: red;
+		// 	width: 100px;
+		// 	height: 20px;
 		// }
 	}
 	@media(min-width: 768px){
@@ -52,16 +72,44 @@
 	}
 	// name
 	.name-project{
-		margin: 2px 0 10px;
+		margin: 2px 0 11px;
 		font-family: 'Nocturne Serif ExtraBold';
 		// background-color: green;
+		position: relative;
+		// &:after{
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -12px;
+		// 	left: 0;
+		// 	height: 20px;
+		// 	width: 300px;
+		// 	// background: black;
+		// }
+		// mobile
+		// &:after{
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -7px;
+		// 	left: 0;
+		// 	height: 10px;
+		// 	width: 100px;
+		// 	background: black;
+		// }
+		// &:before{
+		// 	content: "";
+		// 	position: absolute;
+		// 	bottom: -11px;
+		// 	left: 0;
+		// 	height: 10px;
+		// 	width: 200px;
+		// 	background: green;
+		// }
 		h2{
 			font-size: 22px;
-			display: block;
 		}
 		@media(min-width: 768px){
 			// margin: 20px 0 26px;
-			margin: 6px 0 26px;
+			margin: 8px 0 26px;
 			h2{
 				font-size: 50px;
 				display: inline-block;
@@ -83,24 +131,24 @@
 			}
 		}
 		span{
+			margin-left: 30px;
 			&.callTo-1{
 				display: none;
 				@media(min-width: 992px){
 					width: 190px;
-					margin-left: 30px;
-					font-size: 16px;
+					// font-size: 16px;
 					display: block;
 				}
 			}
 			&.callTo-2{
 				display: block;
 				@media(min-width: 992px){
-					display: none;
+					display: none !important;
 				}
 			}
 		}
 	}
-
+	// animacion flecha
 	&:hover{
 		cursor: pointer;
 		@include transitions-ease(.4s);

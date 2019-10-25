@@ -1,0 +1,25 @@
+//- mixin project-box(title, project, dataCascade={lineDelayMob: 2, lineDelayDesk: 2 clientDelayMob: 5, clientDelayDesk:3, projectDelayMob: 6, projectDelayDesk: 4, })
+//- 	span.line-item
+//- 		.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile=dataCascade.lineDelayMob data-cascade-delay=dataCascade.lineDelayDesk)
+
+//- 	h4.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.clientDelayMob data-cascade-delay="3")  #{title}
+
+//- 	h5.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.projectDelayMob data-cascade-delay=dataCascade.projectDelayDesk)  #{project}
+
+
+
+mixin project-box(title, project, dataCascade={lineDelayMob: 2,clientDelayMob: 5,projectDelayMob: 6,})
+	span.line-item
+		.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile=dataCascade.lineDelayMob data-cascade-delay="2")
+
+	h4.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.clientDelayMob data-cascade-delay="3")  #{title}
+
+	h5.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.projectDelayMob data-cascade-delay="4")  #{project}
+
+mixin hero-project(type, brand,number)
+	.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
+		h2.subtitle-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{type}
+
+		h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{brand}
+
+		span.display-number.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") #{number}

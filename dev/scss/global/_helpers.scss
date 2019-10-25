@@ -25,20 +25,21 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-// animacion arriba de contenido
-.tween-up{
-	transform: translateY(20px);
-	opacity: 0;
-	display: inline-block;
-}
-.tween-right{
-	opacity: 0;
-	transform: translateX(-20px);
-}
-.project-up{
-	transform: translateY(20px);
-	opacity: 0;
-}
+
+// animacion tween max
+// .translate-up{
+// 	transform: translateY(26px);
+// 	opacity: 0;
+// 	display: inline-block;
+// }
+// .tween-right{
+// 	opacity: 0;
+// 	transform: translateX(-20px);
+// }
+// .project-up{
+// 	transform: translateY(20px);
+// 	opacity: 0;
+// }
 
 // regresar a la página anterior
 // a.btn-wrapper.btn-pages(href="javascript:history.back()"

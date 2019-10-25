@@ -1,6 +1,6 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-1
+	//- .preloader.color-1
 block content
 	.about-section.snj-container-fluid.flex-column
 		.row
@@ -11,16 +11,16 @@ block content
 				//- LIST BULLETS
 				nav.slider-wrapper
 					ul.slider-list
-						li.dot-slider.active-dot
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
-						li.dot-slider
+						li.dot-slider.active-dot.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="5" data-cascade-delay="5")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="6" data-cascade-delay="6")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="7" data-cascade-delay="7")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="8" data-cascade-delay="8")
+						li.dot-slider.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="9" data-cascade-delay="9")
 				//- .about-component
 					section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
 						h1.title-block Founded by brand creators
@@ -53,8 +53,5 @@ block content
 				//- +about-component("Nicole Farrelly", "Strategy, Content & Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
 				//- +about-component("Daniel Zacatenco", "Art Direction & Photography", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
 				//- +about-component("Najeeb Khalid", "Art Direction & Videography", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod temp orert incididunt ut labore et dolore magnesiume aliqua. Sagittis alm malesuada barracuda bibendum arcu", "/", "/", "/")
-
-	a(href="ourwork.html")
-		button.btn-wrapper.btn-pages
-			span.btn-animate-up Our Work
-				//- +close-icon
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work

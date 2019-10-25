@@ -1,0 +1,90 @@
+// Configuración general
+[data-cascade]{
+	animation-duration: $duration_inview;
+	animation-timing-function: $easeOutQuint;
+	animation-fill-mode: both;
+	opacity: 0;
+}
+
+// Orden de entrada en 'Mobile'
+	// Puede extenderse hasta los elementos que se necesite
+@include mobile {
+	[data-cascade-delay-mobile="0"]{animation-delay: $delay_inview * 0;}
+	[data-cascade-delay-mobile="1"]{animation-delay: $delay_inview * 1;}
+	[data-cascade-delay-mobile="2"]{animation-delay: $delay_inview * 2;}
+	[data-cascade-delay-mobile="3"]{animation-delay: $delay_inview * 3;}
+	[data-cascade-delay-mobile="4"]{animation-delay: $delay_inview * 4;}
+	[data-cascade-delay-mobile="5"]{animation-delay: $delay_inview * 5;}
+	[data-cascade-delay-mobile="6"]{animation-delay: $delay_inview * 6;}
+	[data-cascade-delay-mobile="7"]{animation-delay: $delay_inview * 7;}
+	[data-cascade-delay-mobile="8"]{animation-delay: $delay_inview * 8;}
+	[data-cascade-delay-mobile="9"]{animation-delay: $delay_inview * 9;}
+	[data-cascade-delay-mobile="10"]{animation-delay: $delay_inview * 10;}
+	[data-cascade-delay-mobile="11"]{animation-delay: $delay_inview * 11;}
+	
+	.firstload[data-cascade-delay-mobile="0"]{animation-delay: $duration_preloader + ($delay_inview * 0);}
+	.firstload[data-cascade-delay-mobile="1"]{animation-delay: $duration_preloader + ($delay_inview * 1);}
+	.firstload[data-cascade-delay-mobile="2"]{animation-delay: $duration_preloader + ($delay_inview * 2);}
+	.firstload[data-cascade-delay-mobile="3"]{animation-delay: $duration_preloader + ($delay_inview * 3);}
+	.firstload[data-cascade-delay-mobile="4"]{animation-delay: $duration_preloader + ($delay_inview * 4);}
+	.firstload[data-cascade-delay-mobile="5"]{animation-delay: $duration_preloader + ($delay_inview * 5);}
+	.firstload[data-cascade-delay-mobile="6"]{animation-delay: $duration_preloader + ($delay_inview * 6);}
+	.firstload[data-cascade-delay-mobile="7"]{animation-delay: $duration_preloader + ($delay_inview * 7);}
+	.firstload[data-cascade-delay-mobile="8"]{animation-delay: $duration_preloader + ($delay_inview * 8);}
+	.firstload[data-cascade-delay-mobile="9"]{animation-delay: $duration_preloader + ($delay_inview * 9);}
+	.firstload[data-cascade-delay-mobile="10"]{animation-delay: $duration_preloader + ($delay_inview * 10);}
+	.firstload[data-cascade-delay-mobile="11"]{animation-delay: $duration_preloader + ($delay_inview * 11);}
+}
+
+// Orden de entrada en 'Desktop'
+	// Puede extenderse hasta los elementos que se necesite
+@include desktop {
+	[data-cascade-delay="0"]{animation-delay: $delay_inview * 0;}
+	[data-cascade-delay="1"]{animation-delay: $delay_inview * 1;}
+	[data-cascade-delay="2"]{animation-delay: $delay_inview * 2;}
+	[data-cascade-delay="3"]{animation-delay: $delay_inview * 3;}
+	[data-cascade-delay="4"]{animation-delay: $delay_inview * 4;}
+	[data-cascade-delay="5"]{animation-delay: $delay_inview * 5;}
+	[data-cascade-delay="6"]{animation-delay: $delay_inview * 6;}
+	[data-cascade-delay="7"]{animation-delay: $delay_inview * 7;}
+	[data-cascade-delay="8"]{animation-delay: $delay_inview * 8;}
+	[data-cascade-delay="9"]{animation-delay: $delay_inview * 9;}
+	[data-cascade-delay="10"]{animation-delay: $delay_inview * 10;}
+	[data-cascade-delay="11"]{animation-delay: $delay_inview * 11;}
+	
+	.firstload[data-cascade-delay="0"]{animation-delay: $duration_preloader + ($delay_inview * 0);}
+	.firstload[data-cascade-delay="1"]{animation-delay: $duration_preloader + ($delay_inview * 1);}
+	.firstload[data-cascade-delay="2"]{animation-delay: $duration_preloader + ($delay_inview * 2);}
+	.firstload[data-cascade-delay="3"]{animation-delay: $duration_preloader + ($delay_inview * 3);}
+	.firstload[data-cascade-delay="4"]{animation-delay: $duration_preloader + ($delay_inview * 4);}
+	.firstload[data-cascade-delay="5"]{animation-delay: $duration_preloader + ($delay_inview * 5);}
+	.firstload[data-cascade-delay="6"]{animation-delay: $duration_preloader + ($delay_inview * 6);}
+	.firstload[data-cascade-delay="7"]{animation-delay: $duration_preloader + ($delay_inview * 7);}
+	.firstload[data-cascade-delay="8"]{animation-delay: $duration_preloader + ($delay_inview * 8);}
+	.firstload[data-cascade-delay="9"]{animation-delay: $duration_preloader + ($delay_inview * 9);}
+	.firstload[data-cascade-delay="10"]{animation-delay: $duration_preloader + ($delay_inview * 10);}
+	.firstload[data-cascade-delay="11"]{animation-delay: $duration_preloader + ($delay_inview * 11);}
+}
+// Animaciones
+
+// fade Up
+[data-cascade="fade-up"].animate{
+	animation-name: fade-up;
+}
+[data-cascade="scale-small"].animate{
+	animation-name: scale-small;
+	animation-duration: 1s;
+	opacity: 1;
+}
+[data-cascade="line-full"].animate{
+	animation-name: line-full;
+}
+[data-cascade="line-half"].animate{
+	animation-name: line-half;
+}
+
+[data-cascade="translate-right"].animate{
+	animation-name: translate-right;
+}
+// new animations
+// .uno{animation-delay: $delay_inview - .5}

@@ -2,23 +2,28 @@ header{
 	position: relative;
 	z-index: 1000;
 	position: fixed;
-}
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
 #header-wrapper{
 	width: 100%;
 	// background-color: red;
-	padding-top: 13px;
+	// padding-top: 10px;
 	height: auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 
 	@media (min-width: 768px){
-		padding-top: 40px;
+		padding-top: 59px;
 	}
 	.logo-wrapper{
 		line-height: 0;
 	}
 	svg.logo-jb{
+		// transform: translateX(2px);
 		width: 96px;
 		// background-color: teal;
 

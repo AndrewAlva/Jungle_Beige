@@ -1,4 +1,4 @@
-// Navigaiconion Buttons
+//Center button navigation
 .btn-wrapper{
 	cursor: pointer;
 	width: 95px;
@@ -10,18 +10,20 @@
 	border-radius: 15px;
 	border-style: none;
 	overflow: hidden;
-	position: relative;
 	outline: none;
-	// button copy
-	span{
+	display: flex;
+	// flex-direction: column;
+	align-items: center;
+	.animate-up{
 		display: block;
-		line-height: 0;
+		// line-height: 0;
 		width: 100%;
+		margin: 0 auto;
 		text-align: center;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 	}
 	// icons
 	svg {
@@ -30,21 +32,23 @@
 		}
 	}
 	&:hover{
-		color: $black;
-		// background-color: white;
 		-webkit-animation: backgroundBtn .4s linear forwards; /* Safari 4.0 - 8.0 */
 		animation: backgroundBtn .4s linear forwards;
-		span{color:$black}
+		.animate-up{
+			color:$black;
+			-webkit-animation: fade-up-btn .5s cubic-bezier(.21,0,0,1) forwards;
+			animation: fade-up-btn .5s cubic-bezier(.21,0,0,1) forwards;
+		}
 		svg {
 			path, rect{
 				fill: $black;
 			}
 		}
 		// animation time
-		.btn-animate-up{
-			-webkit-animation: animateup .5s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
-			animation: animateup .5s cubic-bezier(.21,0,0,1);
-		}
+		// .btn-animate-up{
+		// 	-webkit-animation: animateup .5s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+		// 	animation: animateup .5s cubic-bezier(.21,0,0,1);
+		// }
 	}
 	&:focus{
 		background-color: $black;
@@ -59,7 +63,7 @@
 	left: 10px;
 	@media (min-width: 768px) {
 		top: 50%;
-		left: 45px;
+		left: 40px;
 		transform: translateY(-50%);
 	}
 }
@@ -132,22 +136,22 @@ a{
 
 .arrow-right{
 	color: $cream;
-	display: inline-block;
-	width: 100%;
+	// width: 100%;
 	display: flex;
 	flex-direction: row;
 	@media(min-width: 768px){
 		font-size: 16px;
 	}
+	// animacion hover mejor meter animaciones especipicamente en cada elemento
 	&:hover{
-		&.rectangle-arrow{
-			-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
-			animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
-		}
 		&.right-translate{
 			-webkit-animation: rightTranslate .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
 			animation: rightTranslate .6s cubic-bezier(.21,0,0,1);
 		}	
+		.rectangle-arrow{
+			-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+			animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
+		}
 	}
 	// span margin left, version 90px and 300px
 	.arrow-wrapper{
@@ -177,8 +181,13 @@ a{
 		// width: 120px;
 		margin-left: 12px;
 		font-size: 12px;
+		font-family: 'TitlingGothicFB light';
+		line-height: 11px;
+		height: 9px;
 		@media(min-width: 768px){
 			font-size: 16px;
+			line-height: 18px;
+			height: 14px;
 		}
 	}
 }
