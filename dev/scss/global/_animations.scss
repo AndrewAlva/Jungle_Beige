@@ -82,7 +82,9 @@
 [data-cascade="line-half"].animate{
 	animation-name: line-half;
 }
-
+[data-cascade="line-full-height"].animate{
+	animation-name: line-full-height;
+}
 [data-cascade="translate-right"].animate{
 	animation-name: translate-right;
 }

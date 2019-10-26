@@ -6,13 +6,19 @@ mixin about-component(name, subtitle, about, aboutMobile, linkedin, tw, ig)
 
 
 		section.about-info.snj-col-8.offset-1.snj-col-md-6.offset-md-3.snj-col-lg-3.offset-lg-1
+			
 			.separator-line
-				.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
-			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") #{about}
-			.social-wrapper
-				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4" href=linkedin)
-					+link-icon-2
-				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="5" data-cascade-delay="5" href=tw)
-					+tw-icon
-				a.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="6" data-cascade-delay="6" href=ig)
-					+ins-icon
+				.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
+
+			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2") #{about}
+
+			ul.social-wrapper
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=linkedin)
+						+link-icon
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=tw)
+						+tw-icon
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=ig)
+						+ins-icon

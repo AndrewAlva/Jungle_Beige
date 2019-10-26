@@ -11,7 +11,7 @@
 	// }
 }
 .work-bg{
-	// background-image: url("../img/work_background.jpg");
+	background-image: url("../img/work_background.jpg");
 	background-size: 500%;
 	background-color: black;
 	background-position: 50% 15%;
@@ -159,8 +159,8 @@
 			animation: upTranslate .6s cubic-bezier(.25,0,0,.8);
 		}
 		.right-translate{
-			-webkit-animation: rightTranslate .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
-			animation: rightTranslate .6s cubic-bezier(.21,0,0,1);
+			-webkit-animation: leftTranslate .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+			animation: leftTranslate .6s cubic-bezier(.21,0,0,1);
 		}
 		.rectangle-arrow{
 			-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */

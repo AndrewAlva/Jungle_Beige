@@ -1,16 +1,19 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-3
+	//- .preloader.color-3
 block content
 	.contact-section.snj-container-fluid
 		//- .snj-row
 		.row
 			.center-wrapper
-				section.about-block.offset-1.snj-col-10.offset-md-2.snj-col-md-5
-					h2.subtitle-block.sub-1.translate-up Get in Touch
-					h2.subtitle-block.sub-2.translate-up Contact Us
-					h1.title-block.translate-up Let’s link. Let’s build…
-					.arrow-container
+				a.about-block.offset-1.snj-col-10.offset-md-2.snj-col-md-5(href="message.html")
+					h2.subtitle-block.sub-1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") Get in Touch
+
+					h2.subtitle-block.sub-2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") Contact Us
+
+					h1.title-block.translate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") Let’s link. Let’s build…
+
+					.arrow-container.jb-cascade(data-cascade="translate-right" data-cascade-delay-mobile="1" data-cascade-delay="1")
 						.arrow-right.right-translate
 							.arrow-wrapper
 								.rectangle-arrow
@@ -18,29 +21,30 @@ block content
 							span Drop us a line
 
 				aside.social-block.snj-col-4.offset-1.snj-col-lg-1.offset-lg-1
-					h2.subtitle-block.translate-up Social
+					h2.subtitle-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="1") Social
+					span.line-item
+						.line.jb-cascade(data-cascade="line-full-height" data-cascade-delay-mobile="3" data-cascade-delay="1")
 					ul
-						li.tween-right
+						li.jb-cascade(data-cascade="translate-right")
 							a(href="#") Instagram
-						li.tween-right
+						li.jb-cascade(data-cascade="translate-right")
 							a(href="#") Facebook
-						li.tween-right
+						li.jb-cascade(data-cascade="translate-right")
 							a(href="#") Twitter
-						li.tween-right
+						li.jb-cascade(data-cascade="translate-right")
 							a(href="#") Linkedin
 
 				aside.info-block-wrapper.snj-col-4.offset-2.snj-col-md-9.offset-md-1
-					.info-block.translate-up
+					.info-block.translate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
 						h3 Office
 						p Dubai Design District<br> Building 7, 502A<br>Dubai, U.A.E. 
 
-					.info-block.translate-up
+					.info-block.translate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3")
 						h3 Number
 						p +971 (0) 4 330 0311
-					.info-block.translate-up
+					.info-block.translate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						p © Copyright 2019
-	a(href="ourwork.html")
-		button.btn-wrapper.btn-pages
-			span.btn-animate-up Our Work
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
 block footer
 	+footer('')

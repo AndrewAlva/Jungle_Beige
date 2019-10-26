@@ -32,7 +32,26 @@
 			right: -12px;
 		}
 		li.dot-slider{
-			animation-duration: 100ms;
+			animation-duration: 1000ms;
+
+			$dot_slider_delay: 50ms;
+
+			&:nth-child(1){animation-delay: $dot_slider_delay * 1;}
+			&:nth-child(2){animation-delay: $dot_slider_delay * 2;}
+			&:nth-child(3){animation-delay: $dot_slider_delay * 3;}
+			&:nth-child(4){animation-delay: $dot_slider_delay * 4;}
+			&:nth-child(5){animation-delay: $dot_slider_delay * 5;}
+			&:nth-child(6){animation-delay: $dot_slider_delay * 6;}
+			&:nth-child(7){animation-delay: $dot_slider_delay * 7;}
+			&:nth-child(8){animation-delay: $dot_slider_delay * 8;}
+			&:nth-child(9){animation-delay: $dot_slider_delay * 9;}
+			&:nth-child(10){animation-delay: $dot_slider_delay * 10;}
+			&:nth-child(11){animation-delay: $dot_slider_delay * 11;}
+			&:nth-child(12){animation-delay: $dot_slider_delay * 12;}
+			&:nth-child(13){animation-delay: $dot_slider_delay * 13;}
+			&:nth-child(14){animation-delay: $dot_slider_delay * 14;}
+			&:nth-child(15){animation-delay: $dot_slider_delay * 15;}
+			&:nth-child(16){animation-delay: $dot_slider_delay * 16;}
 		}
 	}
 }
@@ -50,6 +69,7 @@
 		position: relative;
 		display: inline-block;
 		.title-block{
+			animation-duration: 2s;
 			margin-bottom: 13px;
 			letter-spacing: 1px;
 			position: relative;
@@ -134,6 +154,7 @@
 			margin-bottom: 18px;
 			display: block;
 			.line{
+				// animation-delay: 300ms;
 				background-color: $cream;
 				width: 100%;
 				height: 100%;
@@ -152,6 +173,7 @@
 			letter-spacing: 1px;
 			margin-bottom: 16px;
 			position: relative;
+			// animation-delay: 1200ms;
 			@media(min-width: 992px){
 				margin-top: 6px;
 				padding-left: 0;
@@ -187,8 +209,15 @@
 		.social-wrapper{
 			padding-left: 12.5%;
 			padding-top: 11px;
-			a{
-				svg{
+			li{	
+				list-style:none;
+				list-style: none;
+				animation-duration: 1000ms;
+				$social-icon-delay: 50ms;
+				&:nth-child(1){animation-delay: $social-icon-delay * 1;}
+				&:nth-child(2){animation-delay: $social-icon-delay * 2;}
+				&:nth-child(3){animation-delay: $social-icon-delay * 3;}
+				a svg{
 					fill: $cream;
 				}
 			}
@@ -203,3 +232,16 @@
 		}
 	}
 }
+// .social-wrapper{
+// 	li{	
+// 		list-style: none;
+// 		animation-duration: 1000ms;
+// 		$social-icon-delay: 200ms;
+// 		&:nth-child(1){animation-delay: $social-icon-delay * 1;}
+// 		&:nth-child(2){animation-delay: $social-icon-delay * 2;}
+// 		&:nth-child(3){animation-delay: $social-icon-delay * 3;}
+// 		a svg{
+// 			fill: $cream;
+// 		}
+// 	}
+// }

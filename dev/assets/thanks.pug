@@ -1,22 +1,23 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.thanks-section.snj-container-fluid
 		.row
 			.snj-col-9.offset-1.snj-col-md-6.offset-md-3
-				h2.title-block Thanks.
-				p.subtitle-block We’ll get back to you as soon we possibly can. Meanwhile check our stuff.
-				.social-wrapper
-					a(href=linkedin)
-						+link-icon-2
-					a(href=tw)
-						+tw-icon
-					a(href=ig)
-						+ins-icon
-			a(href="ourwork.html")
-				button.btn-wrapper.btn-pages
-					span.btn-animate-up Our Work
-						//- +close-icon
+				h2.title-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2") Thanks.
+				p.subtitle-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") We’ll get back to you as soon we possibly can. Meanwhile check our stuff.
+				ul.social-wrapper
+					li.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3")
+						a(href=linkedin)
+							+link-icon-2
+					li.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
+						a(href=tw)
+							+tw-icon
+					li.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="5" data-cascade-delay="5")
+						a(href=ig)
+							+ins-icon
+			a.btn-wrapper.btn-pages(href="ourwork.html")
+				span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
 block footer
 	+footer('')

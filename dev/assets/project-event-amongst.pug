@@ -5,27 +5,19 @@ block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
-				//- .background-wrapper.p-about-bg
-				//- .info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-				//- 	h2.subtitle-block Event Curation
-				//- 	h1.project-title Amongst Few
-				//- 	span 02
 				+hero-project("Event Curation","Amongst Few","02")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Puma")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Social brand building",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Amongst Few
-					div.paragraph-left
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Amongst Few
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p Amongst Few hasn’t become the region’s premiere streetwear brand on their clothing alone. It’s also because the brand has made it a point to shape and move streetwear culture in Dubai through their activations and events. It’s become the foundation for how Jungle Beige approach all other events - move the needle, or stay home.
 
 			.p-photo1
@@ -64,7 +56,7 @@ block content
 							+icon-arrow
 				p.copyright © Copyright 2019
 	a.btn-wrapper.btn-pages(href="workevent.html")
-		span.btn-animate-up
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

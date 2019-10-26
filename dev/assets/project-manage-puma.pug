@@ -6,28 +6,22 @@ block content
 		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Content Creation & Management
-					h1.project-title Puma
-					span 01
+				+hero-project("Content Creation & Management","Puma", "01")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Puma")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Social brand building",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Puma
-					div.paragraph-left
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Puma
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p We worked with PUMA Middle East to create the brand’s first non-global Instagram account: <a (href="")>@pumame</a>. 
 						p It was an opportunity we had to pitch internally to PUMA global, and came with significant risks. Basically, if we messed up, we mess up the opportunity for every other country/region in the world that want their own IG account.
-					div.paragraph-right
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p Thankfully, we did the opposite and he success of the account has led to several local accounts around the world, from India to South Africa. 
 						p We manage the <a (href="")>@pumame </a> account completely: strategy, content production, community management and reporting. In just a few years, the account reach over 100k followers and continues to “put on” for the region’s own talent, from photographers to musicians. 
 
@@ -69,7 +63,7 @@ block content
 							+icon-arrow
 				p.copyright © Copyright 2019
 	a.btn-wrapper.btn-pages(href="workmanagement.html")
-		span.btn-animate-up
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

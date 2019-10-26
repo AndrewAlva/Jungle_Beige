@@ -6,26 +6,18 @@ block content
 		.row
 			section.project-about
 				+hero-project("Content Creation & Management","Cartel Coffee","02")
-				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Content Creation & Management
-					h1.project-title Cartel Coffee
-					span 02
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Puma")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Social brand building",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Cartel Coffee
-					div.paragraph-left
+					h1.project-titlejb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Cartel Coffee
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p We planned and shot all of the new coffee shop’s content, focusing on what makes the shop special - their unusual branding and their in-house roasting done by the shop’s Emirati founder. 
 						p We also pushed to set the standard for coffee shop aesthetics, not only in the city, but in the entire region. Not an easy job with so many coffee shops out there, but we stand by our ambition, and its outcome. 
 			.p-photo1
@@ -65,7 +57,7 @@ block content
 							+icon-arrow
 				p.copyright © Copyright 2019
 	a.btn-wrapper.btn-pages(href="workmanagement.html")
-		span.btn-animate-up
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

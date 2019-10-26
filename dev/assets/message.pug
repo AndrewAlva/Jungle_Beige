@@ -1,35 +1,34 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-3
+	//- .preloader.color-3
 block content
 	.message-section.snj-container-fluid.flex-column
 		.row
 			.center-wrapper.snj-col-9.offset-1.snj-col-md-6.offset-md-2
-				h2.subtitle-block Get in touch
+				h2.subtitle-block.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Get in touch
 				form#inputs-container
 					.input-wrapper
 						input(type="text" name="name" id="Your Name" required)
-						label.placeholder(for="name") Your Name
-						span.bar
+						label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="name") Your Name
+						span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
 					.input-wrapper
 						input(type="email" name="email" id="email" required)
-						label.placeholder(for="email") Your mail
-						span.bar
+						label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="email") Your mail
+						span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="2" data-cascade-delay="2")
 					.input-wrapper
 						textarea.sn-formfield(name="textarea",minlength="50", id="textarea", required)
-						label.placeholder(for="textarea") Tell us about your project
-						span.bar
+						label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="textarea") Tell us about your project
+						span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
 
 					.input-wrapper#check-box
-						label.policy I have read and agreed with privacy policy.
+						label.policy.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") I have read and agreed with privacy policy.
 							input.checkbox(type="checkbox")
 							span.checkmark
-				.arrow-container
+
+				.arrow-container.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 					+arrow-right("/", "Send it")
 
-
-	a(href="ourwork.html")
-		button.btn-wrapper.btn-pages
-			span.btn-animate-up Our Work
+	a.btn-wrapper.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
 block footer
 	+footer('')
