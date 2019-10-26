@@ -41,7 +41,7 @@
 	}
 	&:hover{
 		h1.title-block{
-			color: $cream;
+			color: red;
 		}
 	}
 	@media(min-width: 768px){
@@ -89,17 +89,6 @@
 				color: $cream
 			}
 		}
-		// lineas para medir
-		// &:after{
-		// 	content: "";
-		// 	width: 200px;
-		// 	height: 14px;
-		// 	position: absolute;
-		// 	bottom: 0;
-		// 	left: 0;
-		// 	background-color: red;
-		// 	opacity: .5
-		// }
 	}
 	@media(min-width: 768px){
 		margin-bottom: 12px;
