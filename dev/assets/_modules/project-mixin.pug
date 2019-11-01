@@ -1,27 +1,52 @@
-//- mixin project-intro(number, name1, name2, linkTo, callTo, callTo2)
-//- 	.project-wrapper.project-up
-//- 		p.number-project.up-translate #{number}
-//- 		.name-project 
-//- 			h2.up-translate #{name1}
-//- 			h2.up-translate #{name2}
-//- 		a.arrow-right.right-translate(href=linkTo)
-//- 			.arrow-wrapper
-//- 				.rectangle-arrow
-//- 				+icon-arrow
-//- 			span.callTo-1 #{callTo}
-//- 			span.callTo-2 #{callTo2}
+//- como usar objetos en los mixin para cambiar ATRIBUTOS
+//- 1. dentro de los objetos (link,name1...) se creará un objeto
+	sintaxis:
+		nombre={atributos que se van a cambiar}
+	ej.(..., dataCascade={textDelay: 0, arrowDelay: 1} )
 
-//- nuevo para envolver todo
-mixin project-intro(linkTo, number, name1, name2, callTo, callTo2)
-	.project-wrapper.project-up
+		1.1 dataCascade es el nombre de nuestro objeto
+		1.2 nombramos cada atributo de forma especifica, esto es lo que cambiaremos en el código para brindar valores
+			en este caso "textDelay" es la animacion del text y "arrowDelay" es la animación de la flecha
+		1.3 los valores despues del atributo (textDelay: 0), son valores que se setean por default, por si no se agrega ningun valor
+mixin project-intro(linkTo, number, name1, name2, callTo, callTo2, dataCascade={textDelay: 0, arrowDelay: 1})
+	.project-wrapper
 		a(href=linkTo)
-			p.number-project.up-translate #{number}
-			.name-project 
-				h2.up-translate #{name1}
-				h2.up-translate #{name2}
-			.arrow-right.right-translate
+			//- 2.Aqui es donde setearemos nombre a los atributos que cambiaremos
+				2.1 en este casi nuestros atributos son:
+					(data-cascade="la animacion" data-cascade-delay-mobile="turno de entrada" data-cascade-delay="turno de entrada")
+				2.3 como en este caso nuestros elementos tienen la animación ya hestablecida, no es necesario mas que poder cual será en los  mismos atributos
+				2.3 ¡OJO! nuestros atributos llevan un nombre establecido  previamente (ej. data-cascade-delay-mobile) y seguido lleva la variable del valor que necesitamos establecer.
+
+					2.3.1 Estos datos se setean seguidos de =(SIGNO IGUAL) y el nombre de la variable que se le cambiará el valor
+						ej. data-cascade-delay-mobile = dataCascade.textDelay
+
+						recordar que antes del nombre del valor (textDelay) debe ir el nombre que le pusimos al objeto(en este caso "dataCascade", seguido de un punto el cual especifica que pertenece a este ".dataCascade"
+
+			//- 4 llamar en el mixin del archivo correspondiente:
+
+				+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
+
+				4.1 los valores en este caso deben ser llamados dentro de {nombre: valor}, como en cada uno especificamos que pertenecian a un objeto, esto hará que solo llame sin los elementos dentro de este
+
+			//- 5 De esta forma lo que logramos es poder editar nuestros atributos
+				5.1 Resumen
+					-crear objeto
+					-dentro+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
+					- en los atributos, despues de nuestros tags, debemos usar el nombre del objeto seguido del nombre del valor, eso es equivalente al #{valor} que usamos en los otros
+					- poner los atributos ya en el html correspondiente
+
+			p.number-project.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.textDelay data-cascade-delay=dataCascade.textDelay) #{number}
+
+
+			.name-project.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile=dataCascade.textDelay data-cascade-delay=dataCascade.textDelay) 
+				h2 #{name1}
+				h2 #{name2}
+
+
+			.arrow-right.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile=dataCascade.arrowDelay data-cascade-delay=dataCascade.arrowDelay)
 				.arrow-wrapper
 					.rectangle-arrow
 					+icon-arrow
 				span.callTo-1 #{callTo}
 				span.callTo-2 #{callTo2}
+

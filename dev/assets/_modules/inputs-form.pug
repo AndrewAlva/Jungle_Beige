@@ -1,0 +1,19 @@
+form#inputs-container
+	//- inputs text
+	.input-wrapper
+		input(type="text" name="name" id="Your Name" required)
+		label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="name") Your Name
+		span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
+	.input-wrapper
+		input(type="email" name="email" id="email" required)
+		label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="email") Your mail
+		span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="2" data-cascade-delay="2")
+	.input-wrapper
+		textarea.sn-formfield(name="textarea",minlength="50", id="textarea", required)
+		label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="textarea") Tell us about your project
+		span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
+	//- check box
+	.input-wrapper#check-box
+		label.policy.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") I have read and agreed with privacy policy.
+			input.checkbox(type="checkbox")
+			span.checkmark

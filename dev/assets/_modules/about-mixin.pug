@@ -1,17 +1,25 @@
+//- mixin for team
 mixin about-component(name, subtitle, about, aboutMobile, linkedin, tw, ig)
 	.about-component
-		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3
-			h1.title-block #{name}
-			h2.subtitle-block #{subtitle}
+		section.header-about.snj-col-9.offset-1.offset-md-3.snj-col-lg-3.offset-lg-3.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0")
+			h1.title-block.display-text #{name}
+			h2.subtitle-block.display-text #{subtitle}
 
 
 		section.about-info.snj-col-8.offset-1.snj-col-md-6.offset-md-3.snj-col-lg-3.offset-lg-1
+			
 			.separator-line
-			p #{about}
-			.social-wrapper
-				a(href=linkedin)
-					+link-icon-2
-				a(href=tw)
-					+tw-icon
-				a(href=ig)
-					+ins-icon
+				.line.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
+
+			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2") #{about}
+
+			ul.social-wrapper
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=linkedin)
+						+link-icon
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=tw)
+						+tw-icon
+				li.jb-cascade(data-cascade="fade-up")
+					a(href=ig)
+						+ins-icon

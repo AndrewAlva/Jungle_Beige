@@ -1,30 +1,24 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Creation & Management
-					h1.project-title Cova
-					span 04
+				+hero-project("Creation & Management","Cova", "04")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Puma")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Social brand building",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Cova
-					div.paragraph-left
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Cova
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p A vibrant restaurant, with astonishingly great food, deserves food content that is just as mouth watering. Yet, the beauty of Coya’s dishes and drinks is that the ingredients and prep that goes into them are just as impressive. So capturing the process, and finished product, were a must. 
 
 			.p-photo1
@@ -45,25 +39,27 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-manage-irisin.html")
+					a.more-cases.prev-case(href="project-manage-irisin.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
 							.rectangle-arrow
+
 				.description.snj-col-8.offset-2.snj-col-md-4.offset-md-1
 					p Next Project
 					h3 Puma
 					h4 Event Curation
 					a(href="project-event-puma.html") See case
+					
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-event-puma.html")
+					a.more-cases.next-case(href="project-event-puma.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workmanagement.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workmanagement.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

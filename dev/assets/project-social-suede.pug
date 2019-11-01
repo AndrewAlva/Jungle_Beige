@@ -1,34 +1,30 @@
 extends _templates/layout.pug
 
+block preloader
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Campaign & Social Media Strategy
-					h1.project-title Suede Guerrilla
-					span 01
+				+hero-project("Campaign & Social Media Strategy","Suede Guerrilla", "01")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Puma")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Suede Guerrillas",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017-Present",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Suede Guerrilla
-					div.paragraph-left
-						p For PUMA’s Run the Streets campaign, we created the Suede Guerrillas, a group of artists and creatives from different walks of life that authentically embodied the campaign’s ethos. 
-						p It was the first long-term micro influencer campaign to exist in the region, and produced and unprecedented amount of original content and activations - a sort of digital interpretation of running the streets. In Year 2, the Suede Guerrillas evolved into a regional platform for co-creation anchored by its site, <a (href="")>suedeguerrillas.com</a>, which we also designed.
-					div.paragraph-right
-						p  We’re especially proud of the platform because it’s exactly the type of thing that wasn’t available to use as young, ambitious creatives. 
-						p Now an entire region of artists/creatives have a way to continually share ideas and work with the brand. It’s already led to dozens of co-creations and will continue to do so while the site is live. It’s the type of access and opportunity our younger selves dreamed of, and we’re proud to pay it forward to this generation and beyond.  
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Suede Guerrillas
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p For PUMA’s Run the Streets campaign, we created the Suede Guerrillas, a group of artists and creatives that authentically embodied the campaign’s ethos.
+						p It was the first long-term micro-influencer campaign to exist in the region, and produced and unprecedented amount of original content and activations - a sort of millennial interpretation of running the streets. In Year 2, the Suede Guerrillas evolved into a regional platform for co-creation anchored by its site, </a (href="")>suedeguerrillas.com</a>, which we also designed.
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p We’re especially proud of the platform because it offers the type of big brand exposure that creatives in cities outside of Dubai can hardly attain, or fathom.
+						p Now an entire region of creatives have a way to continually share ideas and work with PUMA. It’s already led to dozens of co-creations and will continue to do so while the site is live. It’s the type of access and opportunity our younger selves dreamed of, and we’re proud to pay it forward to this generation and beyond.
 
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
@@ -49,7 +45,7 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-brand-cred.html")
+					a.more-cases.prev-case(href="project-brand-cred.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
@@ -60,14 +56,14 @@ block content
 					h4 Campaign & Social Media Strategy
 					a(href="project-social-power.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-social-power.html")
+					a.more-cases.next-case(href="project-social-power.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workstrategy.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workstrategy.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer("scroll")

@@ -1,31 +1,28 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
-				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Event Curation
-					h1.project-title Amongst Few
-					span 02
+				+hero-project("Event Curation","Amongst Few","02")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Amongst Few")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Events at Sole DXB & Amongst Few Cafe",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2016-Present",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Amongst Few
-					div.paragraph-left
-						p Amongst Few hasn’t become the region’s premiere streetwear brand on their clothing alone. It’s also because the brand has made it a point to shape and move streetwear culture in Dubai through their activations and events. It’s become the foundation for how Jungle Beige approach all other events - move the needle, or stay home.
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Events at Sole DXB & Amongst Few Cafe
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p Amongst Few hasn’t become the region’s premiere streetwear brand on their clothing alone. It’s also because they’ve made it a point to shape and move streetwear culture in Dubai through their activations and events. It’s become the foundation for how Jungle Beige approach all other events - move the needle, or don’t bother.
+						p At Sole DXB, we made countless visitors to the Amongst Few booth shed nostalgic tears of joy when we recreated the bedroom of a Sneaker/Hip Hop/Grime kid (including a fully functional Nintendo set up). A year later, Amongst Few’s collaboration with The Hundreds led to Sole DXB’s most celebrated art installation - in the most organic way possible.
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p After selling out of the The Hundreds collab on Friday, we decided to tag “Sold Out” over our own booth (furniture and all) instead of setting up on Saturday with other collections. The community fully embraced this brazen decision and proceeded to use it as their own personal backdrop for IG. All this before “Instagrammable” was thrown around in every marketing meeting.
+						p Amongst Few Cafe has also been home to numerous activations, transforming the frequented cafe to a new experience with each new theme. One night it will be the home of the annual sneaker and streetwear bible, All Gone. The next it will be a Jamaican backyard for the brand’s collaboration with Miss Lily’s. Same place, difference experience, moving the needle… every time.
 
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
@@ -45,25 +42,25 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-event-puma.html")
+					a.more-cases.prev-case(href="project-event-puma.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
 							.rectangle-arrow
 				.description.snj-col-8.offset-2.snj-col-md-4.offset-md-1
 					p Next Project
-					h3 High Beams
-					h4 Branding & Design
-					a(href="project-brand-beams.html") See case
+					h3 Amongst Few
+					h4 E-commerce
+					a(href="project-commerce-amongst.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-brand-beams.html")
+					a.more-cases.next-case(href="project-commerce-amongst.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workevent.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workevent.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

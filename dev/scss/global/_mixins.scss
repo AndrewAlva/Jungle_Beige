@@ -11,6 +11,13 @@
 	-o-transition: all $timing cubic-bezier(.3,0,.2,1);
 	transition: all $timing cubic-bezier(.3,0,.2,1);
 }
+@mixin transitions-target($target, $timing, $delay){
+	-webkit-transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
+	-moz-transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
+	-ms-transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
+	-o-transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
+	transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
+}
 
 @mixin trans-ease-delay($timing, $delay){
 	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
@@ -154,3 +161,19 @@
 		flex-wrap: nowrap;
 }
 
+// mobile/Desktop animation sizes
+@mixin mobile {
+	@media (max-width: #{$mobile-max-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-min-width}) {
+		@content;
+	}
+}
+// functions view width: // function
+@function getvw($value){
+	@return ($value * 100) / 1282;
+}

@@ -2,26 +2,32 @@ nav.nav-wrapper{
 	width: 20px;
 	height: 14px;
 	padding: 3px 0;
-	display: inline-block;
-	float: right;
-	// background-color: yellow;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	[class^="menu-line-"]{		
 		background-color: $cream;
 		height: 2px;
-		// margin: 2px 0;
-		position: relative;
-		display: block
+		display: inline-block;
 	}
 	.menu-line-1{
-		width: 20px;
+		width: 100%;
 		margin-bottom: 2px;
 	}
 	.menu-line-2{
-		width: 10px;
-		float: right;
+		width: 50%;
 		margin-top: 2px;
 	}
-	@media (min-width: 768px) {
+	@media(max-width: 768px){
+		margin-top: 3px;
+		margin-right: 15px;
+	}
+	@media (min-width: 769px) {
 		display: none;
+	}
+	@media(min-width: 1282px){
+		width: getvw(20vw);
+		height: getvw(14vw);
+		padding: getvw(3vw) 0;
 	}
 }

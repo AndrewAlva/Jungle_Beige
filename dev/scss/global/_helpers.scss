@@ -5,12 +5,18 @@
 	@media(min-width: 768px){
 		font-size: 50px
 	}
+	@media(min-width: 1282px){
+		font-size: getvw(50vw);
+	}
 }
 .subtitle-block{
 	font-size: 16px;
 	font-family: 'TitlingGothicFB light';
 	@media(min-width: 768px){
 		font-size: 22px;
+	}
+	@media(min-width: 1282px){
+		font-size: getvw(22vw);
 	}
 }
 .flex-row{
@@ -25,20 +31,35 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-// animacion arriba de contenido
-.tween-up{
-	transform: translateY(20px);
-	opacity: 0;
-	display: inline-block;
-}
-.tween-right{
-	opacity: 0;
-	transform: translateX(-20px);
-}
-.project-up{
-	transform: translateY(20px);
-	opacity: 0;
-}
 
+// hover arrow-animation
+.translate-up{
+	&:hover{
+		-webkit-animation: translate-up .6s cubic-bezier(.21,0,0,1);
+		animation: translate-up .6s cubic-bezier(.21,0,0,1);
+	}
+}
+.translate-right{
+	&:hover{
+		-webkit-animation: translate-right .6s cubic-bezier(.21,0,0,1);
+		animation: translate-right .6s cubic-bezier(.21,0,0,1);
+	}
+}
+.translate-left{
+	&:hover{
+		-webkit-animation: translate-left .6s cubic-bezier(.21,0,0,1);
+		animation: translate-left .6s cubic-bezier(.21,0,0,1);
+	}
+}
+.rectangle-arrow{
+	&:hover{
+		-webkit-animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
+		animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
+	}
+}
 // regresar a la página anterior
-// a.btn-wrapper.btn-pages(href="javascript:history.back()"
+// a.navigation-btn.btn-pages(href="javascript:history.back()"
+// .translate-right{
+// 	-webkit-animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards; /* Safari 4.0 - 8.0 */
+// 	animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
+// }

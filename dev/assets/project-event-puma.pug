@@ -1,33 +1,28 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
-				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Event Curation
-					h1.project-title Puma
-					span 01
+				+hero-project("Event Curation","Puma","01")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "PUMA")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Suede Guerrillas & International Women’s Day",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017 & 2018 ",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Puma
-					div.paragraph-left
-						p Curating an event that looks great, and feels great in terms of vibes, is a big enough challenge. We make it harder on ourselves by trying to also make the event unprecedented in some sort of way. 
-						p Thankfully, PUMA has always shared our tenacity to make this happen, from creating secret entrances to capturing the beautiful diversity of women in Dubai like never before. 
-
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Suede Guerrillas & International Women’s Day
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p Curating an event that looks great, and feels great in terms of vibes, is a big enough challenge. We make it harder on ourselves by trying to make it unprecedented in some sort of way. Thankfully, PUMA has always shared our ambition to make this happen.  
+						p Our first event with PUMA celebrated the Suede Guerrillas and their global Run the Streets campaign. The event featured a secret, tagged up entrance through a sheesha cafe, and it also marked the first time a Secret Walls mural battle ever took place in Dubai. 
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p The following year, we celebrated International Women’s Day by capturing the beautiful diversity of women in Dubai in the most inclusive way we could think of. Often brands will have target the same groups or expats because of their consumer strength in the country.
+						p For International Women’s Day, that wasn’t good enough for us. Instead, we celebrated nearly 30 different women, and their respective nationalities, as it’s this type of diversity that makes Dubai so special. Each woman was shot for their own portrait, with makeup colors from their particular country, and then displayed every single portrait at a party that featured an all-female DJ lineup.
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
@@ -46,7 +41,7 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-manage-cova.html")
+					a.more-cases.prev-case(href="project-manage-coffee.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
@@ -57,14 +52,14 @@ block content
 					h4 Event Curation
 					a(href="project-event-amongst.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-event-amongst.html")
+					a.more-cases.next-case(href="project-event-amongst.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workevent.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workevent.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

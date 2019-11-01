@@ -1,6 +1,6 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-1.preloader-cut
+	//- .preloader.color-1.preloader-cut
 block content
 	.ourwork-sections-detail#event-work
 		.background-wrapper.worksections-bg
@@ -9,8 +9,8 @@ block content
 			+project-sections("Event Curation", "Puma Middle East", "01", "project-event-puma.html")
 		.sections-p-wrapper.project-bg-2
 			+project-sections("Event Curation", "Amongst Few", "02", "project-event-amongst.html")
-	a.btn-wrapper.btn-pages(href="ourwork.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('')

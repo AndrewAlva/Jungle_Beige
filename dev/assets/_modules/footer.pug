@@ -3,9 +3,11 @@ mixin footer(scroll)
 		//- .row
 		#footer-wrapper.snj-col-12
 			if scroll
-				a.arrow-scroll.tween-up
+				a.arrow-scroll.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 					+arrow-scroll
-					span.link-page Scroll to explore
+					span Scroll to explore
 			else
-				span.link-page .
-			a.link-page.line-link.tween-up(href="contact.html") Contact Us
+				span.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") .
+
+			a.link-pages.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1" href="contact.html")
+				span.line-link Contact Us

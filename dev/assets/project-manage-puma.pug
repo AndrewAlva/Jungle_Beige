@@ -1,37 +1,31 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Content Creation & Management
-					h1.project-title Puma
-					span 01
+				+hero-project("Content Creation & Management","Puma", "01")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "PUMA")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Instagram Launch & Management",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017-Present",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Puma
-					div.paragraph-left
-						p We worked with PUMA Middle East to create the brand’s first non-global Instagram account: <a (href="")>@pumame</a>. 
-						p It was an opportunity we had to pitch internally to PUMA global, and came with significant risks. Basically, if we messed up, we mess up the opportunity for every other country/region in the world that want their own IG account.
-					div.paragraph-right
-						p Thankfully, we did the opposite and he success of the account has led to several local accounts around the world, from India to South Africa. 
-						p We manage the <a (href="")>@pumame </a> account completely: strategy, content production, community management and reporting. In just a few years, the account reach over 100k followers and continues to “put on” for the region’s own talent, from photographers to musicians. 
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Instagram Launch & Management 
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p We worked with PUMA Middle East to create the brand’s first non-global Instagram account: <a (href="https://www.instagram.com/junglebeige/")>@pumame.</a> It’s something we had to pitch internally to PUMA global, and it came with significant risks.
 
+						p Basically, if we messed up, we jeopardized the chance of other countries or regions in the world that wanted their own IG account. Thankfully, we did the opposite and the success of <a (href="https://www.instagram.com/junglebeige/")>@pumame</a> paved the way for all the other local accounts that now exist, from India to South Africa.
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p We have the privilege of managing the <a (href="https://www.instagram.com/junglebeige/")>@pumame</a> account completely: strategy, content production, community management and reporting. Something that keeps us informed and sharp on a global level. 
 
+						p In just a few years, the account reached over 100k followers and continues to “put on” for the region’s talent, from photographers to musicians. It’s a project, and relationship, that has significantly helped establish our place in the market. More importantly, it has helped strengthen our relationship with the regional community of athletes, artists and creatives that we consider peers and allies. 
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
@@ -51,7 +45,7 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-social-power.html")
+					a.more-cases.prev-case(href="project-social-power.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
@@ -62,14 +56,14 @@ block content
 					h4 Content Creation & Management
 					a(href="project-manage-coffee.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-manage-coffee.html")
+					a.more-cases.next-case(href="project-manage-coffee.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workmanagement.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workmanagement.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

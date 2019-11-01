@@ -1,34 +1,32 @@
 extends _templates/layout.pug
 
+block preloader
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
 				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Campaign & Social Media Strategy
-					h1.project-title Power Horse
-					span 02
+				+hero-project("Campaign & Social Media Strategy","Power Horse", "02")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Puma						
+							+project-box("Client", "Power Horse")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Community & Culture Initiative",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2018-Present",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Power Horse
-					div.paragraph-left
-						p When Power Horse was ready to distinguish itself from competitors and focus heavily on the pervading lifestyle cultures and movements of the day (namely street culture), we connected the brand with artists and creatives in the community that truly espoused the brand’s “Unstoppable You” spirit. Not the easiest job for a brand that virtually had no reputation with this community.
-						p But we know it’s always about “show and prove” so we made sure that our initial collaborations were about actually helping artists/athletes in the  
-					div.paragraph-right
-						p community clearly get to the next level, whether it was providing the resources (and narrative) to have their booth come to life at Sole DXB, from helping them tick something off their creative bucket list. Once their intention and place in the community was set, we then moved on to establishing a new design language and tone of voice. 
-						p So while their competitors went extreme, we went more creative (even artsy). When competitors went mainstream, we went underground. 
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Community & Culture Initiative
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p When Power Horse was ready to distinguish itself from competitors and focus heavily on the pervading lifestyle cultures and movements of the day (namely street culture), we connected the brand with artists and creatives in the community that unquestionably represented the brand’s “Unstoppable You” spirit. 
+
+						p It’s not the easiest job for a brand that virtually had no reputation with this community. Thankfully this world is still about show and prove. So we made sure that our collaborations fundamentally helped artists/athletes in the community get to the next level.
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p Whether it was helping their booth come to life at Sole DXB or helping them tick something off their creative bucket list. Once Power Horse’s intention, and place, in the community was set, we then moved on to establishing a new design language and tone of voice. So while their competitors went extreme, we went more creative (even artsy).
+
+						p When competitors went mainstream, we went underground. It’s made the difference ever since. 
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
@@ -48,7 +46,7 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-social-suede.html")
+					a.more-cases.prev-case(href="project-social-suede.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
@@ -59,14 +57,14 @@ block content
 					h4 Content Creation & Management
 					a(href="project-manage-puma.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-manage-puma.html")
+					a.more-cases.next-case(href="project-manage-puma.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="workstrategy.html")
-		span.btn-animate-up
+	a.navigation-btn.btn-pages(href="workstrategy.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
 block footer
 	+footer('scroll')

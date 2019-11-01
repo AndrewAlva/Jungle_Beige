@@ -1,48 +1,19 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-3
+	//- .preloader.color-3
 block content
 	.message-section.snj-container-fluid.flex-column
 		.row
 			.center-wrapper.snj-col-9.offset-1.snj-col-md-6.offset-md-2
-				h2.subtitle-block Get in touch
-				form#inputs-container
-					//- .input-container.line-input
-					//- 	input.input-wrapper(type="text" required)
-					//- 	label Your Name
-					//- 	//- input.input-wrapper(type="text" placeholder="Your name")
-					//- .input-container.line-input
-					//- 	input.input-wrapper(type="email" required)
-					//- 	label Your email
-					//- 	//- input.input-wrapper(type="email" placeholder="Your email")
-					//- .input-container.line-input
-					//- 	textarea.input-wrapper.jb-formfield(required)
-					//- 	label Tell us about your project required
-					//- 	//- textarea.input-wrapper.jb-formfield(name="", cols="30", rows="1" placeholder="Tell us about your project", required)
-					//- //- checkbox
-					.input-wrapper
-						input(type="text" name="name" id="Your Name" required)
-						label.placeholder(for="name") Your Name
-						span.bar
-					.input-wrapper
-						input(type="email" name="email" id="email" required)
-						label.placeholder(for="email") Your mail
-						span.bar
-					.input-wrapper
-						textarea.sn-formfield(name="textarea",minlength="50", id="textarea", required)
-						label.placeholder(for="textarea") Tell us about your project
-						span.bar
+				
+				h2.subtitle-block.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Get in touch
+				//- form inputs
+				include _modules/inputs-form.pug
 
-					.input-wrapper#check-box
-						label.policy I have read and agreed with privacy policy.
-							input.checkbox(type="checkbox")
-							span.checkmark
-				.arrow-container
+				.arrow-container.placeholder.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile="4" data-cascade-delay="4")
 					+arrow-right("/", "Send it")
 
-
-	a(href="ourwork.html")
-		button.btn-wrapper.btn-pages
-			span.btn-animate-up Our Work
+	a.navigation-btn.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
 block footer
 	+footer('')

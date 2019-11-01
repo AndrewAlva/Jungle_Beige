@@ -1,11 +1,17 @@
 .display, .h1, .h2, .s1, .s2, .t1{
 	letter-spacing: 20px;
+	@media(min-width: 1282px){
+		letter-spacing: getvw(20vw)
+	}
 }
 
 .display{
 	font-size: 165px;
 	line-height: auto;
 	font-family: 'TitlingGothicFB light';
+	@media(min-width: 1282px){
+		font-size: getvw(165vw);
+	}
 }
 
 .h1{

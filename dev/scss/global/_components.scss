@@ -13,6 +13,9 @@
 				fill: $white;
 			}
 		}
+		@media(min-width: 1282px){
+			padding-right: getvw(6vw);
+		}
 	}
 }
 

@@ -1,36 +1,29 @@
 extends _templates/layout.pug
 block preloader
-	.preloader.color-2
+	//- .preloader.color-2
 block content
 	.snj-container-fluid.project-page
 		.row
 			section.project-about
-				//- .background-wrapper.p-about-bg
-				.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-					h2.subtitle-block Branding & Design
-					h1.project-title Future Street Cred
-					span 02
+				+hero-project("Branding & Design","Future Street Cred","02")
 				aside.especifications.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					.snj-row
 						div.especific-item.snj-col-md-2
-							h4 Cliente
-							h5 Future Street Cred	
+							+project-box("Client", "Jungle Beige")
 						div.especific-item.offset-md-2.snj-col-md-4
-							h4 Project
-							h5 Social brand building
+							+project-box("Project", "Future Street Cred",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 						div.especific-item.snj-col-md-2.offset-md-2
-							h4 Year
-							h5 2017
+							+project-box("Year", "2017",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
-					h1.project-title Future Street Cred
-					div.paragraph-left
-						p At Jungle Beige, our philosophy is that creatives, and creative agencies, should also create simply for the sake of it. We love our client collaborations, but there are often projects that can only exist on its own, without a particular brand or company associated with it. It’s just expression. 
-						p It’s just art. And most importantly, it’s enjoyable. It’s this type of spirit that led us to imagine what credit cards would look like if they partnered with some of the world’s best streetwear brands. 
-					div.paragraph-right
-						p The final designs were eventually featured on Hypebae. Have we seen a streetwear brand and credit card company join forces yet? No, but maybe streetwear or sneaker cryptocurrency will actually be the next thing.
-						p What we’ll certainly continue doing is creating anything, whether it’s one thing or an entire series, simply because we feel it should exist in the world. 
+					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Future Street Cred
+					div.paragraph-left.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p At Jungle Beige, our philosophy is that creatives, and creative agencies, should make things simply for the sake of it. We love our client collaborations, but there are often projects that can only exist on their own, without a particular brand or campaign associated with it.
 
+						p It’s just expression. It’s just art. And most importantly, it’s enjoyable. It’s this type of spirit that led us to imagine what credit cards would look like if they partnered with some of the world’s best streetwear brands.
+					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
+						p The final designs were eventually featured on Hypebae. Have we seen a streetwear brand and credit card company join forces yet? No, but maybe streetwear or sneaker cryptocurrency will actually be the next thing.
+						p What we’ll certainly continue doing is creating anything, whether it’s a one off project or an entire series, simply because we feel it should exist in the world.
 			.p-photo1
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
@@ -50,7 +43,7 @@ block content
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.prev-case(href="project-brand-beams.html")
+					a.more-cases.prev-case(href="project-brand-beams.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
 							+icon-arrow
@@ -61,14 +54,14 @@ block content
 					h4 Campaign & Social Media Strategy
 					a(href="project-social-suede.html") See case
 				.snj-col-md-1.offset-md-2.arrow-container
-					a.arrow-up.next-case(href="project-social-suede.html")
+					a.more-cases.next-case(href="project-social-suede.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
 				p.copyright © Copyright 2019
-	a.btn-wrapper.btn-pages(href="worksbranding.html")
-		span.btn-animate-up
-			+close-icon
+	a.navigation-btn.btn-pages(href="workbranding.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
+			+back-icon-btn
 block footer
 	+footer('scroll')
