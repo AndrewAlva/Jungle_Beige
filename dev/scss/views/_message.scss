@@ -8,6 +8,9 @@
 		@media(min-width: 768px){
 			margin-top: 40px;
 		}
+		@media(min-width: 1282px){
+			margin-top: getvw(40vw);
+		}
 	}
 	.subtitle-block{
 		width: 100%;
@@ -16,6 +19,11 @@
 		line-height: 16px;
 		height: 14px;
 		font-weight: 100;
+		@media(min-width: 1282px){
+			margin-bottom: getvw(22vw);
+			line-height: getvw(16vw);
+			height: getvw(14vw);
+		}
 	}
 }
 // inputs
@@ -30,6 +38,9 @@
 		@media(min-width: 768px){
 			padding-left: calc(33.3333% - -3px);
 		}
+		@media(min-width: 1282px){
+			padding-left: calc(33.3333% - getvw(-3vw));
+		}
 		.input-wrapper{
 			width: 100%;
 			// height: 33px;
@@ -38,6 +49,9 @@
 			position: relative;
 			@media(min-width: 768px){
 				height: 52px;
+			}
+			@media(min-width: 1882px){
+				height: getvw(52vw);
 			}
 			input, 
 			textarea{
@@ -54,6 +68,10 @@
 				outline: none;
 				@media(min-width: 768px){
 					font-size: 16px;
+				}
+				@media(min-width: 1282px){
+					font-size: getvw(16vw);
+					padding: getvw(10vw) 0;
 				}
 			}
 			label{
@@ -76,12 +94,18 @@
 				@media(min-width: 768px){
 					font-size: 16px;
 				}
+				@media(min-width: 1282px){
+					font-size: getvw(16vw);
+				}
 
 				&.policy{
 					font-size: 10px;
 					
 					@media(min-width: 768px){
 						font-size: 12px;
+					}
+					@media(min-width: 1282px){
+						font-size: getvw(12vw);
 					}
 				}
 			}
@@ -91,6 +115,9 @@
 				&:focus,
 				&.filled{
 					height: 120px;
+					@media(min-width: 1282px){
+						height: getvw(120vw);
+					}
 				}
 			}
 			//-active state
@@ -109,6 +136,9 @@
 				height: 2px;
 				background-color: $cream;
 				display: block;
+				@media(min-width: 1282px){
+					height: getvw(2vw);
+				}
 				// opacity: 0;
 			}
 		}
@@ -124,6 +154,9 @@
 	@media(min-width: 768px){
 		padding: 19px 0;
 	}
+	@media(min-width: 1282px){
+		padding: getvw(19vw) 0;
+	}
 	label{
 		position: relative;
 		cursor: pointer;
@@ -134,6 +167,9 @@
 		user-select: none;
 		padding-left: 20px;
 		cursor: pointer;
+		@media(min-width: 1282px){
+			padding-left: getvw(20vw);
+		}
 	}
 	input.checkbox{
 		position: absolute;
@@ -145,7 +181,7 @@
 	}
 	.checkmark{
 		position: absolute;
-		border: solid 2px  $dark-brown;
+		border: solid 2px $dark-brown;
 		border-radius: 100%;
 		cursor: pointer;
 		height: 9px;
@@ -154,6 +190,11 @@
 		left: 0px;
 		transform: translateY(-50%);
 		@include transitions-ease(.4s);
+		@media(min-width: 1282px){
+			border: solid getvw(2vw) $dark-brown;;
+			height: getvw(9vw);
+			width: getvw(9vw);
+		}
 	}
 	input:checked ~ .checkmark{
 		background-color: $dark-brown;
@@ -165,7 +206,7 @@
 	left: 11.11%;
 	position: relative;
 	display: inline-flex;
-	a.arrow-right{
+	.arrow-right{
 		margin-left: -20px;
 		span{
 			color: $black;
@@ -180,7 +221,8 @@
 		svg{
 			fill: $black;
 		}
-	} 
+	}
+
 	&:hover{
 		.arrow-right{
 			-webkit-animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
@@ -208,5 +250,16 @@
 				height: 19px;
 			}
 		}	
+	}
+	@media(min-width: 1282px){
+		margin-top: getvw(15vw);
+		.arrow-right{
+			margin-left: getvw(-15vw);
+			span{
+				line-height: getvw(22vw);
+				height: getvw(20vw);
+				font-size: getvw(19vw)
+			}
+		}
 	}
 }

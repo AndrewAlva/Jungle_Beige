@@ -69,7 +69,7 @@
 		transform: translateY(-50%);
 	}
 	@media(min-width: 1282px){
-		bottom: getvw(40vw);
+		bottom: getvw(10vw);
 		left: getvw(40vw)
 	}
 }
@@ -211,7 +211,7 @@ a{
 		bottom: 0;
 		right: 0;
 		margin: auto;
-		@include transitions-ease(.24s)
+		@include transitions-ease(.24s);
 	}
 	.btn-c-hover{
 		width: 0%;
@@ -245,6 +245,9 @@ a{
 		transform: translate(-50%, -50%);
 		opacity: 0;
 		@include transitions-ease(.4s);
+		@media(min-width: 1282px){
+			font-size: 12vw
+		}
 	}
 	&:hover{
 		.btn-c-init{
