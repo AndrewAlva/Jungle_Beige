@@ -1,22 +1,22 @@
-//- extends _templates/layout.pug
-//- block content
-//- 	#menu.snj-container
-//- 		.row
-//- 			.menu-wrapper.offset-3.snj-col-7
-//- 				a.menu-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")(href="about.html")
-//- 					h2.item-title About Us
-//- 					p.item-intro Know us a little more.
-//- 				a.menu-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2")(href="contact.html")
-//- 					h2.item-title Contact Us
-//- 					p.item-intro Drop us a line.
-//- 				.menu-item.social-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3")
-//- 					p.item-intro Or check our social stuff
-//- 					.social-wrapper
-//- 						a.social-link(href="https://www.linkedin.com/company/jungle-beige")
-//- 							+link-icon
-//- 						a.social-link(href="https://www.instagram.com/junglebeige/")
-//- 							+ins-icon
-//- 						a.social-link(href="")
-//- 							+tw-icon
-//- 	a.navigation-btn.btn-pages(href="workstrategy.html")
-//- 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
+extends _templates/layout.pug
+block content
+	#menu.snj-container
+		.row
+			.menu-wrapper.offset-2.snj-col-7
+				a.menu-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1" href="about.html")
+					h2.item-title About Us
+					p.item-intro Know us a little more.
+				a.menu-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="2" data-cascade-delay="2" href="contact.html")
+					h2.item-title Contact Us
+					p.item-intro Drop us a line.
+				.menu-item.social-item.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3")
+					p.item-intro Or check our social stuff
+					.social-wrapper
+						a.social-link(href="https://www.linkedin.com/company/jungle-beige")
+							+link-icon
+						a.social-link(href="")
+							+tw-icon
+						a.social-link(href="https://www.instagram.com/junglebeige/")
+							+ins-icon
+	a.navigation-btn.btn-pages(href="workstrategy.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Our Work
