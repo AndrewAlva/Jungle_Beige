@@ -26,14 +26,15 @@ header{
 	.logo-wrapper{
 		pointer-events: auto;
 		line-height: 0;
+		width: 96px;
 		svg.logo-jb{
-			width: 96px;
-			@media (min-width: 768px){
-				width: 134px;
-			}
-			@media(min-width: 1282px){
-				width: getvw(134vw);
-			}
+			width: 100%;
+		}
+		@media (min-width: 768px){
+			width: 134px;
+		}
+		@media(min-width: 1282px){
+			width: getvw(134vw);
 		}
 	}
 }
