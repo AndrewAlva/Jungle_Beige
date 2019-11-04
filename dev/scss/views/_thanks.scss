@@ -50,20 +50,35 @@
 	}
 	.social-wrapper{
 		padding: 0 11.11% ;
-		svg{
-			fill: $dark-brown;
-		}
-		@media(min-width: 768px){
-			padding: 0px 0;
-			width: calc(33.33% - 5px);
-			float: right;
-		a{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-right: 6px;
+		width: 77.77%;
+		.social-link{
+			height: 18px;
 			padding: 0;
 			cursor: pointer;
+			display: inline-block;
+			@include transitions-ease(.3s);
+			svg{
+				fill: $dark-brown;
+				height: 100%;
+			}
+			&:hover{
+				svg{
+					fill: $cream;
+				}
 			}
 		}
-		@media(min-width: 1282px){
-			width: calc(33.33% - getvw(5vw));
+
+		@media(min-width: 768px){
+			padding: 0;
+			width: 32.23%;
+			float: right;
+			.social-link{
+				height: getvw(18vw);
+			}
 		}
 	}
 }

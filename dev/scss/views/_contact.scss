@@ -18,26 +18,26 @@
 			align-items: center;
 		}
 	}
-	// &:after{
-	// 	content:"";
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: getvw(68vw);
-	// 	height: 100px;
-	// 	background-color: red;
-	// 	opacity: .5;
-	// }
 }
 
 .about-block{
 	position: relative;
 	cursor: pointer;
-	// background-color: green;
+	// &:after{
+	// 	content: "";
+	// 	background-color: red;
+	// 	width: 68px;
+	// 	height: 300px;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// }
 	@media(min-width: 992px){
 		padding-right: 24px;
-		// background-color: green;
 	}
+	// @media(min-width: 1283px){
+	// 	padding-right: getvw(24vw);
+	// }
 	.title-block{
 		color: $black;
 		padding-left: 10%;
