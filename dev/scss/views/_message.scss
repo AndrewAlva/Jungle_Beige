@@ -4,7 +4,7 @@
 	color:$dark-brown;
 	justify-content: center;
 	.center-wrapper{
-		margin-top: -16px;
+		margin-top: -6px;
 		@media(min-width: 768px){
 			margin-top: 40px;
 		}
@@ -13,12 +13,14 @@
 		}
 	}
 	.subtitle-block{
-		width: 100%;
-		margin-bottom: 22px;
 		position: relative;
-		line-height: 16px;
+		left: -1px;
+		width: 100%;
 		height: 14px;
+		margin-bottom: 22px;
 		font-weight: 100;
+		line-height: 16px;
+		letter-spacing: 0.02em;
 		@media(min-width: 1282px){
 			margin-bottom: getvw(22vw);
 			line-height: getvw(16vw);
@@ -45,6 +47,7 @@
 			width: 100%;
 			// height: 33px;
 			height: 30px;
+			margin-bottom: 2px;
 			display: block;
 			position: relative;
 			@media(min-width: 768px){
@@ -77,6 +80,7 @@
 			label{
 				font-family: 'TitlingGothicFB light';
 				font-size: 12px;
+				letter-spacing: 0.02em;
 				pointer-events: none;
 				@include transitions-ease(.4s);
 				&.placeholder{
@@ -161,12 +165,10 @@
 		position: relative;
 		cursor: pointer;
 		display: block;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		padding-left: 20px;
-		cursor: pointer;
+		@include unselectable;
+		padding-left: 14px;
+		line-height: 1.5em;
+
 		@media(min-width: 1282px){
 			padding-left: getvw(20vw);
 		}
@@ -186,9 +188,9 @@
 		cursor: pointer;
 		height: 9px;
 		width: 9px;
-		top: 50%;
+		top: 0.25em;
 		left: 0px;
-		transform: translateY(-50%);
+		// transform: translateY(-50%);
 		@include transitions-ease(.4s);
 		@media(min-width: 1282px){
 			border: solid getvw(2vw) $dark-brown;;
