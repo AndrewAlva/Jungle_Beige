@@ -4,7 +4,7 @@
 .work-bg{
 	background-image: url("../img/work_background.jpg");
 	background-size: 500%;
-	background-color: black;
+	// background-color: black;
 	background-position: 50% 15%;
 	position: fixed;
 	@media(min-width: 768px){
@@ -26,16 +26,6 @@
 	.wrap-list{
 		display: flex;
 		flex-direction: column;
-		&:after{
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			background-color: pink;
-			opacity: .6;
-			height: 10px;
-			width: 200px;
-		}
 	}
 }
 
@@ -50,7 +40,7 @@
 		line-height: 17px;
 		height: 14px;
 		position: relative;
-		background-color: green;
+		// background-color: green;
 	}
 	@media(min-width: 768px){
 		margin-top: 50px;
@@ -58,6 +48,8 @@
 		// opacity: 0;
 		p.number-project{
 			font-size: 22px;
+			line-height: 22px;
+			height: 18px;
 		}
 	}
 	@media(min-width: 1282px){
@@ -66,22 +58,26 @@
 		// opacity: 0;
 		p.number-project{
 			font-size: getvw(22vw);
+			line-height: getvw(22vw);
+			height: getvw(18vw);
 		}
 	}
 	// name
 	.name-project{
 		// margin: 2px 0 11px;
-		margin: 7px 0 11px;
+		margin: 7px 0 10px;
 		font-family: 'Nocturne Serif ExtraBold';
 		position: relative;
 		padding-right: 30%;
-		background-color: red;
+		// background-color: red;
 		h2{
 			font-size: 22px;
+			letter-spacing: .020em;
 		}
 		@media(min-width: 768px){
 			// margin: 20px 0 26px;
-			margin: 8px 0 26px;
+			margin: 12px 0 26px;
+			padding-right: 0;
 			h2{
 				font-size: 50px;
 				display: inline-block;
@@ -91,7 +87,7 @@
 			}
 		}
 		@media(min-width: 1282px){
-			margin: getvw(8vw) 0 getvw(26vw);
+			margin: getvw(12vw) 0 getvw(26vw);
 			h2{
 				font-size: getvw(50vw);
 				&:last-child{
@@ -102,9 +98,15 @@
 	}
 	// arrow
 	.arrow-right{
-		background: black;
+		// background: black;
 		justify-content: flex-end;
 		display: flex;
+		@media(min-width: 768px){
+			padding-right: 153px;
+		}
+		@media(min-width: 1282px){
+			padding-right: getvw(153vw);
+		}
 		.arrow-wrapper{
 			@media(min-width: 768px){
 				width: 320px;
@@ -121,10 +123,11 @@
 		}
 		span{
 			margin-left: 30px;
+			letter-spacing: .020em;
 			&.callTo-1{
 				display: none;
 				@media(min-width: 992px){
-					width: 190px;
+				// 	width: 190px;
 					display: block;
 				}
 			}
@@ -136,9 +139,9 @@
 			}
 			@media(min-width: 1282px){
 				margin-left: getvw(30vw);
-				&.callTo-1{
-					width: getvw(190vw);
-				}
+				// &.callTo-1{
+				// 	width: getvw(190vw);
+				// }
 			}
 		}
 	}

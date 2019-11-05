@@ -94,7 +94,7 @@
 				// top: -1px;
 			}
 			@media(min-width: 1282px){
-				top: getvw(-2.5vw);
+				// top: getvw(-2.5vw);
 				right: getvw(-7vw);
 			}
 		}
@@ -195,7 +195,7 @@
 						top: inherit;
 					}
 					&:nth-child(3){
-						bottom: 24px;
+						bottom: 23px;
 						left:inherit;
 					}
 				}
@@ -209,7 +209,7 @@
 						bottom: getvw(14vw);
 					}
 					&:nth-child(3){
-						bottom: getvw(24vw);
+						bottom: getvw(23vw);
 					}
 				}
 			}
