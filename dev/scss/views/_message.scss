@@ -6,10 +6,10 @@
 	.center-wrapper{
 		margin-top: -6px;
 		@media(min-width: 768px){
-			margin-top: 40px;
+			margin-top: 45px;
 		}
 		@media(min-width: 1282px){
-			margin-top: getvw(40vw);
+			margin-top: getvw(46vw);
 		}
 	}
 	.subtitle-block{
@@ -17,12 +17,13 @@
 		left: -1px;
 		width: 100%;
 		height: 14px;
-		margin-bottom: 22px;
+		margin-bottom: 24px;
 		font-weight: 100;
 		line-height: 16px;
 		letter-spacing: 0.02em;
+
 		@media(min-width: 1282px){
-			margin-bottom: getvw(22vw);
+			margin-bottom: getvw(25vw);
 			line-height: getvw(16vw);
 			height: getvw(14vw);
 		}
@@ -156,7 +157,7 @@
 	justify-content: center;
 	height: auto;
 	@media(min-width: 768px){
-		padding: 19px 0;
+		padding: 16px 0 19px;
 	}
 	@media(min-width: 1282px){
 		padding: getvw(19vw) 0;
@@ -169,8 +170,12 @@
 		padding-left: 14px;
 		line-height: 1.5em;
 
+		@media (min-width: 768px){
+			padding-left: 18px;
+		}
+
 		@media(min-width: 1282px){
-			padding-left: getvw(20vw);
+			padding-left: getvw(18vw);
 		}
 	}
 	input.checkbox{
