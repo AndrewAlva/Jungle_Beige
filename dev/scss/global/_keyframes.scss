@@ -125,12 +125,19 @@
 }
 // lines
 @-webkit-keyframes line-fill {
-	0% {transform: scaleX(0); opacity:0;}
-	100% {transform: scaleX(1);opacity:1;}
+	0% {transform: scaleY(0) rotate(90deg); opacity:0;}
+	100% {transform: scaleY(1) rotate(90deg);opacity:1;}
 }
-@-webkit-keyframes line-reduce {
-	0% {transform: scaleX(1);}
-	100% {transform: scaleX(.4);}
+// @-webkit-keyframes line-reduce {
+// 	0% {transform: scaleX(1);}
+// 	100% {transform: scaleX(.4);}
+// }
+
+@media(min-width: 768px){
+	@-webkit-keyframes line-fill {
+		0% {transform: scaleX(0); opacity:0;}
+		100% {transform: scaleX(1);opacity:1;}
+	}
 }
 @media(min-width: 1282px){
 		//navigation button
