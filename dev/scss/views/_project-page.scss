@@ -19,50 +19,89 @@ section.project-about{
 	color: $cream;
 	height: 460px;
 	width: 100%;
-	padding: 150px 10px 270px;
+	padding: 115px 10px 0;
 	background-image: url("../img/project_1_bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	@include flexIt;
+	@include flexWrap;
+
 	@media(min-width: 768px){
 		height: 525px;
-		padding: 238px 0 0;
+		padding: 196px 0 0;
 		margin-bottom: 10px;
 		// padding: 0 5px;
 	}
+
 	@media(min-width: 1282px){
 		height: getvw(525vw);
-		padding: getvw(238vw) 0 0;
+		padding: getvw(196vw) 0 0;
 		margin-bottom: getvw(10vw)
 	}
+
 	.info-wrapper{
 		text-align: center;
 		z-index: 2;
 		position: relative;
+		@include flexAlignSelfTop;
+
 		h2, h1, span{
 			display: block;
 		}
+
+		.subtitle-wrap{
+			position: absolute;
+			width: 100%;
+			height: 41%;
+			// border: 1px solid red;
+
+			@media (min-width: 768px){
+				height: 45%;
+			}
+		}
+
+		.project-wrap{
+			position: absolute;
+			top: 41%;
+			width: 100%;
+			height: 59%;
+			// border: 1px solid red;
+
+			@media (min-width: 768px){
+				top: 45%;
+				height: 55%;
+				padding-top: 2px;
+			}
+
+			@media (min-width: 1282px){
+				padding-top: getvw(2vw);
+			}
+		}
+
 		.subtitle-block{
 			font-size: 12px;
-			padding-bottom: 6px;
+			// padding-bottom: 6px;
+			bottom: 4px;
 			width: 60%;
 			margin-left: 20%;
 			font-family: 'TitlingGothicFB Standard';
-			position: relative;
+			position: absolute;
 			font-weight: 100;
 			@media(min-width: 1282px){
 				font-size: getvw(12vw);
-				padding-bottom: getvw(6vw);
+				// padding-bottom: getvw(6vw);
 			}
 		}
 		.display-number{
-			position: absolute;
+			position: relative;
 			color: $black;
 			font-size: 165px;
 			line-height: 166px;
 			font-family: 'TitlingGothicFB light';
-			left: 10%;
-			top: -73%;
+			// left: 10%;
+			left: -2%;
+			top: 0;
 			animation-duration:1s;
 			z-index: -1;
 			letter-spacing: .02em;
@@ -81,23 +120,27 @@ section.project-about{
 			}
 			.display-number{
 				letter-spacing: inherit;
-				left: 30%;
-				top: -75%;
+				left: 2%;
 			}
 		}
 	}
+
+	.especifications-wrap{
+		position: relative;
+		@include flexAlignSelfBottom;
+	}
+
 	aside.especifications{
 		background-color: $brown;
 		width: 100%;
 		font-size: 12px;
 		// padding: 40px calc(10% - 5px);
 		padding: 40px 0;
-		transform: translateY(calc(100% - 119px));
-		position: relative;
-		.snj-row{
-			margin-right: 0;
-			margin-left: 0;
-		}
+		transform: translate3d(0, 192px, 0);
+		position: absolute;
+		bottom: 0;
+		// height: 287px;
+
 		&:after{
 			content: "";
 			width: 2px;
@@ -109,6 +152,11 @@ section.project-about{
 			@media(min-width: 768px){
 				display: none;
 			}
+		}
+
+		.snj-row{
+			margin-right: 0;
+			margin-left: 0;
 		}
 		.especific-item{
 			// padding: 20px 0 0 calc(10% + 5px);
@@ -143,18 +191,19 @@ section.project-about{
 		}
 		@media(min-width: 768px){
 			background-color: transparent;
-			padding: 108px 0px 0px;
-			transform: translateY(0);
+			padding: 0px 0px 64px;
+			transform: translate3d(0, 0, 0);
 			display: flex;
 			flex-direction: row;
+			height: 123px;
 			.snj-row{
 				width: 100%;
 				margin: 0;
 			}
 			.especific-item{
-				padding: 12px 0 12px 15px;
+				padding: 12px 0 12px 10px;
 				span.line-item{
-					left: 5px;
+					left: 0;
 				}
 				h4, h5{
 					padding-left: 0;
@@ -163,17 +212,20 @@ section.project-about{
 		}
 		@media(min-width: 1282px){
 			font-size: getvw(12vw);
-			padding: getvw(108vw) 0 0;
-			h4, h5{
-				font-size: getvw(12vw);
-			}
-			h4{
-				margin-bottom: getvw(7vw);
-			}
+			padding: 0 0 getvw(64vw);
+			height: getvw(123vw);
 			.especific-item{
-				padding: getvw(12vw) 0 getvw(12vw) getvw(15vw);
+				padding: getvw(12vw) 0 getvw(12vw) getvw(10vw);
+
+				h4, h5{
+					font-size: getvw(12vw);
+				}
+				h4{
+					margin-bottom: getvw(7vw);
+				}
+
 				span.line-item{
-					left: getvw(5vw);
+					// left: getvw(5vw);
 					width: getvw(10vw);
 					height: getvw(2vw);
 				}
@@ -194,6 +246,9 @@ section.project-description{
 	}
 	p{
 		margin-bottom: 20px;
+		@media (min-width: 1282px){
+			font-size: getvw(12vw);
+		}
 	}
 	@media(min-width: 768px){
 		background-color: #a2a7a3;
