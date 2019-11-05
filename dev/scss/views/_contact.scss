@@ -23,6 +23,7 @@
 .about-block{
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
 	// &:after{
 	// 	content: "";
 	// 	background-color: red;
@@ -42,6 +43,11 @@
 		color: $black;
 		padding-left: 10%;
 		margin-bottom: 15px;
+
+		@media(min-width: 768px){
+			padding-left: 0;
+		}
+
 		@media(min-width: 1282px){
 			margin-bottom: 0;
 		}
@@ -258,6 +264,19 @@
 		}
 		&:nth-child(3){
 			padding-top: 11px;
+		}
+
+		a{
+			font-size: 10px;
+			color: inherit;
+
+			@media (min-width: 576px){
+				font-size: 12px;
+			}
+
+			@media (min-width: 1282px){
+				font-size: getvw(12vw);
+			}
 		}
 	}
 	@media(min-width: 576px){
