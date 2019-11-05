@@ -19,8 +19,6 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	// background-color: black;
-	// estilo creado aparte
 	@media(min-width: 768px){
 		width: 492px;
 		height: 180px;
@@ -61,7 +59,7 @@
 		}
 			
 		.display-w{
-			top: -1px;
+			// top: -1px;
 			padding-left: 4px;
 			line-height: .33em;
 			height: 91px;
@@ -227,7 +225,7 @@
 				width: 56px;
 				bottom: -48px;
 				left: 25%;
-				transform: rotate(90deg);
+				// transform: rotate(90deg);
 			}
 			@media(min-width: 1282px){
 				width: getvw(90vw);

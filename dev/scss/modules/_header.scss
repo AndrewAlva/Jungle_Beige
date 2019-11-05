@@ -27,6 +27,7 @@ header{
 		pointer-events: auto;
 		line-height: 0;
 		width: 96px;
+		display: flex;
 		svg.logo-jb{
 			width: 100%;
 		}
@@ -44,6 +45,7 @@ header{
 	color:$cream;
 	pointer-events: auto;
 	opacity: 1;
+	letter-spacing: 0.02em;
 	.line-link{
 		color: $cream;
 		position: relative;

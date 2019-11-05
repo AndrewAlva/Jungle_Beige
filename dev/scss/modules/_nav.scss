@@ -1,9 +1,9 @@
 nav.nav-wrapper{
 	width: 20px;
-	height: 14px;
-	padding: 3px 0;
+	// padding: 3px 0;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: flex-end;
 	[class^="menu-line-"]{		
 		background-color: $cream;
@@ -19,15 +19,9 @@ nav.nav-wrapper{
 		margin-top: 2px;
 	}
 	@media(max-width: 768px){
-		margin-top: 3px;
 		margin-right: 15px;
 	}
-	@media (min-width: 769px) {
+	@media (min-width: 768px) {
 		display: none;
-	}
-	@media(min-width: 1282px){
-		width: getvw(20vw);
-		height: getvw(14vw);
-		padding: getvw(3vw) 0;
 	}
 }
