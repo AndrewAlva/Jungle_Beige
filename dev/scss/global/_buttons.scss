@@ -109,6 +109,7 @@ a{
 .arrow-scroll{
 	span{
 		margin-left: 12px;
+		letter-spacing: .02em;
 		@media(min-width: 1282px){
 			margin-left: getvw(12vw);
 		}
@@ -168,6 +169,7 @@ a{
 		font-family: 'TitlingGothicFB light';
 		line-height: 11px;
 		height: 10px;
+		letter-spacing: .02em;
 		@media(min-width: 768px){
 			font-size: 16px;
 			line-height: 18px;

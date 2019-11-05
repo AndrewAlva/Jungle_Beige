@@ -1,13 +1,29 @@
 mixin project-sections(subtitle, title, number, linkTo)
-	.center-wrapper
+	.project-wrapper-section
 		.about-work
-			h2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{subtitle}
-			h1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{title}
-			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{number}
+			.subtitle-wrapper
+				h2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{subtitle}
+			.title-wrapper
+				h1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{title}
+			span.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{number}
 
-		.arrow-container.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile="2" data-cascade-delay="2")
-			a.arrow-right.right-translate(href=linkTo)
+		a.arrow-container.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile="2" data-cascade-delay="2" href=linkTo)
+			.arrow-right
 				.arrow-wrapper
 					.rectangle-arrow
 					+icon-arrow
 				span See project
+
+//- mixin project-sections(subtitle, title, number, linkTo)
+//- 	.about-work.snj-col-9.offset-2
+//- 		.header-project
+//- 			h2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{subtitle}
+//- 			h1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{title}
+//- 			p.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{number}
+
+//- 		.arrow-container.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile="2" data-cascade-delay="2")
+//- 			a.arrow-right.right-translate(href=linkTo)
+//- 				.arrow-wrapper
+//- 					.rectangle-arrow
+//- 					+icon-arrow
+//- 				span See project
