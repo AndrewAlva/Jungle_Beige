@@ -8,8 +8,10 @@ mixin project-box(title, project, dataCascade={lineDelayMob: 2,clientDelayMob: 5
 
 mixin hero-project(type, brand,number)
 	.info-wrapper.snj-col-10.offset-1.snj-col-md-4.offset-md-4
-		h2.subtitle-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{type}
+		.subtitle-wrap
+			h2.subtitle-block.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{type}
 
-		h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{brand}
+		.project-wrap
+			h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") #{brand}
 
 		span.display-number.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") #{number}

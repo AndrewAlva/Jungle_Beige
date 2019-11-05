@@ -161,6 +161,18 @@
 		flex-wrap: nowrap;
 }
 
+@mixin flexAlignSelfBottom{
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+@mixin flexAlignSelfTop{
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
 // mobile/Desktop animation sizes
 @mixin mobile {
 	@media (max-width: #{$mobile-max-width}) {
