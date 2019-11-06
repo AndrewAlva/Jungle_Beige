@@ -58,7 +58,7 @@
 				margin-left: 4.325vw;
 				width: 46vw;
 				img{
-					width: 100%;
+					// width: 100%;
 					height: auto;
 				}
 			}
@@ -87,10 +87,12 @@
 		top: 50%;
 		transform: translateY(-50%);
 		&.controller-prev{
-			left: calc(8.333333% + 10px)
+			left: calc(8.333333% + 10px);
+			text-align: left;
 		}
 		&.controller-next{
-			right: calc(8.333333% + 10px)
+			right: calc(8.333333% + 10px);
+			text-align: right;
 		}
 		span{
 			display: block;

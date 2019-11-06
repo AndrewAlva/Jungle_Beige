@@ -15,6 +15,7 @@ block content
 								+project-box("Project", "High Beams Running Crew",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 							div.especific-item.snj-col-md-2.offset-md-2
 								+project-box("Year", "2017-Present",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
+
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3.about-wrapper
 					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") High Beams Running Crew
@@ -28,9 +29,9 @@ block content
 				img(src="../img/project-img-1.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="../img/project-img-2.jpg", alt="")
-				.p-photo2
 					img(src="../img/project-img-3.jpg", alt="")
+				.p-photo2
+					img(src="../img/project-img-2.jpg", alt="")
 			include _modules/slider.pug
 			section.video-wrapper.snj-col-12
 				video(src="")
@@ -41,7 +42,7 @@ block content
 					span Play
 			//- footer
 			section.footer-project
-				.snj-col-md-1.offset-md-2.arrow-container
+				.snj-col-md-1.offset-md-2.arrow-container.container-prev
 					a.more-cases.prev-case(href="project-commerce-amongst.html")
 						span.light-font.left-translate Previous Case
 						.arrow-wrapper.left-translate
@@ -52,13 +53,14 @@ block content
 					h3 Future Street Cred
 					h4 Branding & Design
 					a(href="project-brand-cred.html") See case
-				.snj-col-md-1.offset-md-1.arrow-container
+					p.copyright © Copyright 2019
+				.snj-col-md-1.offset-md-1.arrow-container.container-next
 					a.more-cases.next-case(href="project-brand-cred.html")
 						span.light-font.right-translate Next Case
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
-				p.copyright © Copyright 2019
+				//- p.copyright © Copyright 2019
 
 	a.navigation-btn.btn-pages(href="workbranding.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
