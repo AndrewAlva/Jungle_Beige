@@ -327,7 +327,7 @@ nav.slider-wrapper{
 			@include transitions-ease(.4s);
 		}
 		&:hover,
-		&:active{
+		&.active{
 			background-color: transparent;
 			&:after{
 				opacity: 0;
