@@ -43,6 +43,7 @@ var AboutSlider = {
 	addEventListeners: function(){
 		this.dotsNavListener();
 		this.scrollListener();
+		this.scrollMobileListener();
 	},
 
 	dotsNavListener: function(){
@@ -56,16 +57,13 @@ var AboutSlider = {
 	},
 
 	scrollListener: function(){
-		window.addEventListener('scroll', function(e){
-			console.log('user scrolling')
-			AboutSlider.scrollNavigation(e.deltaY)
-		});
-
 		window.addEventListener('wheel', throttle(function(e){
 			// console.log('user wheeling: ' + e.deltaY);
 			AboutSlider.scrollNavigation(e.deltaY)
 		}, 1500));
+	},
 
+	scrollMobileListener: function(){
 		var _touchStartY;
 		var _touchEndY;
 		window.addEventListener('touchstart', throttle(function(e){
@@ -91,7 +89,9 @@ var AboutSlider = {
 
 }
 
-AboutSlider.init();
+if (document.getElementById('paragraphs-wrap')) {
+	AboutSlider.init();
+}
 
 
 
