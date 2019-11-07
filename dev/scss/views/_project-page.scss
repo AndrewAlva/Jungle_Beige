@@ -483,6 +483,7 @@ section.footer-project{
 a.more-cases{
 	margin-top: 24px;
 	color: $cream;
+	@include flexAlignSelfTop;
 	.arrow-wrapper{
 		position: relative;
 		display: flex;
@@ -499,7 +500,7 @@ a.more-cases{
 		}
 	}
 	@media(min-width: 1282px){
-		padding-top: getvw(24vw);
+		margin-top: getvw(24vw);
 		.arrow-wrapper{
 			width: getvw(110vw);
 			.rectangle-arrow{
