@@ -132,9 +132,11 @@
 			//-active state
 			input:focus ~ label.placeholder,
 			input:valid ~ label.placeholder,
+			input.filled ~ label.placeholder,
 			textarea:focus ~ label.placeholder,
 			textarea.filled ~ label.placeholder{
 				opacity: 0;
+				animation-name: none;
 			}
 			input:hover ~ label.placeholder,
 			textarea:hover ~ label.placeholder{
@@ -242,7 +244,7 @@
 			-webkit-animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
 			animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
 		}
-		.rentangle-arrow{
+		.rectangle-arrow{
 			-webkit-animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards;
 			animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards;
 			background-color: $cream;
