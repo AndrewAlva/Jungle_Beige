@@ -82,7 +82,7 @@
 				font-family: 'TitlingGothicFB light';
 				font-size: 12px;
 				letter-spacing: 0.02em;
-				pointer-events: none;
+				// pointer-events: none;
 				@include transitions-ease(.4s);
 				&.placeholder{
 					// pointer-events: none;
@@ -116,11 +116,15 @@
 			}
 			textarea{
 				resize: none;
+				padding-top: 17px;
 				@include transitions-ease(.4s);
 				&:focus,
 				&.filled{
 					height: 120px;
-					@media(min-width: 1282px){
+				}
+				@media(min-width: 1282px){
+					padding-top: getvw(17vw);
+					&.filles{
 						height: getvw(120vw);
 					}
 				}

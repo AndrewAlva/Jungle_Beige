@@ -1,7 +1,4 @@
 // Hero Slider (Used in Home Page)
-	
-
-
 	// Update slides width for resizing cases
 	$(window).resize(function() {
 		homeSlider.getSlideWidth();
