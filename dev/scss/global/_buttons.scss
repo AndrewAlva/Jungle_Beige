@@ -249,7 +249,7 @@ a{
 		opacity: 0;
 		@include transitions-ease(.4s);
 		@media(min-width: 1282px){
-			font-size: 12vw
+			font-size: getvw(12vw)
 		}
 	}
 	&:hover{

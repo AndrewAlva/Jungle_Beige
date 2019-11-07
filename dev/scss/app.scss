@@ -26,14 +26,14 @@
 @import 'views/_thanks';
 @import 'views/_project-page';
 
-@import 'modules/_header';
-@import 'modules/_nav';
-@import 'modules/_footer';
+@import 'modules/_header-nav';
+@import 'modules/_nav-menu';
+@import 'modules/_footer-nav';
 @import 'modules/_grid-lines';
 @import 'modules/_grid-lines-full';
 @import 'modules/_slider';
 @import 'modules/_preloader';
-@import 'modules/_menu';
+@import 'modules/_side-nav';
 
 .img-tester{
 	opacity: .4;

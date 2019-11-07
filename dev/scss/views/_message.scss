@@ -217,8 +217,10 @@
 	left: 11.11%;
 	position: relative;
 	display: inline-flex;
+	@include transitions-ease(.4s)
 	.arrow-right{
-		margin-left: -20px;
+		// margin-left: -20px;
+		pointer-events: none;
 		span{
 			color: $black;
 			line-height: 16px;
@@ -228,6 +230,7 @@
 		}
 		.rectangle-arrow{
 			background-color: $black;
+			// @include transitions-ease(.3s)
 		}
 		svg{
 			fill: $black;
@@ -238,17 +241,19 @@
 		.arrow-right{
 			-webkit-animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
 			animation: translate-right .8s cubic-bezier(.21,0,0,1) forwards;
-			user-events: none;
 		}
 		.rentangle-arrow{
-			-webkit-animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards; /* Safari 4.0 - 8.0 */
+			-webkit-animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards;
 			animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards;
+			background-color: $cream;
 		}
 		span{
-			@include transitions-target(color, 0s, .1s);
+			// @include transitions-target(color, .8s, .4s);
 			color: $cream;
 		}
-
+		svg{
+			fill: $cream;
+		}
 	}
 	@media(min-width: 768px){	
 		margin-top: 15px;
