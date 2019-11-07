@@ -29,4 +29,5 @@ window.onload = function() {
 
 	// Remove preloader
 	animation.init();
+
 }
