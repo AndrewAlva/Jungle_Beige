@@ -1,16 +1,18 @@
 #side-nav{
 	background-color: $orange;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	display: block;
 	padding-top: 104px;
 	position: absolute;
 	top: 0;
-	right: 0;	
+	right: -10px;	
 	transform: translate(0, 100%);
 	@include transitions-ease(.9s);
 	opacity: 0;
-
+	@media(min-width: 768px){
+		display: none;
+	}
 	.menu-wrapper{
 		padding-top: 40px;
 		position: relative;
