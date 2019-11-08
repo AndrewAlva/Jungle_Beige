@@ -175,6 +175,7 @@
 			//-active state
 			input:focus ~ label.placeholder,
 			input:valid ~ label.placeholder,
+			input.filled ~ label.placeholder,
 			textarea:focus ~ label.placeholder,
 			textarea.filled ~ label.placeholder{
 				opacity: 0;
