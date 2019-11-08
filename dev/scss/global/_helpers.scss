@@ -5,9 +5,9 @@
 	@media(min-width: 768px){
 		font-size: 50px
 	}
-	@media(min-width: 1282px){
-		font-size: getvw(50vw);
-	}
+	// @media(min-width: 1282px){
+	// 	font-size: getvw(50vw);
+	// }
 }
 .subtitle-block{
 	font-size: 16px;
@@ -15,9 +15,9 @@
 	@media(min-width: 768px){
 		font-size: 22px;
 	}
-	@media(min-width: 1282px){
-		font-size: getvw(22vw);
-	}
+	// @media(min-width: 1282px){
+	// 	font-size: getvw(22vw);
+	// }
 }
 .flex-row{
 	display: flex;

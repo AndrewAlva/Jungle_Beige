@@ -25,12 +25,12 @@
 			height: 40px;
 			letter-spacing: .02em;
 		}
-		@media(min-width: 1282px){
-			margin-bottom: getvw(12vw);
-			// margin-top: getvw(8vw);
-			line-height: getvw(44vw);
-			height: getvw(40vw);
-		}
+		// @media(min-width: 1282px){
+		// 	margin-bottom: getvw(12vw);
+		// 	// margin-top: getvw(8vw);
+		// 	line-height: getvw(44vw);
+		// 	height: getvw(40vw);
+		// }
 	}
 	p{
 		padding-left: 11.11%;
@@ -43,9 +43,9 @@
 			line-height: 1.8em;
 			padding-left: 16.6667%;
 		}
-		@media(min-width: 1282px){
-			margin-bottom: getvw(15vw);
-		}
+		// @media(min-width: 1282px){
+		// 	margin-bottom: getvw(15vw);
+		// }
 	}
 	.social-wrapper{
 		padding: 0 11.11% ;
@@ -70,9 +70,9 @@
 				}
 			}
 
-			@media (min-width: 1282px){
-				height: getvw(18vw);
-			}
+			// @media (min-width: 1282px){
+			// 	height: getvw(18vw);
+			// }
 		}
 
 		@media(min-width: 768px){
