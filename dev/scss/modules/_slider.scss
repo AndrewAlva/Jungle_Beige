@@ -5,10 +5,17 @@
 .hero-slider-wrapper{
 	position: relative;
 	width: 100%;
-	height: 390px;
+	// height: 390px;
+	padding-bottom: 121.875%;
 	margin-bottom: 20px;
+
+	@media(min-width: 576px){
+		padding-bottom: 700px;
+	}
+
 	@media(min-width: 768px){
 		height:525px;
+		padding-bottom: 0;
 		margin-bottom: 10px;
 		display: flex;
 		flex-direction: column;
@@ -20,7 +27,7 @@
 	}
 
 	.slider-cards-wrapper{
-		position: relative;
+		position: absolute;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
@@ -36,6 +43,10 @@
 			width: max-content;
 			height: 100%;
 			display: flex;
+
+			&.smooth-sliding{
+				@include transitions-ease(.7s);
+			}
 		}
 
 		// .smooth-sliding{
@@ -54,9 +65,11 @@
 				transform: translate(-50%, -50%)
 			}
 			@media(min-width: 768px){			
-				margin-right: 4.325vw;
-				margin-left: 4.325vw;
-				width: 46vw;
+				// margin-right: 4.325vw;
+				// margin-left: 4.325vw;
+				// width: 46vw;
+				width: getvw(596vw);
+				margin: 0 getvw(55.5vw);
 				img{
 					// width: 100%;
 					height: auto;
@@ -108,10 +121,18 @@
 			text-align: center;
 			color: $dark-brown;
 			&.controller-prev{
-				left: 16.666667%;
+				// left: 16.666667%;
+				left: 0;
+				right: 55.26%;
+				margin: auto;
+				text-align: center;
 			}
 			&.controller-next{
-				right: 16.666667%;
+				// right: 16.666667%;
+				right: 0;
+				left: 55.26%;
+				margin: auto;
+				text-align: center;
 			}
 		}
 		@media(min-width: 1282px){
