@@ -15,12 +15,12 @@
 	z-index: 1000;
 	// flex-direction: column;
 	align-items: center;
-	@media(min-width: 1282px){
-		width: getvw(95vw);
-		height: getvw(29vw);
-		font-size: getvw(12vw);
-		border-radius: getvw(15vw)
-	}
+	// @media(min-width: 1282px){
+	// 	width: getvw(95vw);
+	// 	height: getvw(29vw);
+	// 	font-size: getvw(12vw);
+	// 	border-radius: getvw(15vw)
+	// }
 	span{
 		height: 13px;
 		&.animate-up{
@@ -28,9 +28,9 @@
 			margin: 0 auto;
 			text-align: center;
 		}
-		@media(min-width: 1282px){
-			height: getvw(13vw);
-		}
+		// @media(min-width: 1282px){
+		// 	height: getvw(13vw);
+		// }
 		// icons
 		svg {
 			path, rect{
@@ -68,10 +68,10 @@
 		left: 40px;
 		transform: translateY(-50%);
 	}
-	@media(min-width: 1282px){
-		bottom: getvw(10vw);
-		left: getvw(40vw)
-	}
+	// @media(min-width: 1282px){
+	// 	bottom: getvw(10vw);
+	// 	left: getvw(40vw)
+	// }
 }
 
 
@@ -80,9 +80,9 @@ a{
 	text-decoration: none;
 	font-size: 12px;
 	font-family: 'TitlingGothicFB light';
-	@media(min-width: 1282px){
-		font-size: getvw(12vw);
-	}
+	// @media(min-width: 1282px){
+	// 	font-size: getvw(12vw);
+	// }
 }
 
 // link arrow
@@ -99,9 +99,9 @@ a{
 		// text-align: right;
 		display: block;
 		margin-bottom: 12px;
-		@media(min-width: 1282px){
-			margin-bottom: getvw(12vw);
-		}
+		// @media(min-width: 1282px){
+		// 	margin-bottom: getvw(12vw);
+		// }
 	}
 }
 
@@ -110,9 +110,9 @@ a{
 	span{
 		margin-left: 12px;
 		letter-spacing: .02em;
-		@media(min-width: 1282px){
-			margin-left: getvw(12vw);
-		}
+		// @media(min-width: 1282px){
+		// 	margin-left: getvw(12vw);
+		// }
 	}
 }
 
@@ -124,9 +124,9 @@ a{
 	@media(min-width: 768px){
 		font-size: 16px;
 	}
-	@media(min-width: 1282px){
-		font-size: getvw(16vw);
-	}
+	// @media(min-width: 1282px){
+	// 	font-size: getvw(16vw);
+	// }
 
 	.arrow-wrapper{
 		position: relative;
@@ -149,18 +149,18 @@ a{
 			width: 7px;
 			height: 12px;
 		}
-		@media(min-width: 1282px){
-			width: getvw(110vw);
-			.rectangle-arrow{
-				height: getvw(2vw);
-				width: getvw(82vw);
-				margin-right: getvw(1vw);
-			}
-			svg.icon-arrow{
-				width: getvw(7vw);
-				height: getvw(12vw);
-			}
-		}
+		// @media(min-width: 1282px){
+		// 	width: getvw(110vw);
+		// 	.rectangle-arrow{
+		// 		height: getvw(2vw);
+		// 		width: getvw(82vw);
+		// 		margin-right: getvw(1vw);
+		// 	}
+		// 	svg.icon-arrow{
+		// 		width: getvw(7vw);
+		// 		height: getvw(12vw);
+		// 	}
+		// }
 	}
 	span{
 		// width: 120px;
@@ -175,12 +175,12 @@ a{
 			line-height: 18px;
 			height: 14px;
 		}
-		@media(min-width: 1292px){
-			margin-left: getvw(12vw);
-			font-size: getvw(16vw);
-			line-height: getvw(18vw);
-			height: getvw(14vw);
-		}
+		// @media(min-width: 1292px){
+		// 	margin-left: getvw(12vw);
+		// 	font-size: getvw(16vw);
+		// 	line-height: getvw(18vw);
+		// 	height: getvw(14vw);
+		// }
 	}
 }
 
@@ -191,10 +191,10 @@ a{
 	background-color: transparent;
 	border: none;
 	position: relative;
-	@media(min-width: 1282px){
-		width: getvw(90vw);
-		height: getvw(90vw);
-	}
+	// @media(min-width: 1282px){
+	// 	width: getvw(90vw);
+	// 	height: getvw(90vw);
+	// }
 	svg{
 		fill: $light-brown;
 	}
@@ -248,9 +248,9 @@ a{
 		transform: translate(-50%, -50%);
 		opacity: 0;
 		@include transitions-ease(.4s);
-		@media(min-width: 1282px){
-			font-size: getvw(12vw)
-		}
+		// @media(min-width: 1282px){
+		// 	font-size: getvw(12vw)
+		// }
 	}
 	&:hover{
 		.btn-c-init{
@@ -261,9 +261,9 @@ a{
 		.play-video{
 			transform: translateY(22px);
 			opacity: 0;
-			@media(min-width: 1282px){
-				transform:translateY(getvw(22vw));
-			}
+			// @media(min-width: 1282px){
+			// 	transform:translateY(getvw(22vw));
+			// }
 		}
 		.btn-c-hover{
 			width: 100%;
@@ -297,9 +297,9 @@ nav.slider-wrapper{
 		position: relative;
 		padding:16px;
 		cursor: pointer;
-		@media(min-width: 1282px){
-			padding: getvw(16vw)
-		}
+		// @media(min-width: 1282px){
+		// 	padding: getvw(16vw)
+		// }
 
 		&:after{
 			content: "";
@@ -336,17 +336,17 @@ nav.slider-wrapper{
 				opacity: 1;
 			}
 		}
-		@media(min-width: 1282px){
-			&:after{
-				width: getvw(5vw);
-				height: getvw(5vw);
-			}
-			&:before{
-				width: getvw(5vw);
-				height: getvw(5vw);
-				border: solid getvw(2vw) $orange
-			}
-		}
+		// @media(min-width: 1282px){
+		// 	&:after{
+		// 		width: getvw(5vw);
+		// 		height: getvw(5vw);
+		// 	}
+		// 	&:before{
+		// 		width: getvw(5vw);
+		// 		height: getvw(5vw);
+		// 		border: solid getvw(2vw) $orange
+		// 	}
+		// }
 	}
 }
 

@@ -6,9 +6,9 @@
 body{
 	color: $black;
 	font-size: 12px;
-	@media(min-width: 1282px){
-		font-size: getvw(12vw);
-	}
+	// @media(min-width: 1282px){
+	// 	font-size: getvw(12vw);
+	// }
 }
 
 body, h1, h2, h3, h4, h5, h6, p, section, div, nav, ul, li, button{
