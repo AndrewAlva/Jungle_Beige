@@ -29,9 +29,9 @@
 		@media(min-width: 768px){
 			right: -12px;
 		}
-		@media(min-width: 1282px){
-			right: getvw(-12vw);
-		}
+		// @media(min-width: 1282px){
+		// 	right: getvw(-12vw);
+		// }
 		.dot-slider{
 			animation-duration: 1000ms;
 
@@ -93,19 +93,19 @@
 				pointer-events: none;
 			}
 		}
-		@media(min-width: 1282px){
-			.title-block{
-				// margin-bottom: getvw(15vw);
-				margin-top: getvw(4vw);
-			}
-			.subtitle-block{
-				font-size: getvw(22vw);
-				top: getvw(-33vw);
-				left: getvw(-96vw);
-				line-height: getvw(22vw);
-				height: getvw(19vw);
-			}
-		}
+		// @media(min-width: 1282px){
+		// 	.title-block{
+		// 		// margin-bottom: getvw(15vw);
+		// 		margin-top: getvw(4vw);
+		// 	}
+		// 	.subtitle-block{
+		// 		font-size: getvw(22vw);
+		// 		top: getvw(-33vw);
+		// 		left: getvw(-96vw);
+		// 		line-height: getvw(22vw);
+		// 		height: getvw(19vw);
+		// 	}
+		// }
 		&:hover{
 			.display-text{
 				-webkit-animation: display-text .5s cubic-bezier(.25,0,0,.15);
@@ -145,11 +145,11 @@
 				margin: 0;
 				top: -16px;
 			}
-			@media(min-width: 1282px){
-				width: getvw(20vw);
-				height: getvw(2vw);
-				top: getvw(-16vw);
-			}
+			// @media(min-width: 1282px){
+			// 	width: getvw(20vw);
+			// 	height: getvw(2vw);
+			// 	top: getvw(-16vw);
+			// }
 		}
 		
 		#paragraphs-wrap{
@@ -163,9 +163,9 @@
 			@media (min-width: 992px){
 				height: 166px;
 			}
-			@media (min-width: 1282px){
-				height: getvw(166vw);
-			}
+			// @media (min-width: 1282px){
+			// 	height: getvw(166vw);
+			// }
 		}
 
 		.about-p{
@@ -186,11 +186,11 @@
 				margin-bottom: 36px;
 			}
 
-			@media(min-width: 1282px){
-				line-height: getvw(15vw);
-				margin-top: getvw(6vw);
-				margin-bottom: getvw(36vw);
-			}
+			// @media(min-width: 1282px){
+			// 	line-height: getvw(15vw);
+			// 	margin-top: getvw(6vw);
+			// 	margin-bottom: getvw(36vw);
+			// }
 
 			&.show{
 				opacity: 1;
@@ -235,12 +235,12 @@
 				padding: 10px 0 0 0;
 				width: 65.66%;
 			}
-			@media(min-width: 1282px){
-				padding-top: getvw(10vw);
-				.social-link{
-					height: getvw(18vw);
-				}
-			}
+			// @media(min-width: 1282px){
+			// 	padding-top: getvw(10vw);
+			// 	.social-link{
+			// 		height: getvw(18vw);
+			// 	}
+			// }
 		}
 	}
 }
