@@ -35,33 +35,49 @@
 	background-color: $light-orange;
 	color:$dark-brown;
 	justify-content: center;
-	form#inputs-container{
+	.inputs-container{
 		width: 100%;
 		padding-left: 11.11%;
 		@media(min-width: 768px){
-			padding-left: calc(33.3333% - -3px);
+			padding-left: 33.8333%;
 		}
 		@media(min-width: 1282px){
-			padding-left: calc(33.3333% - getvw(-3vw));
+			padding-left: 33.8333%;
+		}
+		.inputs-flex{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			height: 96px;
+			@media(min-width: 768px){
+				height: 156px;
+			}
+			@media(min-width: 1282px){
+				height: getvw(156vw);
+			}
 		}
 		.input-wrapper{
 			width: 100%;
 			// height: 33px;
-			height: 30px;
-			margin-bottom: 2px;
+			flex-shrink: 0;
+			// margin-bottom: 2px;
 			display: block;
 			position: relative;
-			@media(min-width: 768px){
-				height: 52px;
+			// @media(min-width: 768px){
+			// 	height: 52px;
+			// }
+			@media(min-width: 1282px){
+				margin-bottom: getvw(2vw);
 			}
-			@media(min-width: 1882px){
-				height: getvw(52vw);
-			}
+
 			input, 
 			textarea{
 				font-size: 12px;
 				width: inherit;
-				height: 100%;
+				// height: 100%;
+				height: 30px;
 				padding: 10px 0;
 				font-family: 'TitlingGothicFB light';
 				// position: relative;
@@ -72,10 +88,12 @@
 				outline: none;
 				@media(min-width: 768px){
 					font-size: 16px;
+					height: 50px;
 				}
 				@media(min-width: 1282px){
 					font-size: getvw(16vw);
 					padding: getvw(10vw) 0;
+					height: getvw(50vw);
 				}
 			}
 			label{
@@ -88,16 +106,22 @@
 					// pointer-events: none;
 					position: absolute;
 					left: 0px;
-					top: 50%;
-					transform: translateY(-50%);
+					top: 23.5%;
+					// top: 50%;
+					// transform: translateY(-50%);
 					// opacity: 1;
 					animation-duration: 1000ms;
 					&.active{
+						animation-name: none;
 						opacity: 0!important;
 					}
 				}
 				@media(min-width: 768px){
 					font-size: 16px;
+					&.placeholder{
+						top: 31%;
+
+					}
 				}
 				@media(min-width: 1282px){
 					font-size: getvw(16vw);
@@ -116,27 +140,46 @@
 			}
 			textarea{
 				resize: none;
-				padding-top: 17px;
 				@include transitions-ease(.4s);
-				&:focus,
-				&.filled{
-					height: 120px;
+				&:focus{
+					height: 96px;
+				}
+				@media(min-width: 768px){
+					padding-top: 16px;
+					&:focus{
+						height: 156px;
+					}
 				}
 				@media(min-width: 1282px){
-					padding-top: getvw(17vw);
-					&.filles{
-						height: getvw(120vw);
+					padding-top: getvw(16vw);
+					&:focus{
+						height: getvw(156vw);
 					}
 				}
 			}
+			textarea ~ label.placeholder{
+				top: 32%;
+			}
+
+			textarea:focus ~ label.placeholder{
+				top: 16px;
+				animation-name: none;
+				@media(min-width: 768px){
+					transform: translateY(0);
+				}
+				@media(min-width: 1282px){
+					top: getvw(16vw);
+				}
+			}
+
 			//-active state
 			input:focus ~ label.placeholder,
 			input:valid ~ label.placeholder,
-			input.filled ~ label.placeholder,
 			textarea:focus ~ label.placeholder,
 			textarea.filled ~ label.placeholder{
 				opacity: 0;
 				animation-name: none;
+				@include transitions-ease(.4s);
 			}
 			input:hover ~ label.placeholder,
 			textarea:hover ~ label.placeholder{
@@ -150,13 +193,20 @@
 				@media(min-width: 1282px){
 					height: getvw(2vw);
 				}
-				// opacity: 0;
 			}
+			// &.textarea-wrapper{
+			// 	background-color: red;
+			// 	display: block;
+			// 	&:focus{
+			// 		height: 100%;
+			// 		transition: all 0.4s ease-out;
+			// 	}
+			// }
 		}
 	}
 }
 // 	// checkbox
-.message-section #inputs-container #check-box{
+.message-section .inputs-container #check-box{
 	padding: 10px 0;
 	display: flex;
 	flex-direction: column;
@@ -229,6 +279,7 @@
 			height: 13px;
 			font-size: 16px;
 			font-family: 'Nocturne Serif ExtraBold';
+			letter-spacing: .02em;
 		}
 		.rectangle-arrow{
 			background-color: $black;
@@ -258,25 +309,27 @@
 		}
 	}
 	@media(min-width: 768px){	
-		margin-top: 15px;
+		margin-top: 12px;
 		left: 33.33%;
-		a.arrow-right{
+		.arrow-right{
 			margin-left: -15px;
 			span{
 				font-size: 22px;
 				line-height: 20px;
 				height: 19px;
+				margin-left: 19px;
 			}
 		}	
 	}
 	@media(min-width: 1282px){
-		margin-top: getvw(15vw);
+		margin-top: getvw(12vw);
 		.arrow-right{
 			margin-left: getvw(-15vw);
 			span{
 				line-height: getvw(22vw);
 				height: getvw(20vw);
-				font-size: getvw(19vw)
+				font-size: getvw(19vw);
+				margin-left: getvw(19vw);
 			}
 		}
 	}
