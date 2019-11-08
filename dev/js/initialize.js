@@ -19,12 +19,8 @@ window.onload = function() {
 		event.preventDefault();
 		var slide = $(this).data("slide");
 
-		if(slide=="prev" || slide=="next"){
-			if(slide=="prev") homeSlider.prev();
-			else homeSlider.next();
-		} else {
-			homeSlider.goTo(slide);
-		}
+		if(slide=="prev") homeSlider.prev();
+		else homeSlider.next();
 	});
 
 	// Remove preloader

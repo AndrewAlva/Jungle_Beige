@@ -1,6 +1,7 @@
 // Hero Slider (Used in Home Page)
 	// Update slides width for resizing cases
 	$(window).resize(function() {
+		homeSlider.getDeviceVersion();
 		homeSlider.getSlideWidth();
 		homeSlider.goTo(homeSlider.currentActiveSlide);
 	});
@@ -25,6 +26,7 @@
 
 		// Slider states
 		this.currentActiveSlide = 0;
+		this.currentDevice = "";
 
 		// Nav states
 		this.tabs = $('#home-hero-slider-not-mobile').find('.tabs');
@@ -32,6 +34,7 @@
 
 		// Methods
 		this.init = function(){
+			this.getDeviceVersion();
 			this.getDisplacement();
 			this.insertClones();
 			this.updateNavTabsState(0,0);
@@ -64,7 +67,11 @@
 		this.goTo = function(index, animate){ // Something is missing
 			var slideToDeactivate = this.currentActiveSlide;
 			var slideToActivate = index;
-			var slidesDisplace = this.getDisplacement() + (this.slideWidth * index);
+			if (this.currentDevice == "mobile") {
+				var slidesDisplace = this.getDisplacement() + (this.slideWidth * index);
+			} else {
+				var slidesDisplace = this.getDisplacement() + ((window.innerWidth * .551482) * index);
+			}
 			
 			if(this.canSlide){
 				this.canSlide = false;
@@ -88,7 +95,13 @@
 
 		this.getDisplacement = function(){ // Something is missing
 			this.getSlideWidth();
-			var lateralDisplacement = (2 * this.slideWidth) - (($(window).width() - this.slideWidth) / 2);
+			// var lateralDisplacement = (2 * this.slideWidth) - (($(window).width() - this.slideWidth) / 2);
+			if (this.currentDevice == "mobile") {
+				var lateralDisplacement = this.slideWidth * 2;
+			} else {
+				var lateralDisplacement = window.innerWidth * .878705;
+			}
+
 			return lateralDisplacement;
 		}
 
@@ -128,6 +141,14 @@
 		this.updateNavTabsState = function(activeTab, tabToActive){
 			$(this.tabs[activeTab]).removeClass('active-tab');
 			$(this.tabs[tabToActive]).addClass('active-tab');
+		}
+
+		this.getDeviceVersion = function(){
+			if (window.innerWidth < 768) {
+				this.currentDevice = "mobile"
+			} else {
+				this.currentDevice = "desktop"
+			}
 		}
 
 		// Pull the trigger
