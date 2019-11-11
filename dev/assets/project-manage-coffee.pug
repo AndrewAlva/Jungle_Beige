@@ -4,7 +4,7 @@ block preloader
 block content
 	.snj-container-fluid.project-page
 		.row
-			section.project-about
+			section.project-about.hero-background#coffee-hero
 				+hero-project("Content Creation & Management","Cartel Coffee","02")
 				.especifications-wrap.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					aside.especifications
@@ -28,15 +28,15 @@ block content
 
 						p No easy task with so many coffee shops out there, but we stand by our ambition, and its outcome, which includes a Narcos inspired mixed media video, a one take video narrated by the founder and countless photos we would put up against any coffee shop around. 
 			.p-photo1
-				img(src="./img/project-img-1.jpg", alt="")
+				img(src="./img/projects/coffee/2-coffee-photo.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="./img/project-img-2.jpg", alt="")
+					img(src="./img/projects/coffee/3-coffee-photo.jpg", alt="")
 				.p-photo2
-					img(src="./img/project-img-3.jpg", alt="")
-			include _modules/slider.pug
+					img(src="./img/projects/coffee/4-coffee-photo.jpg", alt="")
+			+slider-projects("./img/projects/coffee/5-coffee-slide.jpg", "./img/projects/coffee/6-coffee-slide.jpg", "./img/projects/coffee/7-coffee-slide.jpg", "./img/projects/coffee/8-coffee-slide.jpg", "", "", "", "")
 
-			section.video-wrapper.snj-col-12
+			section.video-wrapper.coffee-video-mini.snj-col-12
 				video(src="")
 				button.btn-circle
 					.btn-c-init

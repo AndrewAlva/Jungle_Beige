@@ -4,7 +4,7 @@ block preloader
 block content
 	.snj-container-fluid.project-page
 		.row
-			section.project-about
+			section.project-about#event-amongst-hero
 				+hero-project("Event Curation","Amongst Few","02")
 				.especifications-wrap.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					aside.especifications
@@ -26,14 +26,14 @@ block content
 						p Amongst Few Cafe has also been home to numerous activations, transforming the frequented cafe to a new experience with each new theme. One night it will be the home of the annual sneaker and streetwear bible, All Gone. The next it will be a Jamaican backyard for the brand’s collaboration with Miss Lily’s. Same place, difference experience, moving the needle… every time.
 
 			.p-photo1
-				img(src="./img/project-img-1.jpg", alt="")
+				img(src="./img/projects/event-amongst/2-event-amongst-photo.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="./img/project-img-2.jpg", alt="")
+					img(src="./img/projects/event-amongst/3-event-amongst-photo.jpg", alt="")
 				.p-photo2
-					img(src="./img/project-img-3.jpg", alt="")
-			include _modules/slider.pug
-			section.video-wrapper.snj-col-12
+					img(src="./img/projects/event-amongst/4-event-amongst-photo.jpg", alt="")
+			+slider-projects("./img/projects/event-amongst/5-event-amongst-slide.jpg", "./img/projects/event-amongst/6-event-amongst-slide.jpg", "./img/projects/event-amongst/7-event-amongst-slide.jpg", "./img/projects/event-amongst/8-event-amongst-slide.jpg", "", "", "", "")
+			section.video-wrapper.snj-col-12.eventAmongst-video-mini
 				video(src="")
 				button.btn-circle
 					.btn-c-init

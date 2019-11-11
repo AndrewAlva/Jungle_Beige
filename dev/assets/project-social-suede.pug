@@ -3,9 +3,9 @@ extends _templates/layout.pug
 block preloader
 	//- .preloader.color-2
 block content
-	.snj-container-fluid.project-page
+	.snj-container-fluid.project-page#suede-guerrilla-project
 		.row
-			section.project-about
+			section.project-about#suede-hero
 				//- .background-wrapper.p-about-bg
 				+hero-project("Campaign & Social Media Strategy","Suede Guerrilla", "01")
 				.especifications-wrap.snj-col-10.offset-1.snj-col-md-6.offset-md-3
@@ -28,15 +28,14 @@ block content
 						p Now an entire region of creatives have a way to continually share ideas and work with PUMA. It’s already led to dozens of co-creations and will continue to do so while the site is live. It’s the type of access and opportunity our younger selves dreamed of, and we’re proud to pay it forward to this generation and beyond.
 
 			.p-photo1
-				img(src="./img/project-img-1.jpg", alt="")
+				img(src="./img/projects/suede-guerrilla/suede-photo-2.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="./img/project-img-2.jpg", alt="")
+					img(src="./img/projects/suede-guerrilla/suede-photo-3.jpg", alt="")
 				.p-photo2
-					img(src="./img/project-img-3.jpg", alt="")
-			include _modules/slider.pug
-			
-			section.video-wrapper.snj-col-12
+					img(src="./img/projects/suede-guerrilla/suede-photo-4.jpg", alt="")
+			+slider-projects("./img/projects/suede-guerrilla/suede-slide-5.jpg", "./img/projects/suede-guerrilla/suede-slide-6.jpg", "./img/projects/suede-guerrilla/suede-slide-7.jpg", "./img/projects/suede-guerrilla/suede-slide-8.jpg", "", "", "", "")
+			section.video-wrapper.suede-video-mini.snj-col-12
 				video(src="")
 				button.btn-circle
 					.btn-c-init

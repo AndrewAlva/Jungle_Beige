@@ -1,19 +1,20 @@
 //- seccion de slider
-section#home-hero-slider-not-mobile.hero-slider-wrapper.not-mobile-hero-slider-wrapper
-	.slider-cards-wrapper
-		//- envolvente
-		#sliding-wrapper-not-mobile.sliding-wrapper.smooth-sliding
-			//- <!-- slide container elemento -->
-			.slide-container.slide-0
-				img(src="./img/projects/af_ecommerce/af_00.jpg", alt="")
-			.slide-container.slide-1
-				img(src="./img/projects/af_ecommerce/af_01.jpg", alt="")
-			.slide-container.slide-2
-				img(src="./img/projects/af_ecommerce/af_02.jpg", alt="")
-			.slide-container.slide-3
-				img(src="./img/projects/af_ecommerce/af_03.jpg", alt="")
+mixin slider-projects( slide1, slide2, slide3, slide4, slide1Title, slide2Title, slide3Title, slide4Title)
+	section#home-hero-slider-not-mobile.hero-slider-wrapper.not-mobile-hero-slider-wrapper
+		.slider-cards-wrapper
+			//- envolvente
+			#sliding-wrapper-not-mobile.sliding-wrapper.smooth-sliding
+				//- <!-- slide container elemento -->
+				.slide-container.slide-0
+					img(src=slide1, alt=slide1Title)
+				.slide-container.slide-1
+					img(src=slide2, alt=slide2Title)
+				.slide-container.slide-2
+					img(src=slide3, alt=slide3Title)
+				.slide-container.slide-3
+					img(src=slide4, alt=slide4Title)
 
-	button.slide-controller.controller-prev.to-slide(data-slide="prev")
-		span.up-translate Prev
-	button.slide-controller.controller-next.to-slide(data-slide="next")
-		span.up-translate Next
+		button.slide-controller.controller-prev.to-slide(data-slide="prev")
+			span.up-translate Prev
+		button.slide-controller.controller-next.to-slide(data-slide="next")
+			span.up-translate Next

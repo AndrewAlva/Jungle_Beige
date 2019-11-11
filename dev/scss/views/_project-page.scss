@@ -20,13 +20,15 @@ section.project-about{
 	height: 460px;
 	width: 100%;
 	padding: 115px 10px 0;
-	background-image: url("../img/project_1_bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	@include flexIt;
 	@include flexWrap;
-
+	&.hero-background{
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 	@media(min-width: 768px){
 		height: 525px;
 		padding: 196px 0 0;
@@ -338,9 +340,9 @@ section.project-description{
 	overflow: hidden;
 	img{
 		width: 100%;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%)
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%)
 	}
 	@media(min-width: 768px){
 		height: 525px;
@@ -368,10 +370,30 @@ section.video-wrapper{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-image: url("../img/project-img-5.jpg");
 	background-size: cover;
-	background-position: center;
 	margin-bottom: 20px;
+	&.coffee-video-mini{
+		background-image: url("../img/projects/coffee/9-coffee-mini.jpg");
+		background-position: center bottom;
+	}
+	&.suede-video-mini{
+		background-image: url("../img/projects/suede-guerrilla/suede-mini-9.jpg");
+	}
+	&.powerhorse-video-mini{
+		background-image: url("https://www.fillmurray.com/1920/787");
+	}
+	&.contentPuma-video-mini{
+		background-image: url("https://www.fillmurray.com/1920/787");
+	}
+	&.eventAmongst-video-mini{
+		background-image: url("../img/projects/event-amongst/9-event-amongst-mini.jpg");
+	}
+	&.commerceAmongst-video-mini{
+		background-image: url("https://www.fillmurray.com/1920/787");
+	}
+	&.fill-mini{
+		background-image: url("https://www.fillmurray.com/1920/787");
+	}
 	video{
 		position: absolute;
 		top: 0;
@@ -544,4 +566,28 @@ a.more-cases{
 			animation: editRectArrow .6s cubic-bezier(.21,0,0,1);
 		}
 	}
+}
+// Background hero image
+#coffee-hero{
+	background-image: url("../img/projects/coffee/1-coffee-hero.jpg");	
+}
+#suede-hero{
+	background-image: url("../img/projects/suede-guerrilla/suede-header-1.jpg");
+}
+#power-horse-hero{
+	background-image: url("../img/projects/power-horse/1-power-hero.jpg");
+	background-position: center;
+}
+#content-puma{
+	background-image: url("../img/projects/content-puma/1-content-puma-hero.jpg");
+	background-position: center;
+}
+#event-puma-hero{
+	background-image: url("../img/projects/event-puma/1-event-puma-hero.jpg");
+}
+#commerce-amongst-hero{
+	// background-image: url("https://www.fillmurray.com/1920/787");
+}
+#event-amongst-hero{
+	background-image: url("../img/projects/event-amongst/1-event-amongst-hero.jpg");
 }

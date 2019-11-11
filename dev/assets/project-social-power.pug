@@ -5,7 +5,7 @@ block preloader
 block content
 	.snj-container-fluid.project-page
 		.row
-			section.project-about
+			section.project-about#power-horse-hero
 				//- .background-wrapper.p-about-bg
 				+hero-project("Campaign & Social Media Strategy","Power Horse", "02")
 				.especifications-wrap.snj-col-10.offset-1.snj-col-md-6.offset-md-3
@@ -29,15 +29,15 @@ block content
 
 						p When competitors went mainstream, we went underground. It’s made the difference ever since. 
 			.p-photo1
-				img(src="./img/project-img-1.jpg", alt="")
+				img(src="./img/projects/power-horse/2-power-photo.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="./img/project-img-2.jpg", alt="")
+					img(src="https://www.fillmurray.com/955/787", alt="")
 				.p-photo2
-					img(src="./img/project-img-3.jpg", alt="")
-			include _modules/slider.pug
+					img(src="https://www.fillmurray.com/955/787", alt="")
+			+slider-projects("https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "", "", "", "")
 			
-			section.video-wrapper.snj-col-12
+			section.video-wrapper.powerhorse-video-mini.snj-col-12
 				video(src="")
 				button.btn-circle
 					.btn-c-init

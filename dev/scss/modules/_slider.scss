@@ -141,3 +141,23 @@
 		// }
 	}
 }
+#suede-guerrilla-project{
+	.slide-container{
+		@media(min-width: 768px){
+			img{
+				top: 68%;
+			}
+		}
+	}
+}
+#event-puma-project{
+	.slide-container{
+		@media(min-width: 768px){
+			img{
+				top: 0;
+				left: 0;
+				transform: translate(0,0);
+			}
+		}
+	}
+}
