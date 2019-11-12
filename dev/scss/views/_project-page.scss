@@ -304,21 +304,23 @@ section.project-description{
 	img{
 		height: 100%;
 		// top: 5%;
-		left: -50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 	@media(min-width: 768px){
 		margin-bottom: 10px;
 		img{		
-			// width: 100%;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%)
+			height: auto;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%)
 		}
 	}
-	@media(min-width: 1282px){
-		height: getvw(525vw);
-		// margin-bottom: getvw(10vw);
-	}
+	// @media(min-width: 1282px){
+	// 	height: getvw(525vw);
+	// 	// margin-bottom: getvw(10vw);
+	// }
 }
 .img-wrapper{
 	width: 100%;
@@ -339,10 +341,11 @@ section.project-description{
 	width: 100%;
 	overflow: hidden;
 	img{
+		height: auto;
 		width: 100%;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%)
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)
 	}
 	@media(min-width: 768px){
 		height: 525px;
@@ -353,6 +356,9 @@ section.project-description{
 		&.p-photo2{
 			width: calc(50% - 5px);
 			padding-right: 0;
+		}
+		img{
+			width: auto;
 		}
 	}
 	// @media(min-width: 1282px){
@@ -372,6 +378,7 @@ section.video-wrapper{
 	justify-content: center;
 	background-size: cover;
 	margin-bottom: 20px;
+	background-position:  center;
 	&.coffee-video-mini{
 		background-image: url("../img/projects/coffee/9-coffee-mini.jpg");
 		background-position: center bottom;
@@ -567,9 +574,15 @@ a.more-cases{
 		}
 	}
 }
+
+
 // Background hero image
 #coffee-hero{
-	background-image: url("../img/projects/coffee/1-coffee-hero.jpg");	
+	background-image: url("../img/projects/coffee/1-coffee-hero.jpg");
+	background-position: 24%, 40%;
+	@media(min-width: 768px){
+		background-position:  top;
+	}
 }
 #suede-hero{
 	background-image: url("../img/projects/suede-guerrilla/suede-header-1.jpg");
@@ -580,14 +593,128 @@ a.more-cases{
 }
 #content-puma{
 	background-image: url("../img/projects/content-puma/1-content-puma-hero.jpg");
-	background-position: center;
+	background-position: 58%;
 }
 #event-puma-hero{
 	background-image: url("../img/projects/event-puma/1-event-puma-hero.jpg");
+	@media(max-width: 768px){
+		background-position: 20%;
+	}
 }
 #commerce-amongst-hero{
 	// background-image: url("https://www.fillmurray.com/1920/787");
 }
 #event-amongst-hero{
 	background-image: url("../img/projects/event-amongst/1-event-amongst-hero.jpg");
+}
+
+//checar fotos individualmente
+@media(min-width: 768px){
+	#coffee-project{
+		.slide-container.slide-0 img{
+			top: 42%;
+		}
+	}
+
+	#power-horse-project{
+		.slide-container.slide-1 img{
+			top:0;
+			transform: translate(-50%, 0%)
+		}
+	}
+}
+
+#manage-puma-project{
+	.slide-container.slide-0 img{
+		top:0;
+		transform: translate(-50%, 0%)
+	}
+	@media(min-width: 552px){
+		.slide-container.slide-2 img{
+			left: 0;
+			transform: translate(0%, -50%);
+		}
+	}
+	@media(max-width: 768px){
+		.p-photo1 img{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+		}
+	}
+	@media(min-width: 1200px){
+		.p-photo1 img{
+			width: 100%;
+			top: 0;
+			transform: translate(-50%, -7%);
+		}
+	}
+}
+
+#suede-guerrilla-project{
+	.p-photo{
+		top: 50%;
+		left: 0;
+		transform: translate(-10%, -50%);
+	}
+	.p-photo3 img{
+		top: 0%;
+		transform: translate(-50%, 0%)
+	}
+	@media(min-width: 768px){
+		.p-photo1 img{
+			top: 0;
+			left: 0;
+			transform: translate(-10%, 0%)
+		}
+		.slide-container{
+			img{
+				top: 68%;
+			}
+		}
+	}
+}
+#event-puma-project{
+	@media(max-width: 576px){
+		.p-photo1 img{
+			top: 0;
+			right:-20%;
+			left: inherit;
+			transform: translate(0);
+		}
+	}
+	@media(min-width: 768px){
+		.p-photo1 img{
+			height: 100%;
+			top: 50%;
+			left: 42%;
+			transform: translate(-50%,-50%);
+		}
+		.p-photo3 img{
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -7%);
+		}
+		.slide-container.slide-0 img{
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0%);
+		}
+	}
+	@media(min-width: 992px){
+		.p-photo1 img{
+			right: 0;
+			left: inherit;
+			transform: translate(0);
+			top: inherit;
+		}
+	}
+	@media(min-width: 1200px){
+		.p-photo1 img{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: auto;
+		}
+	}
 }
