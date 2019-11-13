@@ -2,13 +2,12 @@ extends _templates/layout.pug
 block preloader
 	//- .preloader.color-1.preloader-cut
 block content
-	.ourwork-sections-detail#management-work
-		.background-wrapper.worksections-bg
-		//- component
-		.sections-p-wrapper.project-bg-1
-			+project-sections(" Content creation & Management", "Puma", "01", "project-manage-puma.html")
-		.sections-p-wrapper.project-bg-2
-			+project-sections(" Content creation & Management", "Cartel Coffe", "02", "project-manage-coffee.html")
+	.worksections-bg
+	//- component
+	.sections-p-wrapper.project-bg-puma
+		+project-sections(" Content creation & Management", "Puma", "01", "project-manage-puma.html")
+	.sections-p-wrapper.project-bg-coffee
+		+project-sections(" Content creation & Management", "Cartel Coffee", "02", "project-manage-coffee.html")
 	a.navigation-btn.btn-pages(href="ourwork.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn

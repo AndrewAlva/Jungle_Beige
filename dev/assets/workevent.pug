@@ -2,13 +2,12 @@ extends _templates/layout.pug
 block preloader
 	//- .preloader.color-1.preloader-cut
 block content
-	.ourwork-sections-detail#event-work
-		.background-wrapper.worksections-bg
-		//- component
-		.sections-p-wrapper.project-bg-1
-			+project-sections("Event Curation", "Puma Middle East", "01", "project-event-puma.html")
-		.sections-p-wrapper.project-bg-2
-			+project-sections("Event Curation", "Amongst Few", "02", "project-event-amongst.html")
+	.worksections-bg
+	//- component
+	.sections-p-wrapper.project-bg-event-puma
+		+project-sections("Event Curation", "Puma Middle East", "01", "project-event-puma.html")
+	.sections-p-wrapper.project-bg-event-amongst
+		+project-sections("Event Curation", "Amongst Few", "02", "project-event-amongst.html")
 	a.navigation-btn.btn-pages(href="ourwork.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn

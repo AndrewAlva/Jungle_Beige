@@ -379,6 +379,7 @@ section.video-wrapper{
 	background-size: cover;
 	margin-bottom: 20px;
 	background-position:  center;
+	position: relative;
 	&.coffee-video-mini{
 		background-image: url("../img/projects/coffee/9-coffee-mini.jpg");
 		background-position: center bottom;
@@ -401,15 +402,14 @@ section.video-wrapper{
 	&.fill-mini{
 		background-image: url("https://www.fillmurray.com/1920/787");
 	}
-	video{
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	button{
+	// video{
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// }
+	.btn-circle{
 		display: block;
 		margin: 0 auto;
-		outline: none;
 	}
 	@media(min-width: 768px){
 		height: 525px;
@@ -419,6 +419,118 @@ section.video-wrapper{
 	// 	height: getvw(525vw);
 	// 	margin-bottom: getvw(10vw);
 	// }
+	.close-video{
+		position: absolute;
+		right: 8.96%;
+		top: 50px;
+	}
+	video{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.video-overlay{
+		position: fixed;
+		z-index: 9000;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.timeline-controller{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		// padding: 0;
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+		@media(min-width: 768px){
+			padding: 0 20px;
+			max-width: 100%;
+			bottom: 40px;
+		}
+		@media(min-width: 992px){
+			padding: 0;
+		}
+		.time-control{
+			color: $dark-orange;
+			font-size: 10px;
+			&.time-mobile{
+				display: inline-block;
+			}
+			@media(min-width: 768px){
+				font-size: 12px;
+				line-height: 12px;
+				height: 10px;
+				display: inline-block;
+				&.time-mobile{
+					display: none;
+				}
+			}
+		}
+		.time-init{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			@media(min-width: 768px){
+				display: inline-block;
+				text-align: left;
+			}
+			@media(min-width: 992px){
+				text-align: right;
+			}
+		}
+		.time-end{
+			display: none;
+			text-align: right;
+			@media(min-width: 768px){
+				display: inline-block;
+			}
+			@media(min-width: 992px){
+				text-align: left;
+			}
+		}
+		// @media(max-width: 767px){
+		// 	position: absolute;
+		// 	bottom: 20px;
+		// 	width: auto;
+		// 	&.time-init{
+		// 		left: 20px;
+		// 	}
+		// 	&.time-end{
+		// 		right: 20px;
+		// 	}
+		// }
+		.timeline-wrapper{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.timeline{
+				width: 100%;
+				height: 4px;
+				border-radius: 2px;
+				background-color: #312d2b;
+				display: block;
+				.bar-timeline{
+					background-color: $orange;
+					height: 100%;
+					width: 20%;
+					border-radius: 2px;
+					display: block;
+				}
+			}
+			@media(max-width: 992px){
+				padding: 0 10px;
+			}
+		}
+	}
 }
 section.footer-project{
 	width: 100%;
@@ -575,40 +687,67 @@ a.more-cases{
 	}
 }
 
-
-// Background hero image
-#coffee-hero{
-	background-image: url("../img/projects/coffee/1-coffee-hero.jpg");
-	background-position: 24%, 40%;
-	@media(min-width: 768px){
-		background-position:  top;
-	}
+// Hero images
+[class*="project-bg-"]{	
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-#suede-hero{
+// branding falta
+.project-bg-beams{
+	background-image: url("../img/project_1_bg.jpg");
+}
+.project-bg-cred{
+	background-image: url("../img/project_2_bg.jpg");
+}
+// campaign & social media strategy
+.project-bg-suede{
 	background-image: url("../img/projects/suede-guerrilla/suede-header-1.jpg");
 }
-#power-horse-hero{
+.project-bg-power{
 	background-image: url("../img/projects/power-horse/1-power-hero.jpg");
-	background-position: center;
 }
-#content-puma{
+// content creation & management
+.project-bg-puma{
 	background-image: url("../img/projects/content-puma/1-content-puma-hero.jpg");
-	background-position: 58%;
 }
-#event-puma-hero{
+.project-bg-coffee{
+	background-image: url("../img/projects/coffee/1-coffee-hero.jpg");
+	background-position: center top;
+}
+// event curation
+.project-bg-event-puma{
 	background-image: url("../img/projects/event-puma/1-event-puma-hero.jpg");
-	@media(max-width: 768px){
-		background-position: 20%;
-	}
 }
-#commerce-amongst-hero{
-	// background-image: url("https://www.fillmurray.com/1920/787");
-}
-#event-amongst-hero{
+.project-bg-event-amongst{
 	background-image: url("../img/projects/event-amongst/1-event-amongst-hero.jpg");
 }
+// e-commerce falta
+.project-bg-commerce-amongst{
+	background-image: url("../img/project_2_bg.jpg");
+}
 
-//checar fotos individualmente
+// Background hero image
+section.project-about{
+	// content creation & management
+	&.project-bg-puma{
+		background-position: 58%;
+	}
+	&.project-bg-coffee{
+		background-position: 28%;
+		@media(min-width:768px){
+			background-position: center top;
+		}
+	}
+	// event curation
+	&.project-bg-event-puma{
+		@media(max-width: 768px){
+			background-position: 20%;
+		}
+	}
+}
+
+// check photos
 @media(min-width: 768px){
 	#coffee-project{
 		.slide-container.slide-0 img{
@@ -652,7 +791,7 @@ a.more-cases{
 }
 
 #suede-guerrilla-project{
-	.p-photo{
+	.p-photo1 img{
 		top: 50%;
 		left: 0;
 		transform: translate(-10%, -50%);
@@ -671,6 +810,11 @@ a.more-cases{
 			img{
 				top: 68%;
 			}
+		}
+	}
+	@media(min-width: 992px){
+		.p-photo1 img{
+			transform: translate(0%, 0%)
 		}
 	}
 }

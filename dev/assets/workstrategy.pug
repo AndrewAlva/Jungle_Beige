@@ -2,13 +2,12 @@ extends _templates/layout.pug
 block preloader
 	//- .preloader.color-1.preloader-cut
 block content
-	.ourwork-sections-detail#strategy-work
-		.background-wrapper.worksections-bg
+	.worksections-bg
 		//- component
-		.sections-p-wrapper.project-bg-1
-			+project-sections("Campaign & Social Media Strategy ", "Suede Guerrillas ", "01", "project-social-suede.html")
-		.sections-p-wrapper.project-bg-2
-			+project-sections("Campaign & Social Media Strategy ", "Power Horse", "02", "project-social-power.html")
+	.sections-p-wrapper.project-bg-suede
+		+project-sections("Campaign & Social Media Strategy ", "Suede Guerrillas ", "01", "project-social-suede.html")
+	.sections-p-wrapper.project-bg-power
+		+project-sections("Campaign & Social Media Strategy ", "Power Horse", "02", "project-social-power.html")
 	a.navigation-btn.btn-pages(href="ourwork.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn

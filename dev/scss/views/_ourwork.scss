@@ -93,7 +93,7 @@
 	.arrow-right{
 		justify-content: flex-end;
 		display: flex;
-		@media(min-width: 768px){
+		@media(min-width: 1200px){
 			padding-right: 153px;
 		}
 		// @media(min-width: 1282px){
@@ -135,6 +135,7 @@
 	}
 	&:hover{
 		opacity: 1;
+		animation-name: none;
 		.number-project, 
 		.name-project{
 			-webkit-animation: translate-up .6s cubic-bezier(.25,0,0,.8);

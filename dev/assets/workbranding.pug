@@ -2,14 +2,13 @@ extends _templates/layout.pug
 block preloader
 	//- .preloader.color-1.preloader-cut
 block content
-	#branding-work
-		.background-wrapper.worksections-bg
-		.sections-p-wrapper.project-bg-1
-			+project-sections("Branding & Design", "High Beams", "01", "project-brand-beams.html")
-		.sections-p-wrapper.project-bg-2
-			+project-sections("Branding & Design", "Future Street Cred", "02", "project-brand-cred.html")
-		a.navigation-btn.btn-pages(href="ourwork.html")
-			span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
-				+back-icon-btn
+	.worksections-bg
+	.sections-p-wrapper.project-bg-beams
+		+project-sections("Branding & Design", "High Beams", "01", "project-brand-beams.html")
+	.sections-p-wrapper.project-bg-cred
+		+project-sections("Branding & Design", "Future Street Cred", "02", "project-brand-cred.html")
+	a.navigation-btn.btn-pages(href="ourwork.html")
+		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
+			+back-icon-btn
 block footer
 	+footer('')
