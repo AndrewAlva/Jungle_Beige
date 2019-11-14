@@ -36,13 +36,9 @@ block content
 					img(src="./img/projects/content-puma/4-content-puma-photo.jpg", alt="")
 			+slider-projects("./img/projects/content-puma/5-content-puma-slide.jpg", "./img/projects/content-puma/6-content-puma-slide.jpg", "./img/projects/content-puma/7-content-puma-slide.jpg", "./img/projects/content-puma/8-content-puma-slide.jpg", "", "", "", "")
 
-			section.video-wrapper.contentPuma-video-mini.snj-col-12
-				video(src="")
-				button.btn-circle
-					.btn-c-init
-					+video-play-icon
-					.btn-c-hover
-					span Play
+			section.video-wrapper.fill-mini.snj-col-12
+				+video-player("https://www.fillmurray.com/1920/787","../img/projects/content-puma/9-content-puma-video.mp4")
+
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev

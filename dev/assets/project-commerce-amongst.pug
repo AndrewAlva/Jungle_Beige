@@ -32,13 +32,9 @@ block content
 				.p-photo2
 					img(src="./img/projects/commerce-amongst/4-commerce-amongst-photo.jpg", alt="")
 			+slider-projects("./img/projects/commerce-amongst/5-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/6-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/7-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/8-commerce-amongst-slide.jpg", "", "", "", "")
-			section.video-wrapper.snj-col-12.commerceAmongst-video-mini
-				video(src="")
-				button.btn-circle
-					.btn-c-init
-					+video-play-icon
-					.btn-c-hover
-					span Play
+			//- video player
+			section.video-wrapper.fill-mini.snj-col-12
+				+video-player("https://www.fillmurray.com/1920/787","../img/projects/commerce-amongst/9-commerce-amongst-video.mp4")
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev

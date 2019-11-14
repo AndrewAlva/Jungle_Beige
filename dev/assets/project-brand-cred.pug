@@ -33,13 +33,9 @@ block content
 				.p-photo2
 					img(src="https://www.fillmurray.com/955/787", alt="")
 			+slider-projects("https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "", "", "", "")
-			section.video-wrapper.snj-col-12.fill-mini
-				video(src="")
-				button.btn-circle
-					.btn-c-init
-					+video-play-icon
-					.btn-c-hover
-					span Play
+			//- video
+			section.video-wrapper.fill-mini.snj-col-12
+				+video-player("../img/projects/coffee/9-coffee-mini.jpg","../img/projects/coffee/9-coffee-video.mp4")
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev

@@ -386,9 +386,12 @@ section.video-wrapper{
 	}
 	&.suede-video-mini{
 		background-image: url("../img/projects/suede-guerrilla/suede-mini-9.jpg");
+		@media(min-width: 1200px){
+			background-position: top;
+		}
 	}
 	&.powerhorse-video-mini{
-		background-image: url("https://www.fillmurray.com/1920/787");
+		// background-image: url("https://www.fillmurray.com/1920/787");
 	}
 	&.contentPuma-video-mini{
 		background-image: url("https://www.fillmurray.com/1920/787");

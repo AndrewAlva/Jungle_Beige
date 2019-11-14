@@ -1,0 +1,26 @@
+mixin video-player(tumbnail, video)
+	button#open-video-btn.btn-circle.play-btn.circle-border-btn
+		.btn-c-init
+		+video-play-icon
+		.btn-c-hover
+		span Play
+	.video-overlay#videoContainer
+		video#projectVideo(poster=tumbnail loop)
+			source(src=video type="video/mp4")
+		//- button.btn-circle.pause-video.circle-border-btn
+		//- 	.btn-c-init
+		//- 	+video-pause-icon
+
+		button#close-video-btn.btn-circle.close-video
+			+video-exit-icon
+			span.bg-btn
+
+		.timeline-controller.snj-container-fluid
+			.time-init.snj-col-3.snj-col-md-1
+				span#currentSecondsContainer.time-control 00.00
+				span.time-control.time-mobile /
+				span.time-control.time-mobile.videoDurationContainer 00.00
+			.progress-bar-wrapper.snj-col-9.snj-col-md-10
+				.progress-bar
+					.bar
+			span.time-control.time-end.snj-col-md-1.videoDurationContainer 00.00

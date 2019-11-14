@@ -35,13 +35,10 @@ block content
 				.p-photo3
 					img(src="./img/projects/suede-guerrilla/suede-photo-4.jpg", alt="")
 			+slider-projects("./img/projects/suede-guerrilla/suede-slide-5.jpg", "./img/projects/suede-guerrilla/suede-slide-6.jpg", "./img/projects/suede-guerrilla/suede-slide-7.jpg", "./img/projects/suede-guerrilla/suede-slide-8.jpg", "", "", "", "")
+			//- video
 			section.video-wrapper.suede-video-mini.snj-col-12
-				video(src="")
-				button.btn-circle
-					.btn-c-init
-					+video-play-icon
-					.btn-c-hover
-					span Play
+				+video-player("../img/projects/suede-guerrilla/suede-mini-9.jpg","../img/projects/suede-guerrilla/suede-video-9.mp4")
+				
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev

@@ -32,13 +32,9 @@ block content
 				.p-photo2
 					img(src="./img/projects/event-puma/4-event-puma-photo.jpg", alt="")
 			+slider-projects("./img/projects/event-puma/5-event-puma-slide.jpg", "./img/projects/event-puma/6-event-puma-slide.jpg", "./img/projects/event-puma/7-event-puma-slide.jpg", "https://www.fillmurray.com/893/591", "", "", "", "")
-			section.video-wrapper.snj-col-12.fill-mini
-				video(src="")
-				button.btn-circle
-					.btn-c-init
-					+video-play-icon
-					.btn-c-hover
-					span Play
+			//- video
+			section.video-wrapper.fill-mini.snj-col-12
+				+video-player("https://www.fillmurray.com/1920/787","../img/projects/event-puma/9-event-puma-video.mp4")
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev
