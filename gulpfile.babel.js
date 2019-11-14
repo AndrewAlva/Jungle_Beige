@@ -101,13 +101,13 @@ gulp.task('babel-min', ()=>{
 
 // Tarea para exportar imagenes de "dev" a "public"
 gulp.task('images', function(){
-  return gulp.src('./dev/assets/img/*.+(png|jpg|gif|svg)')
+  return gulp.src('./dev/assets/img/*.+(png|jpg|gif|svg|mp4)')
   .pipe(gulp.dest('./public/img'))
 });
 
 // Tarea para exportar imagenes de folders dentro de img de "dev" a "public"
 gulp.task('subimages', function(){
-  return gulp.src('./dev/assets/img/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('./dev/assets/img/**/*.+(png|jpg|gif|svg|mp4)')
   .pipe(gulp.dest('./public/img'))
 });
 

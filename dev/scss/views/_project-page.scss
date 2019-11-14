@@ -442,6 +442,8 @@ section.video-wrapper{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
 	}
 	.timeline-controller{
 		display: flex;
@@ -508,17 +510,17 @@ section.video-wrapper{
 		// 		right: 20px;
 		// 	}
 		// }
-		.timeline-wrapper{
+		.progress-bar-wrapper{
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			.timeline{
+			.progress-bar{
 				width: 100%;
 				height: 4px;
 				border-radius: 2px;
 				background-color: #312d2b;
 				display: block;
-				.bar-timeline{
+				.bar{
 					background-color: $orange;
 					height: 100%;
 					width: 20%;
@@ -531,6 +533,10 @@ section.video-wrapper{
 			}
 		}
 	}
+}
+#videoContainer.show-video{
+	opacity: 1;
+	pointer-events: auto;
 }
 section.footer-project{
 	width: 100%;
