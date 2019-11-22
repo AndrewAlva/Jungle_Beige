@@ -3,7 +3,14 @@
 // without waiting for stylesheets, images, and
 // subframes to finish loading
 document.addEventListener('DOMContentLoaded', function() {
-    // Do something
+    // Detect if page has video
+	if (document.getElementById('videoContainer')) {
+		var ProjectVideo = new JBVideoPlayer({
+			containerID: 'videoContainer'
+		});
+
+		ProjectVideo.init();
+	}
 });
 
 
