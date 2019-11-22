@@ -518,17 +518,40 @@ section.video-wrapper{
 			flex-direction: column;
 			justify-content: center;
 			.progress-bar{
+				position: relative;
 				width: 100%;
 				height: 4px;
 				border-radius: 2px;
 				background-color: #312d2b;
 				display: block;
+				cursor: pointer;
+
+				&:hover{
+					height: 5px;
+
+					&:before{
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0; left: 0;
+						width: 100%;
+						height: 100%;
+						background:rgba(255,255,255,0.1);
+					}
+				}
+
 				.bar{
 					background-color: $orange;
 					height: 100%;
-					width: 20%;
+					width: 100%;
 					border-radius: 2px;
 					display: block;
+					@include transform-origin(0, 0);
+					@include bar-ease;
+					
+					&.jump{
+						@include none-ease;
+					}
 				}
 			}
 			@media(max-width: 992px){

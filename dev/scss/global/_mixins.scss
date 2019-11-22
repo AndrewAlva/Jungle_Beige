@@ -4,6 +4,23 @@
 	box-sizing: border-box;
 }
 
+@mixin none-ease{
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+
+}
+
+@mixin bar-ease{
+	-webkit-transition: transform .3s ease-in-out;
+	-moz-transition: transform .3s ease-in-out;
+	-ms-transition: transform .3s ease-in-out;
+	-o-transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+}
+
 @mixin transitions-ease($timing){
 	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1);
 	-moz-transition: all $timing cubic-bezier(.3,0,.2,1);

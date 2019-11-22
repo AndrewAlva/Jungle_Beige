@@ -1,6 +1,21 @@
 // nombre de las variables, tomar elementos por  nombre de id
 var videoContainer = document.getElementById("videoContainer");
 var projectVideo = document.getElementById("projectVideo");
+var progressBar = document.getElementById("updatingBar");
+var progressBarNav = document.getElementById("progressNav");
+var progressBarNavWidth = progressBarNav.offsetWidth;
+
+function animateVideo(){
+    requestAnimationFrame(animateVideo);
+    renderVideo();
+}
+function renderVideo(){
+    if (isPlaying) {
+        updateBarWidth(currentSeconds);
+    }
+}
+
+
 // define si se está reproduciendo(siempre hacer como pregunta)
 // ya que al inicio cuando se carga la página no se esta reproduciendo 
 // el video, entonces su valor es false
@@ -19,7 +34,7 @@ buttonOpen.addEventListener("click", function() {
 // en esta variable le ponemos un evento, que será play, para que reproduzca el video
     projectVideo.play();
 // ya que le seteamos que al momento de abrirse el video se reproduzca, entonces nuestra variable
-// isPlaaying deja de ser false y paa a ser true, hay que definirle eso tambien
+// isPlaying deja de ser false y paa a ser true, hay que definirle eso tambien
     isPlaying=true;
 });
 
@@ -58,15 +73,17 @@ var videoDuration, videoDurationContainers;
 projectVideo.addEventListener("loadedmetadata", function(){
     // se le asigna a nuestra variable video duration el valor de la duracion del video(project video) con .duration
     videoDuration = projectVideo.duration;
-    console.log("Video duration: " + videoDuration);
+    // console.log("Video duration: " + videoDuration);
 // setear la variable videoDurationContainers a una clase
     videoDurationContainers = document.getElementsByClassName("videoDurationContainer");
 // en este caso como son dos elementos los que tenemos por medio de un ciclo for los buscamos
     for (var i = 0; i < videoDurationContainers.length; i++) {
         videoDurationContainers[i].innerHTML = getTimeString(getMinutes(videoDuration), getSeconds(videoDuration));
     }
-    console.log("get seconds: " + getSeconds(videoDuration));
+    // console.log("get seconds: " + getSeconds(videoDuration));
 
+    animateVideo();
+    updateBarWidth(0);
 });
 
 // duración del video
@@ -102,11 +119,35 @@ function getTimeString(minutes, seconds){
     return minutes + "." + seconds;
 }
 
+function updateBarWidth(currentSecond){
+    var _barWidth =  currentSecond / projectVideo.duration;
+    var _inlineWidth = "scaleX(" + _barWidth + ")";
+    progressBar.style.transform = _inlineWidth;
+}
+
 // update seconds
-var currentSeconds;
+var currentSeconds = 0;
 var currentSecondsContainer = document.getElementById("currentSecondsContainer");
 
 projectVideo.addEventListener("timeupdate", function(){
     currentSeconds = projectVideo.currentTime;
     currentSecondsContainer.innerHTML = getTimeString(getMinutes(currentSeconds), getSeconds(currentSeconds));
 });
+
+
+
+progressBarNav.addEventListener('click', function(e){
+    progressBar.classList.add('jump');
+    console.log(e);
+    var _percentageClicked = (e.layerX * 100) / progressBarNavWidth;
+    var _newVideoTime = (_percentageClicked * projectVideo.duration) / 100;
+
+    updateBarWidth(_newVideoTime);
+    projectVideo.currentTime = _newVideoTime;
+    setTimeout(function(){
+        progressBar.classList.remove('jump');
+    }, 200);
+})
+
+
+

@@ -1,11 +1,11 @@
-mixin video-player(tumbnail, video)
+mixin video-player(thumbnail, video)
 	button#open-video-btn.btn-circle.play-btn.circle-border-btn
 		.btn-c-init
 		+video-play-icon
 		.btn-c-hover
 		span Play
 	.video-overlay#videoContainer
-		video#projectVideo(poster=tumbnail loop)
+		video#projectVideo(poster=thumbnail)
 			source(src=video type="video/mp4")
 		//- button.btn-circle.pause-video.circle-border-btn
 		//- 	.btn-c-init
@@ -21,6 +21,6 @@ mixin video-player(tumbnail, video)
 				span.time-control.time-mobile /
 				span.time-control.time-mobile.videoDurationContainer 00.00
 			.progress-bar-wrapper.snj-col-9.snj-col-md-10
-				.progress-bar
-					.bar
+				#progressNav.progress-bar
+					#updatingBar.bar
 			span.time-control.time-end.snj-col-md-1.videoDurationContainer 00.00
