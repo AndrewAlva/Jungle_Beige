@@ -29,3 +29,12 @@ ul{
 		list-style: none;
 	}
 }
+
+canvas{
+	z-index: 9999;
+	pointer-events: none;
+
+	&.overlay{
+		mix-blend-mode: overlay;
+	}
+}
