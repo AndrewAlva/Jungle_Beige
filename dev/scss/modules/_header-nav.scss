@@ -2,14 +2,16 @@ header#header-nav{
 	position: relative;
 	z-index: 1000;
 	position: fixed;
-	height: 40px;
+	height: getvwmob(40vw);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	// pointer-events: none;
-	// @media(min-width: 1282px){
-	// 	height: getvw(40vw);
-	// }
+	@media(min-width: 768px){
+		height: 40px;
+	}
+	@media(min-width: 1282px){
+		height: getvw(40vw);
+	}
 }
 .header-wrapper{
 	width: 100%;
@@ -20,23 +22,24 @@ header#header-nav{
 	@media (min-width: 768px){
 		padding-top: 59px;
 	}
-	// @media(min-width: 1282px){
-	// 	padding-top: getvw(59vw);
-	// }
+	@media(min-width: 1282px){
+		padding-top: getvw(59vw);
+	}
 	.logo-wrapper{
 		pointer-events: auto;
 		line-height: 0;
-		width: 96px;
+		width: getvwmob(96vw);
 		display: flex;
+		z-index: 1000;
 		svg.logo-jb{
 			width: 100%;
 		}
 		@media (min-width: 768px){
 			width: 134px;
 		}
-		// @media(min-width: 1282px){
-		// 	width: getvw(134vw);
-		// }
+		@media(min-width: 1282px){
+			width: getvw(134vw);
+		}
 	}
 }
 .link-pages{
@@ -49,17 +52,17 @@ header#header-nav{
 	.line-link{
 		color: $cream;
 		position: relative;
-		line-height: 13px;
-		height: 10px;
+		line-height: getvwmob(13vw);
+		height: getvwmob(10vw);
 		display: inline-block;
 		&:before,
 		&:after{
 			position: absolute;
 			content: "";
 			background: $cream;
-			height: 2px;
+			height: getvwmob(2vw);
 			width: 0;
-			bottom: -4px;
+			bottom: getvwmob(-4vw);
 			transition: all .25s;
 		}
 		&:before{
@@ -86,17 +89,25 @@ header#header-nav{
 	}
 	@media(min-width: 768px){
 		display: inline-block;
+		.line-link{
+			line-height: 13px;
+			height: 10px;
+			&:before,
+			&:after{
+				height: 2px;
+				bottom: -4px;
+			}
+		}
 	}
-	// @media(min-width: 1282px){
-	// 	.line-link{
-	// 		line-height: getvw(13vw);
-	// 		height: getvw(10vw);
-
-	// 	}
-	// 	&:before,
-	// 	&:after{
-	// 		height: getvw(2vw);
-	// 		bottom: getvw(-4vw);
-	// 	}
-	// }
+	@media(min-width: 1282px){
+		.line-link{
+			line-height: getvw(13vw);
+			height: getvw(10vw);
+		}
+		&:before,
+		&:after{
+			height: getvw(2vw);
+			bottom: getvw(-4vw);
+		}
+	}
 }

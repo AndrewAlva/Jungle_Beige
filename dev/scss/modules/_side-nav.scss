@@ -3,28 +3,34 @@
 	width: 100vw;
 	height: 100vh;
 	display: block;
-	padding-top: 104px;
+	// padding-top: getvwmob(104vw);
 	position: absolute;
 	top: 0;
-	right: -10px;	
+	right: getvwmob(-10vw);	
 	transform: translate(0, 100%);
 	@include transitions-ease(.9s);
 	opacity: 0;
+	.row{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 	@media(min-width: 768px){
 		display: none;
 	}
 	.menu-wrapper{
-		padding-top: 40px;
+		padding-top: getvwmob(40vw);
 		position: relative;
 		&:after{
 			content: "";
-			width: 20px;
-			height: 2px;
+			width: getvwmob(20vw);
+			height: getvwmob(2vw);
 			background-color: $cream;
 			position: absolute;
-			top: -2px;
-			left: -25px;
-			border-radius: 1px;
+			top: getvwmob(-2vw);
+			left: getvwmob(-25vw);
+			border-radius: getvwmob(1vw);
 			opacity: .6;
 		}
 		.menu-item{
@@ -32,22 +38,22 @@
 			flex-direction: column;
 			font-family: 'TitlingGothicFB light';
 			color: $cream;
-			margin-bottom: 40px;
+			margin-bottom: getvwmob(40vw);
 			.item-title{
-				font-size: 16px;
+				font-size: getvwmob(16vw);
 				font-weight: 100;
-				line-height: 17px;
-				height: 13px;
+				line-height: getvwmob(17vw);
+				height: getvwmob(13vw);
 				// background-color: red;
-				margin-bottom: 9px;
+				margin-bottom: getvwmob(9vw);
 				letter-spacing: 0.02em;
 			}
 			.item-intro{
 				opacity: .6;
-				font-size: 12px;
+				font-size: getvwmob(12vw);
 				// background-color: green;
-				line-height: 15px;
-				height: 13px;
+				line-height: getvwmob(15vw);
+				height: getvwmob(13vw);
 			}
 		}
 		.social-item{
@@ -55,15 +61,15 @@
 				color: $dark-orange;
 			}
 			.social-wrapper{
-				margin-top: 20px;
+				margin-top: getvwmob(20vw);
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-start;
 				.social-link{
-					width: 18px;
-					height: 18px;
+					width: getvwmob(18vw);
+					height: getvwmob(18vw);
 					display: inline-block;
-					margin-right: 40px;
+					margin-right: getvwmob(40vw);
 					@include transitions-ease(.3s)
 					svg{
 						fill: $dark-orange;
@@ -83,7 +89,7 @@
 		opacity: 1;
 	}
 	.sidenav-elems{
-		@include translate(0, 40px);
+		@include translate(0, getvwmob(40vw));
 		@include trans-ease-delay(.4s, .5s);
 		opacity: 0;
 		&.show{

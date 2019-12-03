@@ -1,37 +1,45 @@
 //Center button navigation
 .navigation-btn{
 	cursor: pointer;
-	width: 95px;
-	height: 29px;
+	width: getvwmob(95vw);
+	height: getvwmob(29vw);
 	font-family: 'TitlingGothicFB light';
-	font-size: 12px;
+	font-size: getvwmob(12vw);
 	color: $cream;
 	background-color: $black;
-	border-radius: 15px;
+	border-radius: getvwmob(15vw);
 	border-style: none;
 	overflow: hidden;
 	outline: none;
 	display: flex;
 	z-index: 1000;
-	// flex-direction: column;
 	align-items: center;
-	// @media(min-width: 1282px){
-	// 	width: getvw(95vw);
-	// 	height: getvw(29vw);
-	// 	font-size: getvw(12vw);
-	// 	border-radius: getvw(15vw)
-	// }
+	@media(min-width: 768px){
+		width: 95px;
+		height: 29px;
+		font-size: 12px;
+		border-radius: 15px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(95vw);
+		height: getvw(29vw);
+		font-size: getvw(12vw);
+		border-radius: getvw(15vw)
+	}
+
 	span{
-		height: 13px;
+		height: getvwmob(13vw);
 		&.animate-up{
 			width: 100%;
 			margin: 0 auto;
 			text-align: center;
 		}
-		// @media(min-width: 1282px){
-		// 	height: getvw(13vw);
-		// }
-		// icons
+		@media(min-width: 768px){
+			height: 13px;
+		}
+		@media(min-width: 1282px){
+			height: getvw(13vw);
+		}
 		svg {
 			path, rect{
 				fill:$cream;
@@ -61,28 +69,31 @@
 // center btn in page
 .btn-pages{
 	position: fixed;
-	bottom: 10px;
-	left: 10px;
+	bottom: getvwmob(10vw);
+	left: getvwmob(10vw);
 	@media (min-width: 768px) {
 		top: 50%;
 		left: 40px;
 		transform: translateY(-50%);
 	}
-	// @media(min-width: 1282px){
-	// 	bottom: getvw(10vw);
-	// 	left: getvw(40vw)
-	// }
+	@media(min-width: 1282px){
+		bottom: getvw(10vw);
+		left: getvw(40vw)
+	}
 }
 
 
 // links general btn
 a{
 	text-decoration: none;
-	font-size: 12px;
+	font-size: getvwmob(12vw);
 	font-family: 'TitlingGothicFB light';
-	// @media(min-width: 1282px){
-	// 	font-size: getvw(12vw);
-	// }
+	@media(min-width: 768px){
+		font-size: 12px;
+	}
+	@media(min-width: 1282px){
+		font-size: getvw(12vw);
+	}
 }
 
 // link arrow
@@ -98,21 +109,27 @@ a{
 	span{
 		// text-align: right;
 		display: block;
-		margin-bottom: 12px;
-		// @media(min-width: 1282px){
-		// 	margin-bottom: getvw(12vw);
-		// }
+		margin-bottom: getvwmob(12vw);
+		@media(min-width: 768px){
+			margin-bottom: 12px;
+		}
+		@media(min-width: 1282px){
+			margin-bottom: getvw(12vw);
+		}
 	}
 }
 
-// ---------
+
 .arrow-scroll{
 	span{
-		margin-left: 12px;
+		margin-left: getvwmob(12vw);
 		letter-spacing: .02em;
-		// @media(min-width: 1282px){
-		// 	margin-left: getvw(12vw);
-		// }
+		@media(min-width: 768px){
+			margin-left: 12px;
+		}
+		@media(min-width: 1282px){
+			margin-left: getvw(12vw);
+		}
 	}
 }
 
@@ -124,9 +141,9 @@ a{
 	@media(min-width: 768px){
 		font-size: 16px;
 	}
-	// @media(min-width: 1282px){
-	// 	font-size: getvw(16vw);
-	// }
+	@media(min-width: 1282px){
+		font-size: getvw(16vw);
+	}
 
 	.arrow-wrapper{
 		position: relative;
@@ -134,53 +151,66 @@ a{
 		flex-direction: row;
 		justify-content: flex-end;
 		align-items: center;
-		width: 110px;
+		width: getvwmob(110vw);
 		cursor: pointer;
 		.rectangle-arrow{
 			display: inline-block;
-			height: 2px;
-			width: 82px;
-			margin-right: 1px;
+			height: getvwmob(2vw);
+			width: getvwmob(82vw);
+			margin-right: getvwmob(1vw);
 			background: $cream;
 		}
 
 		svg.icon-arrow{
 			flex-shrink: 0;
-			width: 7px;
-			height: 12px;
+			width: getvwmob(7vw);
+			height: getvwmob(12vw);
 		}
-		// @media(min-width: 1282px){
-		// 	width: getvw(110vw);
-		// 	.rectangle-arrow{
-		// 		height: getvw(2vw);
-		// 		width: getvw(82vw);
-		// 		margin-right: getvw(1vw);
-		// 	}
-		// 	svg.icon-arrow{
-		// 		width: getvw(7vw);
-		// 		height: getvw(12vw);
-		// 	}
-		// }
+		@media(min-width: 768px){
+			width: 110px;
+			.rectangle-arrow{
+				height: 2px;
+				width: 82px;
+				margin-right: 1px;
+			}
+			svg.icon-arrow{
+				width: 7px;
+				height: 12px;
+			}
+		}
+		@media(min-width: 1282px){
+			width: getvw(110vw);
+			.rectangle-arrow{
+				height: getvw(2vw);
+				width: getvw(82vw);
+				margin-right: getvw(1vw);
+			}
+			svg.icon-arrow{
+				width: getvw(7vw);
+				height: getvw(12vw);
+			}
+		}
 	}
 	span{
 		// width: 120px;
-		margin-left: 12px;
-		font-size: 12px;
+		margin-left: getvwmob(12vw);
+		font-size: getvwmob(12vw);
 		font-family: 'TitlingGothicFB light';
-		line-height: 11px;
-		height: 10px;
+		line-height: getvwmob(11vw);
+		height: getvwmob(10vw);
 		letter-spacing: .02em;
 		@media(min-width: 768px){
+			margin-left: 12px;
 			font-size: 16px;
 			line-height: 18px;
 			height: 14px;
 		}
-		// @media(min-width: 1292px){
-		// 	margin-left: getvw(12vw);
-		// 	font-size: getvw(16vw);
-		// 	line-height: getvw(18vw);
-		// 	height: getvw(14vw);
-		// }
+		@media(min-width: 1292px){
+			margin-left: getvw(12vw);
+			font-size: getvw(16vw);
+			line-height: getvw(18vw);
+			height: getvw(14vw);
+		}
 	}
 }
 

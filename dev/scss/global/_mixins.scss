@@ -206,3 +206,6 @@
 @function getvw($value){
 	@return ($value * 100) / 1282;
 }
+@function getvwmob($value){
+	@return ($value *100) / 320;
+}

@@ -11,8 +11,8 @@
 
 // Display WE
 .display-wrapper{
-	width: 250px;
-	height: 134px;
+	width: getvwmob(250vw);
+	height: getvwmob(134vw);
 	position: absolute;
 	margin: auto;
 	top: 0;
@@ -27,18 +27,18 @@
 		width: 600px;
 		height: 218px;
 	}
-	// @media(min-width: 1282px){
-	// 	width: getvw(600vw);
-	// 	height: getvw(218vw);
-	// 	// background: red;
-	// }
+	@media(min-width: 1282px){
+		width: getvw(600vw);
+		height: getvw(218vw);
+		// background: red;
+	}
 	.display-type{
 		width: 100%;
 		height: 100%;
 		white-space: nowrap;
 		position: relative;
 		h2{
-			font-size: 165px;
+			font-size: getvwmob(165vw);
 			font-family: 'Nocturne Serif ExtraBold';
 			display: inline-block;
 			position: absolute;
@@ -53,56 +53,60 @@
 				font-size: 396px;
 				height: 100%;
 			}
-			// @media(min-width: 1282px){
-			// 	font-size: getvw(396vw);
-			// }
+			@media(min-width: 1282px){
+				font-size: getvw(396vw);
+			}
 		}
 			
 		.display-w{
-			top: -1px;
-			padding-left: 4px;
+			top: getvwmob(-1vw);
+			padding-left: getvwmob(4vw);
 			line-height: .33em;
-			height: 91px;
+			height: getvwmob(91vw);
 			@media(min-width: 768px){
+				top: -1px;
 				padding-left: 8px;
+				height: 91px;
 			}
 			@media (min-width: 992px){
 				padding-left: 10px;
 				line-height: 0.33em;
 				height: 0.554em;
 			}
-			// @media(min-width: 1282px){
-			// 	top: getvw(-1vw);
-			// 	padding-left: getvw(10vw);
-			// }
+			@media(min-width: 1282px){
+				top: getvw(-1vw);
+				padding-left: getvw(10vw);
+			}
 		}
 		.display-e{
-			top: -1px;
-			right: -3px;
+			top: getvwmob(-1vw);
+			right: getvwmob(-3vw);
 			line-height: 0.355em;
-			height: 90px;
+			height: getvwmob(90vw);
 			@media(min-width: 768px){
+				top: -1px;
 				right: -6px;
+				height: 90px;
 			}
 			@media (min-width: 992px){
 				right: -7px;
 				line-height: 0.355em;
 				height: 0.548em;
 			}
-			// @media(min-width: 1282px){
-			// 	top: getvw(-1vw)
-			// 	right: getvw(-7vw);
-			// }
+			@media(min-width: 1282px){
+				top: getvw(-1vw);
+				right: getvw(-7vw);
+			}
 		}
 	}
 
 	// Title
 	.title-wrapper{
 		position: absolute;
-		width: 112px;
-		height: 48px;
-		top: 10px;
-		left: 24px;
+		width: getvwmob(112vw);
+		height: getvwmob(48vw);
+		top: getvwmob(10vw);
+		left: getvwmob(24vw);
 		@media(min-width: 768px){
 			width: 212px;
 			height: 90px;
@@ -115,18 +119,18 @@
 			top: 29px;
 			left: inherit;
 		}
-		// @media(min-width: 1282px){
-		// 	width: getvw(286vw);
-		// 	height: getvw(94vw);
-		// 	top: getvw(29vw);
-		// }
+		@media(min-width: 1282px){
+			width: getvw(286vw);
+			height: getvw(94vw);
+			top: getvw(29vw);
+		}
 
 		.span-container{
 			position: relative;
 			width: 100%;
 			height: 100%;
 			font-family: 'Nocturne Serif ExtraBold';
-			font-size: 28px;
+			font-size: getvwmob(28vw);
 			color: $cream;
 			@media(min-width: 768px){
 				font-size: 52px;
@@ -134,25 +138,25 @@
 			@media(min-width: 992px){
 				font-size: 62px;
 			}
-			// @media(min-width: 1282px){
-			// 	font-size: getvw(62vw);
-			// }
+			@media(min-width: 1282px){
+				font-size: getvw(62vw);
+			}
 			span{
 				position: absolute;
 				line-height: 0;
 				&:first-child{
 					display: inline-block;
-					top: 9px;
-					left: 0px;
+					top: getvwmob(9vw);
+					left: 0;
 				}
 				&:nth-child(2){
 					font-family: 'TitlingGothicFB light';
-					font-size: 15px;
-					top: 14px;
-					right: -2px;
+					font-size: getvwmob(15vw);
+					top: getvwmob(14vw);
+					right: getvwmob(-2vw);
 				}
 				&:nth-child(3){
-					bottom: 11px;
+					bottom: getvwmob(11vw);
 					left: 0;
 				}
 				@media(min-width: 768px){
@@ -164,13 +168,13 @@
 					}
 					&:nth-child(2){
 						font-size: 32px;
-						right: 0;
 						top: 26px;
+						right: 0;
 						bottom: inherit;
 					}
 					&:nth-child(3){
-						right: 0;
 						bottom: 20px;
+						right: 0;
 						left:inherit;
 					}
 				}
@@ -186,39 +190,54 @@
 						left:inherit;
 					}
 				}
-				// @media(min-width: 1282px){
-				// 	&:first-child{
-				// 		top: getvw(20vw);
-				// 	}
-				// 	&:nth-child(2){
-				// 		font-size: getvw(32vw);
-				// 		left: getvw(1vw);
-				// 		bottom: getvw(14vw);
-				// 	}
-				// 	&:nth-child(3){
-				// 		bottom: getvw(23vw);
-				// 	}
-				// }
+				@media(min-width: 1282px){
+					&:first-child{
+						top: getvw(20vw);
+					}
+					&:nth-child(2){
+						font-size: getvw(32vw);
+						left: getvw(1vw);
+						bottom: getvw(14vw);
+					}
+					&:nth-child(3){
+						bottom: getvw(23vw);
+					}
+				}
 			}
 		}
 		.line-item{
 			position: absolute;
-			width: 90px;
-			height: 2px;
-			bottom: 0px;
-			left: auto;
-			right: -103px;
-			@media(max-width: 768px){
-				width: 56px;
-				bottom: -48px;
-				left: 25%;
-			}
-			// @media(min-width: 1282px){
-			// 	width: getvw(56vw);
-			// 	height: vw(2vw);
-			// 	right: getvw(-103vw);
-			// 	bottom: getvw(-48vw);
+			// width: 90px;
+			// height: 2px;
+			// bottom: 0;
+			// left: auto;
+			// right: -103px;
+			width: getvwmob(56vw);
+			height: getvwmob(2vw);
+			bottom: getvwmob(-48vw);
+			left: 25%;
+			right: getvwmob(-103vw);
+			// @media(max-width: 768px){
+			// 	width: 56px;
+			// 	height: 2px;
+			// 	bottom: -48px;
+			// 	left: 25%;
+			// 	right: -103px;
 			// }
+			@media(min-width: 768px){
+				width: 90px;
+				height: 2px;
+				bottom: -64px;
+				left: 25%;
+				right: -103px;
+			}
+			@media(min-width: 1282px){
+				width: getvw(90vw);
+				height: getvw(2vw);
+				left: initial;
+				right: getvw(-103vw);
+				bottom: getvw(0vw);
+			}
 			.lines-wrapper{
 				position: relative;
 				background-color: $cream;
@@ -231,40 +250,42 @@
 	}
 	.about-title{
 		color: $cream;
-		font-size: 10px;
+		font-size: getvwmob(10vw);
 		font-family: 'TitlingGothicFB light';
-		width: 95px;
+		width: getvwmob(95vw);
 		height: auto;
 		display: inline-block;
 		position: absolute;
-		bottom: -50px;
-		right: 5px;
+		bottom: getvwmob(-50vw);
+		right: getvwmob(5vw);
 		letter-spacing: .02em;
 		.points{
 			font-family: 'Nocturne Serif ExtraBold';
 			position: absolute;
 			display: inline-block;
 			position: absolute;
-			right: -2px;
-			bottom: 2px;
-			font-size: 12px;
-			letter-spacing: 2px;
-			line-height: 0px;
-			height: 6px;
+			height: getvwmob(6vw);
+			right: getvwmob(-2vw);
+			bottom: getvwmob(2vw);
+			font-size: getvwmob(12vw);
+			letter-spacing: getvwmob(2vw);
+			line-height: 0;
 		}
 		@media(min-width: 768px){
 			font-size: 12px;
 			width: 170px;
-			bottom: -4px;
+			bottom: -17px;
+			right: 5px;
 			br{
 				display: none;
 			}
 			.points{
+				height: 8px;
+				width: 14px;
 				right: 3px;
 				bottom: 4px;
 				font-size: 20px;
-				width: 14px;
-				height: 8px;
+				letter-spacing: 2px;
 			}
 		}
 		@media(min-width: 992px){
@@ -274,26 +295,32 @@
 			bottom: -4px;
 			line-height: 16px;
 		}
-		// @media(min-width: 1282px){
-		// 	right: getvw(-3vw);
-		// 	width: getvw(200vw);
-		// 	font-size: getvw(14vw);
-		// 	bottom: getvw(-4vw);
-		// 	line-height: getvw(16vw);
-		// 	.points{
-		// 		right: getvw(3vw);
-		// 		bottom: getvw(4vw);
-		// 		font-size: getvw(20vw);
-		// 		width: getvw(14vw);
-		// 		height: getvw(8vw);
-		// 	}
-		// }
+		@media(min-width: 1282px){
+			right: getvw(-3vw);
+			width: getvw(200vw);
+			font-size: getvw(14vw);
+			bottom: getvw(-4vw);
+			line-height: getvw(16vw);
+			.points{
+				right: getvw(3vw);
+				bottom: getvw(4vw);
+				font-size: getvw(20vw);
+				width: getvw(14vw);
+				height: getvw(8vw);
+			}
+		}
 	}
 	&:hover{
 		.display-type h2{
 			color: transparent;
-			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-width: getvwmob(2vw);
 			-webkit-text-stroke-color: $black;
+			@media(min-width: 768px){
+				-webkit-text-stroke-width: 2px;
+			}
+			@media(min-width: 1282px){
+				-webkit-text-stroke-width: getvw(2vw);
+			}
 		}
 		.title-wrapper{
 			.span-container span{

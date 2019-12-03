@@ -1,23 +1,23 @@
 nav.nav-menu{
-	width: 20px;
+	width: getvwmob(20vw);
 	// padding: 3px 0;
-	margin-right: 15px;
+	margin-right: getvwmob(15vw);
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	.nav-wrapper{
 		width: 100%;
-		height: 8px;
+		height: getvwmob(8vw);
 		position: relative;
 		border: none;
 		background-color: transparent;
 		.menu-line{		
 			background-color: $cream;
-			height: 2px;
+			height: getvwmob(2vw);
 			display: inline-block;
 			position: absolute;
-			@include transitions-ease(.3s)
+			@include transitions-ease(.3s);
 		}
 		.burger-line-1{
 			width: 100%;

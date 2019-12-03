@@ -12,8 +12,8 @@ footer{
 }
 #footer-wrapper{
 	width: 100%;
-	height: 40px;
-	padding: 13px 0;
+	height: getvwmob(40vw);
+	padding: getvwmob(13vw) 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -24,8 +24,8 @@ footer{
 		height: 94px;
 		padding: 40px 5px;
 	}
-	// @media(min-width: 1282px){
-	// 	height: getvw(94vw);
-	// 	padding: getvw(40vw) getvw(5vw);
-	// }
+	@media(min-width: 1282px){
+		height: getvw(94vw);
+		padding: getvw(40vw) getvw(5vw);
+	}
 }
