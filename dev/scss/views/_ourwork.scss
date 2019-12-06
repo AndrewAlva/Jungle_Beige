@@ -1,5 +1,14 @@
 .ourwork{
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	.row{
+		position: relative;
+		margin: auto 0;
+		bottom: 0;
+		top: 0;
+	}
 }
 .work-bg{
 	background-image: url("../img/work_background.jpg");

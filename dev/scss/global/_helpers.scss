@@ -51,3 +51,15 @@
 		animation: translate-left .6s cubic-bezier(.21,0,0,1);
 	}
 }
+
+// center info
+.center-content{
+	display: flex;
+	flex-direction: column;
+}
+.center-margin{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
