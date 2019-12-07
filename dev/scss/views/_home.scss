@@ -231,12 +231,17 @@
 				left: 25%;
 				right: -103px;
 			}
+			@media(min-width: 992px){
+				width: 90px;
+				height: 2px;
+				left: initial;
+				right: -103px;
+				bottom: 0;
+			}
 			@media(min-width: 1282px){
 				width: getvw(90vw);
 				height: getvw(2vw);
-				left: initial;
 				right: getvw(-103vw);
-				bottom: getvw(0vw);
 			}
 			.lines-wrapper{
 				position: relative;
