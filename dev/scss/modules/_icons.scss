@@ -1,0 +1,75 @@
+.close-icon{
+	width: getvwmob(13vw);
+	height: getvwmob(13vw);
+	@media(min-width: 768px){
+		width: 13px;
+		height: 13px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(13vw);
+		height: getvw(13vw);
+	}
+}
+
+.back-icon-btn{
+	width: getvwmob(35vw);
+	height: getvwmob(13vw);
+	@media(min-width: 768px){
+		width: 35px;
+		height: 13px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(35vw);
+		height: getvw(13vw);
+	}
+}
+.next-arrow-90{
+	width: getvwmob(90vw);
+	height: getvwmob(12vw);
+	@media(min-width: 768px){
+		width: 90px;
+		height: 12px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(90vw);
+		height: getvw(12vw);
+	}
+}
+.next-arrow-300{
+	width: getvwmob(300vw);
+	height: getvwmob(12vw);
+	@media(min-width: 768px){
+		width: 300px;
+		height: 12px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(300vw);
+		height: getvw(12vw);
+	}
+}
+.arrow-scroll-icon{
+	width: getvwmob(12vw);
+	height: getvwmob(7vw);
+	@media(min-width: 768px){
+		width: 12px;
+		height: 7px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(12vw);
+		height: getvw(7vw);
+	}
+}
+
+.icon-arrow{
+	width: getvwmob(7vw);
+	height: getvwmob(12vw);
+	@media(min-width: 768px){
+		width: 7px;
+		height: 12px;
+	}
+	@media(min-width: 1282px){
+		width: getvw(7vw);
+		height: getvw(12vw);
+	}
+}
+// video player button está en buttons.scss

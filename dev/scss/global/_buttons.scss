@@ -161,10 +161,8 @@ a{
 			background: $cream;
 		}
 
-		svg.icon-arrow{
+		.icon-arrow{
 			flex-shrink: 0;
-			width: getvwmob(7vw);
-			height: getvwmob(12vw);
 		}
 		@media(min-width: 768px){
 			width: 110px;
@@ -173,10 +171,6 @@ a{
 				width: 82px;
 				margin-right: 1px;
 			}
-			svg.icon-arrow{
-				width: 7px;
-				height: 12px;
-			}
 		}
 		@media(min-width: 1282px){
 			width: getvw(110vw);
@@ -184,10 +178,6 @@ a{
 				height: getvw(2vw);
 				width: getvw(82vw);
 				margin-right: getvw(1vw);
-			}
-			svg.icon-arrow{
-				width: getvw(7vw);
-				height: getvw(12vw);
 			}
 		}
 	}
@@ -243,8 +233,8 @@ a{
 		margin: auto;
 		@include transitions-ease(.24s);
 		&.play-video{
-			width: getvwmob(17.01vw);
-			height: getvwmob(32.01vw);
+			width: getvwmob(17vw);
+			height: getvwmob(32vw);
 		}
 		&.pause-icon{
 			width:getvwmob(21.69vw);
@@ -256,8 +246,8 @@ a{
 		}
 		@media(min-width: 768px){
 			&.play-video{
-				width: 17.01px;
-				height: 32.01px;
+				width: 17px;
+				height: 32px;
 			}
 			&.pause-icon{
 				width:21.69px;
@@ -270,8 +260,8 @@ a{
 		}
 		@media(min-width: 1282px){
 			&.play-video{
-				width: getvw(17.01vw);
-				height: getvw(32.01vw);
+				width: getvw(17vw);
+				height: getvw(32vw);
 			}
 			&.pause-icon{
 				width:getvw(21.69vw);
