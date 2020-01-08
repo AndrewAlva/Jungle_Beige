@@ -30,7 +30,7 @@
 	}
 	@media(min-width: 1282px){
 		padding-top: getvw(36vw);
-		padding-bottom: getvw(50vw);
+		padding-bottom: getvw(40vw);
 	}
 	.wrap-list{
 		display: flex;
@@ -69,18 +69,22 @@
 			height: getvw(18vw);
 		}
 	}
+
 	.name-project{
 		margin: getvwmob(7vw) 0 getvwmob(10vw);
 		padding-right: 30%;
 		position: relative;
 		font-family: 'Nocturne Serif ExtraBold';
+
 		h2{
 			font-size: getvwmob(22vw);
 			letter-spacing: .020em;
 		}
+
 		@media(min-width: 768px){
 			margin: 12px 0 26px;
 			padding-right: 0;
+
 			h2{
 				font-size: 50px;
 				display: inline-block;
@@ -89,8 +93,10 @@
 				}
 			}
 		}
+
 		@media(min-width: 1282px){
-			margin: getvw(12vw) 0 getvw(26vw);
+			margin: getvw(14vw) 0 getvw(26vw);
+
 			h2{
 				font-size: getvw(50vw);
 				&:last-child{
