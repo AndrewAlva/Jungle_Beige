@@ -6,12 +6,19 @@ nav.nav-menu{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 	.nav-wrapper{
 		width: 100%;
 		height: getvwmob(8vw);
 		position: relative;
 		border: none;
 		background-color: transparent;
+
+		&:focus{
+			outline: none;
+			border: none;
+		}
+
 		.menu-line{		
 			background-color: $cream;
 			height: getvwmob(2vw);

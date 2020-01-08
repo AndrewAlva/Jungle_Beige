@@ -202,6 +202,13 @@
 		@content;
 	}
 }
+
+@mixin vw-desktop {
+	@media (min-width: #{$desktop-vw-min-width}) {
+		@content;
+	}
+}
+
 // functions view width: // function
 @function getvw($value){
 	@return ($value * 100) / 1282;

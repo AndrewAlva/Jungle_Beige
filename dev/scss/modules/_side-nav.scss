@@ -4,9 +4,10 @@
 	height: 100vh;
 	display: block;
 	// padding-top: getvwmob(104vw);
-	position: absolute;
+	position: fixed;
 	top: 0;
-	right: getvwmob(-10vw);	
+	// right: getvwmob(-10vw);
+	left: 0;
 	transform: translate(0, 100%);
 	@include transitions-ease(.9s);
 	opacity: 0;
@@ -20,8 +21,10 @@
 		display: none;
 	}
 	.menu-wrapper{
-		padding-top: getvwmob(40vw);
 		position: relative;
+		padding-top: getvwmob(40vw);
+		padding-left: 1.8vw;
+
 		&:after{
 			content: "";
 			width: getvwmob(20vw);
@@ -38,7 +41,8 @@
 			flex-direction: column;
 			font-family: 'TitlingGothicFB light';
 			color: $cream;
-			margin-bottom: getvwmob(40vw);
+			&:not(:last-child){margin-bottom: getvwmob(40vw);}
+
 			.item-title{
 				font-size: getvwmob(16vw);
 				font-weight: 100;

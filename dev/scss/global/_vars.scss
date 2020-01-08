@@ -26,6 +26,7 @@ $snj-grid__gutterHalfWidth: $snj-grid__gutterWidth / 2;
 // Mobiles/Desktop animation sizes
 $mobile-max-width: 767px;
 $desktop-min-width: 768px;
+$desktop-vw-min-width: 1282px;
 
 // Animation
 $easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
