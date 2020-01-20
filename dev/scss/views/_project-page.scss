@@ -377,6 +377,10 @@ section.video-wrapper{
 	margin-bottom: getvwmob(20vw);
 	background-position:  center;
 	position: relative;
+	&.beams-video-mini{
+		background-image: url("../img/projects/high-beams/09_beams_mini.jpg");
+		background-position: center bottom;
+	}
 	&.coffee-video-mini{
 		background-image: url("../img/projects/coffee/9-coffee-mini.jpg");
 		background-position: center bottom;
@@ -759,7 +763,7 @@ section.footer-project{
 }
 // branding falta
 .project-bg-beams{
-	background-image: url("../img/project_1_bg.jpg");
+	background-image: url("../img/projects/high-beams/01_beams.jpg");
 }
 .project-bg-cred{
 	background-image: url("../img/project_2_bg.jpg");

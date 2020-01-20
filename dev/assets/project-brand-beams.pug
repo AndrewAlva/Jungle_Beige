@@ -4,7 +4,7 @@ block preloader
 block content
 	.snj-container-fluid.project-page
 		.row
-			section.project-about
+			section.project-about.project-bg-beams
 				+hero-project("Branding & Design","High Beams", "01")
 				.especifications-wrap.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					aside.especifications
@@ -26,17 +26,17 @@ block content
 						p The crew gets its name from the fact that drivers in Dubai flash their high beams at you when you’re driving too slow. And since the crew can’t run outdoors throughout the year, they installed a weekly gym session called Saturday Brunch - brunches being another “Dubai thing”.
 						p Finally, with crew members from all over the world, with different backgrounds, languages, etc., the ethos of the crew is Vibes First. Because if the vibes are right, people can definitely connect, train and party together.
 			.p-photo1
-				img(src="https://www.fillmurray.com/1920/787", alt="")
+				img(src="./img/projects/high-beams/02_beams.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="https://www.fillmurray.com/955/787", alt="")
+					img(src="./img/projects/high-beams/03_beams.jpg", alt="")
 				.p-photo2
-					img(src="https://www.fillmurray.com/955/787", alt="")
-			+slider-projects("https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "https://www.fillmurray.com/893/591", "", "", "", "")
+					img(src="./img/projects/high-beams/04_beams.jpg", alt="")
+			+slider-projects("./img/projects/high-beams/05_beams.jpg", "./img/projects/high-beams/06_beams.jpg", "./img/projects/high-beams/07_beams.jpg", "./img/projects/high-beams/08_beams.jpg", "", "", "", "")
 
 			//- video player
-			section.video-wrapper.fill-mini.snj-col-12
-				+video-player("../img/projects/coffee/9-coffee-mini.jpg","../img/projects/coffee/9-coffee-video.mp4")
+			section.video-wrapper.beams-video-mini.snj-col-12
+				+video-player("./img/projects/high-beams/09_beams_mini.jpg","./img/projects/high-beams/09_beams.mp4")
 
 			//- footer
 			section.footer-project
@@ -62,5 +62,7 @@ block content
 	a.navigation-btn.btn-pages(href="workbranding.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
+
+
 block footer
 	+footer("scroll")
