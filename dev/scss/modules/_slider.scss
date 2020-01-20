@@ -83,18 +83,19 @@
 		}
 	}
 	button.slide-controller{
-		width: 8vw;
-		font-size: 12px;
-		color: $cream;
-		padding: 20px 0;
-		background: transparent;
-		border: none;
-		outline: none;
 		z-index: 10;
 		cursor: pointer;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		width: 8vw;
+		padding: 20px 0;
+		font-size: 12px;
+		font-family: 'TitlingGothicFB light';
+		color: $cream;
+		background: transparent;
+		border: none;
+		outline: none;
 		&.controller-prev{
 			left: calc(8.333333% + 10px);
 			text-align: left;
@@ -131,10 +132,10 @@
 				text-align: center;
 			}
 		}
-		// @media(min-width: 1282px){
-		// 	font-size: getvw(12vw);
+		@media(min-width: 1282px){
+			font-size: getvw(12vw);
 		// 	padding: getvw(20vw) 0;
-		// }
+		}
 	}
 }
 #suede-guerrilla-project{

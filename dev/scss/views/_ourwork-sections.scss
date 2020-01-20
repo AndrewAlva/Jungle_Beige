@@ -33,11 +33,11 @@
 	}
 	@media(min-width: 992px){
 		width: 81.14%;
+		min-height: getvw(277vw);
 		float: right;
 		white-space: nowrap;
 	}
 	@media(min-width: 1282px){
-		min-height: getvw(277vw);
 		padding: 0 getvw(10vw);
 	}
 	&.full-screen{
