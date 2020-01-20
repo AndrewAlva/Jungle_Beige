@@ -90,7 +90,7 @@
 		transform: translateY(-50%);
 		width: 8vw;
 		padding: 20px 0;
-		font-size: 12px;
+		font-size: getvwmob(12vw);
 		font-family: 'TitlingGothicFB light';
 		color: $cream;
 		background: transparent;
@@ -115,6 +115,7 @@
 		}
 		@media(min-width: 768px){
 			width: 8.333333%;
+			font-size: 12px;
 			text-align: center;
 			color: $dark-brown;
 			&.controller-prev{
@@ -135,15 +136,6 @@
 		@media(min-width: 1282px){
 			font-size: getvw(12vw);
 		// 	padding: getvw(20vw) 0;
-		}
-	}
-}
-#suede-guerrilla-project{
-	.slide-container{
-		@media(min-width: 768px){
-			img{
-				top: 68%;
-			}
 		}
 	}
 }
