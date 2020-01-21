@@ -1,6 +1,10 @@
 extends _templates/layout.pug
+
+
 block preloader
 	//- .preloader.color-2
+
+
 block content
 	.snj-container-fluid.project-page#commerce-amongst-project
 		.row
@@ -15,6 +19,8 @@ block content
 								+project-box("Project", "Launch & Management of Website",{lineDelayMob: 3, clientDelayMob: 7, projectDelayMob: 8})
 							div.especific-item.snj-col-md-2.offset-md-2
 								+project-box("Year", "2017-Present ",{lineDelayMob: 4, clientDelayMob: 9, projectDelayMob: 10})
+			
+
 			section.project-description
 				.snj-col-10.offset-1.snj-col-md-6.offset-md-3
 					h1.project-title.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="10" data-cascade-delay="5") Launch & Management of Website
@@ -24,6 +30,8 @@ block content
 					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p While the knowledge, style and warmth of the store staff isn’t easily translated online, we can still provide an efficient and flexible experience - shopping by brand, size, price range and even color.
 						p True digital transformation isn’t complete without the other elements of the shopping experience, such as the brand’s social media channels, as well as the visuals, tone and offers of its newsletter. It’s all one ecosystem that is carefully crafted in order to ensure the customer can easily access what they’re looking for, and always come away understanding what the brand is about and can continually offer.
+			
+
 			.p-photo1
 				img(src="https://www.fillmurray.com/1920/787", alt="")
 			.img-wrapper
@@ -32,9 +40,11 @@ block content
 				.p-photo2
 					img(src="./img/projects/commerce-amongst/4-commerce-amongst-photo.jpg", alt="")
 			+slider-projects("./img/projects/commerce-amongst/5-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/6-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/7-commerce-amongst-slide.jpg", "./img/projects/commerce-amongst/8-commerce-amongst-slide.jpg", "", "", "", "")
+			
+
 			//- video player
-			section.video-wrapper.fill-mini.snj-col-12
-				+video-player("https://www.fillmurray.com/1920/787","../img/projects/commerce-amongst/9-commerce-amongst-video.mp4")
+			section.video-wrapper.commerceAmongst-video-mini.snj-col-12
+				+video-player("./img/projects/commerce-amongst/09_amongst_commerce_mini_opt.jpg","./img/projects/commerce-amongst/09_amongst_commerce.mp4")
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev
@@ -55,8 +65,13 @@ block content
 						.arrow-wrapper.right-translate
 							.rectangle-arrow
 							+icon-arrow
-	a.navigation-btn.btn-pages(href="workevent.html")
+
+
+	a.navigation-btn.btn-pages(href="workcommerce.html")
 		span.animate-up.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1")
 			+back-icon-btn
+
+
+
 block footer
 	+footer('scroll')
