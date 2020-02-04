@@ -19,7 +19,7 @@ section.project-about{
 	color: $cream;
 	height: getvwmob(460vw);
 	width: 100%;
-	padding: getvwmob(115vw) getvwmob(10vw) 0;
+	padding: getvwmob(117vw) getvwmob(10vw) 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -74,7 +74,7 @@ section.project-about{
 		}
 		.subtitle-block{
 			font-size: getvwmob(12vw);
-			bottom: getvwmob(4px);
+			bottom: getvwmob(8vw);
 			width: 60%;
 			margin-left: 20%;
 			font-family: 'TitlingGothicFB Standard';
@@ -129,7 +129,7 @@ section.project-about{
 		background-color: $brown;
 		width: 100%;
 		padding: getvwmob(40vw) 0 getvwmob(37vw);
-		transform:translate3d(0, getvwmob(181vw), 0);
+		transform:translate3d(0, getvwmob(195vw), 0);
 		position: absolute;
 		bottom: 0;
 		&:after{
@@ -229,9 +229,10 @@ section.project-description{
 	background-color: $gray;
 	width: 100%;
 	display: flex;
-	padding:getvwmob(206vw) getvwmob(10vw) getvwmob(31vw);
+	padding: getvwmob(220vw) getvwmob(10vw) getvwmob(31vw);
+
 	.project-title{
-		margin-bottom: getvwmob(13vw);
+		margin-bottom: getvwmob(20vw);
 		width: 100%;
 		position: relative;
 	}
@@ -632,7 +633,7 @@ section.footer-project{
 			font-family: 'Nocturne Serif ExtraBold';
 			color: $cream;
 			font-size: getvwmob(22vw);
-			margin: getvwmob(7vw) 0 getvwmob(9vw);
+			margin: getvwmob(7vw) 0 getvwmob(11vw);
 			position: relative;
 			letter-spacing: .02em;
 		}
@@ -647,6 +648,7 @@ section.footer-project{
 			letter-spacing: .02em;
 		}
 		.copyright{
+			font-family: 'TitlingGothicFB light';
 			letter-spacing: .02em;
 			margin-top: getvwmob(74vw);
 		}
