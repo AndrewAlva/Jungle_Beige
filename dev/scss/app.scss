@@ -58,18 +58,18 @@
 	pointer-events:none;
 	
 	&.a{
-		width: 100%;
-		height: 132px;
+		width: getvw(243vw);
+		height: 100%;
 
-		top: 0;
-		left: 0;
+		bottom:  0;
+		right: 0;
 	}
 	
 	&.b{
-		width: 100%;
-		height: 210px;
+		width: getvw(444vw);
+		height: 100%;
 
 		top: 0;
-		right: 0;
+		left: 0;
 	}
 }
