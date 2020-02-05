@@ -51,23 +51,23 @@
 }
 
 .testing{
-	position: absolute;
+	position: fixed;
 	z-index: 999999;
 	background-color: red;
 	opacity: .3;
 	pointer-events:none;
 	
 	&.a{
-		width: 100%;
-		height: 641px;
+		width: getvw(141vw);
+		height: 100%;
 
 		top: 0;
-		right: 0;
+		left: 0;
 	}
 	
 	&.b{
-		width: 100%;
-		height: 529px;
+		width: getvw(40vw);
+		height: 100%;
 
 		top: 0;
 		left: 0;
