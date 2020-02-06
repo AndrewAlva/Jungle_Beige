@@ -3,10 +3,14 @@ var AboutSlider = {
 	dotsWrap: undefined,
 	slides: 0,
 	index: 0,
+	timerObj: null,
+	timerInterval: 10000, //in miliseconds
 
 	init: function(){
 		this.getElements();
 		this.addEventListeners();
+
+		this.goTo(0);
 	},
 
 	getElements: function(){
@@ -16,25 +20,28 @@ var AboutSlider = {
 	},
 
 	goTo: function(index){
+		this.timerStop();
 		for (var i = 0; i < this.slides; i++) {
 			this.paragraphsWrap.children[i].classList.remove('show');
 			this.dotsWrap.children[i].classList.remove('active');
+			this.dotsWrap.children[i].children[0].children[0].classList.remove('animate');
 		}
 		this.paragraphsWrap.children[index].classList.add('show');
 		this.dotsWrap.children[index].classList.add('active');
+		this.dotsWrap.children[index].children[0].children[0].classList.add('animate');
 
 		this.index = index;
+		this.timerStart();
 	},
 	next: function(){
-		var _newIndex = this.index + 1;
-		if (_newIndex >= this.slides) _newIndex = this.slides - 1;
+		var _newIndex = parseInt(this.index) + 1;
+		if (_newIndex >= this.slides) _newIndex = 0;
 
 		this.goTo(_newIndex);
-		this.index = _newIndex;
 	},
 	back: function(){
 		var _newIndex = this.index - 1;
-		if (_newIndex < 0) _newIndex = 0;
+		if (_newIndex < 0) _newIndex = this.slides - 1;
 		
 		this.goTo(_newIndex);
 		this.index = _newIndex;
@@ -42,8 +49,10 @@ var AboutSlider = {
 
 	addEventListeners: function(){
 		this.dotsNavListener();
-		this.scrollListener();
-		this.scrollMobileListener();
+
+		// Scroll detection disabled to be replaced by auto pagination
+		// this.scrollListener();
+		// this.scrollMobileListener();
 	},
 
 	dotsNavListener: function(){
@@ -85,6 +94,18 @@ var AboutSlider = {
 		} else if (deltaY < 0){
 			AboutSlider.back();
 		}
+	},
+
+	timerStart: function(){
+		var _this = this;
+
+		this.timerObj = setInterval(function(){
+			_this.next();
+		}, this.timerInterval);
+	},
+
+	timerStop: function(){
+		clearInterval(this.timerObj);
 	}
 
 }

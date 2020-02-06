@@ -435,38 +435,103 @@ a{
 }
 
 // list dot slider
+	// Svg ring properties
+	$PI: 3.141592;
+	$PI2: 6.283185;
+	$radius: 4;
+	$diameter: $radius * 2;
+	$perimeter: $PI * $diameter;
+
+	// Svg animation
+	@-webkit-keyframes stroke_animation {
+		0% {
+			stroke-dashoffset: 0;
+		}
+		
+		100% {
+			stroke-dashoffset: $perimeter;
+		}
+	}
+
+	@keyframes stroke_animation {
+		0% {
+			stroke-dashoffset: 0;
+		}
+		
+		100% {
+			stroke-dashoffset: $perimeter;
+		}
+	}
+
 nav.slider-wrapper{
 	li.dot-slider{
 		display: block;
 		position: relative;
 		position: relative;
-		padding:getvwmob(16vw);
+		padding: getvwmob(16vw);
 		cursor: pointer;
+
 		&:after{
 			content: "";
 			display: block;
 			position: relative;
-			width: getvwmob(5vw);
-			height: getvwmob(5vw);
+			width: getvwmob(8vw);
+			height: getvwmob(8vw);
 			background: $orange;
 			border-radius: 50%;
 			@include transitions-ease(.4s);
 		}
+
 		&:before{
-			content: "";
-			display: block;
+			// content: "";
+			// display: block;
+			// position: absolute;
+			// width: getvwmob(5vw);
+			// height: getvwmob(5vw);
+			// z-index: -1;
+			// border:solid getvwmob(2vw) $orange;
+			// opacity: 0;
+			// border-radius: 50%;
+			// top: 0; bottom: 0;
+			// left: 0; right: 0;
+			// margin: auto;
+			// @include transitions-ease(.4s);
+		}
+
+		.svg-dot{
+			pointer-events: none;
 			position: absolute;
-			width: getvwmob(5vw);
-			height: getvwmob(5vw);
-			z-index: -1;
-			border:solid getvwmob(2vw) $orange;
-			opacity: 0;
-			border-radius: 50%;
+			margin: auto;
 			top: 0; bottom: 0;
 			left: 0; right: 0;
-			margin: auto;
-			@include transitions-ease(.4s);
+			width: getvwmob(10vw);
+			height: getvwmob(10vw);
+			@include rotate(-90deg);
+
+			@media (min-width: 768px){
+				width: 10px;
+				height: 10px;
+			}
+
+			@media(min-width: 1282px){
+				width: getvw(10vw);
+				height: getvw(10vw);
+			}
 		}
+
+		.svg-ring{
+			pointer-events: none;
+			stroke: $orange;
+			stroke-width: 2;
+			fill: none;
+			stroke-dasharray: $perimeter;
+			stroke-dashoffset: 0;
+
+			&.animate{
+				animation: stroke_animation 10s linear infinite forwards;
+			}
+		}
+
 		&:hover,
 		&.active{
 			background-color: transparent;
@@ -474,31 +539,37 @@ nav.slider-wrapper{
 				opacity: 0;
 			}
 			&:before{
-				opacity: 1;
+				// opacity: 1;
 			}
 		}
+
 		@media(min-width: 768px){
 			padding: 16px;
+
 			&:after{
-				width: 5px;
-				height: 5px;
+				width: 8px;
+				height: 8px;
 			}
+
 			&:before{
-				width: 5px;
-				height: 5px;
-				border: solid 2px $orange
+				// width: 5px;
+				// height: 5px;
+				// border: solid 2px $orange
 			}
 		}
+
 		@media(min-width: 1282px){
 			padding: getvw(16vw);
+
 			&:after{
-				width: getvw(5vw);
-				height: getvw(5vw);
+				width: getvw(8vw);
+				height: getvw(8vw);
 			}
+
 			&:before{
-				width: getvw(5vw);
-				height: getvw(5vw);
-				border: solid getvw(2vw) $orange
+				// width: getvw(5vw);
+				// height: getvw(5vw);
+				// border: solid getvw(2vw) $orange
 			}
 		}
 	}
