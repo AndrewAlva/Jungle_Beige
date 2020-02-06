@@ -5,22 +5,23 @@
 	display: flex;
 	// flex-direction: column;
 	justify-content: center;
-	@media(min-width: 768px){
-		.center-wrapper{
+	
+	.center-wrapper{
+		top: -1.1vw;
+		@media(min-width: 768px){
 			// padding-top: 259px;
 		}
-	}
-	@media(min-width: 1282px){
-		.center-wrapper{
+		@media(min-width: 1282px){
 			// padding-top: getvw(259vw);
 		}
 	}
+
 	.subtitle-block{
 		position: relative;
 		width: 100%;
 		height: getvwmob(18vw);
 		line-height: getvwmob(22vw);
-		margin-bottom: getvwmob(20vw);
+		margin-bottom: getvwmob(18vw);
 		font-weight: 100;
 		letter-spacing: 0.02em;
 		@media(min-width: 768px){
@@ -184,7 +185,7 @@
 			span.bar{
 				width: 100%;
 				height: getvwmob(2vw);
-				background-color: $cream;
+				background-color: $light-cream;
 				display: block;
 				@media(min-width: 768px){
 					height: 2px;
@@ -244,11 +245,11 @@
 	}
 	.checkmark{
 		position: absolute;
-		border: solid getvwmob(2px) $dark-brown;
+		border: solid getvwmob(2vw) $dark-brown;
 		border-radius: 100%;
 		cursor: pointer;
-		height: getvwmob(9vw);
-		width: getvwmob(9vw);
+		height: getvwmob(8vw);
+		width: getvwmob(8vw);
 		top: 0.25em;
 		left: 0;
 		@include transitions-ease(.4s);

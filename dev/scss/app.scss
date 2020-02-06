@@ -58,16 +58,16 @@
 	pointer-events:none;
 	
 	&.a{
-		width: 100%;
-		height: getvw(53vw);
+		width: getvw(8vw);
+		height: 100%;
 
 		top: 0;
 		left: 0;
 	}
 	
 	&.b{
-		width: 100%;
-		height: getvw(53vw);
+		width: getvw(5vw);
+		height: 100%;
 
 		top: 0;
 		left: 0;
