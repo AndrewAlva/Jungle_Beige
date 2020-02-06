@@ -47,22 +47,28 @@
 		padding-right: getvwmob(6vw);
 		width: 88.57%;
 		.social-link{
-			height: 18px;
+			height: getvwmob(18vw);
 			padding: 0;
 			cursor: pointer;
 			display: inline-block;
 			@include transitions-ease(.3s);
+
+			@media (min-width: 768px){
+				height: 18px;
+			}
+
+			@media (min-width: 1282px){
+				height: getvw(18vw);
+			}
+
 			svg{
-				fill: $dark-brown;
+				fill: $brown;
 				height: 100%;
 			}
 			&:hover{
 				svg{
 					fill: $cream;
 				}
-			}
-			@media (min-width: 1282px){
-				height: getvw(18vw);
 			}
 		}
 
