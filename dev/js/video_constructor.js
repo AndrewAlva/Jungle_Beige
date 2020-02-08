@@ -65,6 +65,10 @@ function JBVideoPlayer(args) {
 
 
     this.addListeners = function(){
+        window.addEventListener('resize', function(){
+            _self.progressBarContainerWidth = _self.progressBarContainer.offsetWidth;
+        });
+
         this.buttonOpen.addEventListener("click", function() {
             _self.container.classList.add('show-video');
             _self.video.play();
