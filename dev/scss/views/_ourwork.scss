@@ -11,13 +11,14 @@
 	}
 }
 .work-bg{
-	background-image: url("../img/ourwork_bg_opt.jpg");
-	background-size: 500%;
-	background-position: 50% 15%;
 	position: fixed;
+	background-image: url("../img/ourwork_bg_mob_opt.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 	@media(min-width: 768px){
-		background-size: 100%;
-		background-position: 0% 30%;
+		background-image: url("../img/ourwork_bg_desk_opt.jpg");
 	}
 }
 
