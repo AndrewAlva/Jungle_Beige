@@ -46,6 +46,7 @@ var Cursor = {
         var pageLinks = document.getElementsByTagName('a');
         var pageButtons = document.getElementsByTagName('button');
         var aboutNavs = document.getElementsByClassName('dot-slider');
+        var specialWideners = document.getElementsByClassName('cursorWidener');
         var wideCursorTriggers = []
 
         for (var i = 0; i < pageLinks.length; i++) {
@@ -56,6 +57,9 @@ var Cursor = {
         }
         for (var i = 0; i < aboutNavs.length; i++) {
             wideCursorTriggers.push(aboutNavs[i]);
+        }
+        for (var i = 0; i < specialWideners.length; i++) {
+            wideCursorTriggers.push(specialWideners[i]);
         }
 
         for (var i = 0; i < wideCursorTriggers.length; i++) {

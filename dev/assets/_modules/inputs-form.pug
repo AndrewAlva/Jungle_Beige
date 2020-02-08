@@ -5,16 +5,20 @@ form.inputs-container
 			input.jb-formfield(type="text" name="name" id="name" required)
 			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="name") Your name
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
+
 		.input-wrapper
 			input.jb-formfield(type="email" name="email" id="email" required)
 			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="email") Your mail
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="2" data-cascade-delay="2")
+
 		.input-wrapper
 			textarea.textarea-wrapper.jb-formfield.sn-formfield(name="textarea", id="textarea", required)
 			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="textarea") Tell us about your project
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
-		//- check box
-	.input-wrapper#check-box
+	
+
+	//- check box
+	.input-wrapper#check-box.cursorWidener
 		label.policy.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") I have read and agreed with privacy policy.
-			input.checkbox(type="checkbox")
+			input.checkbox(type="checkbox" required)
 			span.checkmark
