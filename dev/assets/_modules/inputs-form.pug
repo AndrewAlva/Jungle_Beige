@@ -1,24 +1,33 @@
-form.inputs-container
+form.inputs-container(name="contact-form" action="mail.php" method="POST" enctype="multipart/form-data")
 	//- inputs text
 	.inputs-flex
 		.input-wrapper
-			input.jb-formfield(type="text" name="name" id="name" required)
-			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="name") Your name
+			input.jb-formfield(type="text" name="form-name" id="form-name" required)
+			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="form-name") Your name
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="1" data-cascade-delay="1")
 
 		.input-wrapper
-			input.jb-formfield(type="email" name="email" id="email" required)
-			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="email") Your mail
+			input.jb-formfield(type="email" name="form-email" id="form-email" required)
+			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="form-email") Your mail
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="2" data-cascade-delay="2")
 
 		.input-wrapper
-			textarea.textarea-wrapper.jb-formfield.sn-formfield(name="textarea", id="textarea", required)
-			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="textarea") Tell us about your project
+			textarea.textarea-wrapper.jb-formfield.sn-formfield(name="form-textarea", id="form-textarea", required)
+			label.placeholder.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="2" for="form-textarea") Tell us about your project
 			span.bar.jb-cascade(data-cascade="line-full" data-cascade-delay-mobile="3" data-cascade-delay="3")
 	
 
 	//- check box
 	.input-wrapper#check-box.cursorWidener
 		label.policy.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="3" data-cascade-delay="3") I have read and agreed with privacy policy.
-			input.checkbox(type="checkbox" required)
+			input.checkbox(type="checkbox" name="form-checkbox" id="form-checkbox" required)
 			span.checkmark
+
+
+	.arrow-container.jb-cascade(data-cascade="fade-right" data-cascade-delay-mobile="4" data-cascade-delay="4")
+		button(type="submit")
+			.arrow-right
+				.arrow-wrapper
+					.rectangle-arrow
+					+icon-arrow
+				span Send it

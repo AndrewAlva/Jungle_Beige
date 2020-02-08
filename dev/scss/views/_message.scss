@@ -271,10 +271,15 @@
 .message-section .arrow-container{
 	width: auto;
 	margin-top: getvwmob(4vw);
-	margin-left: 11.11%;
 	position: relative;
 	display: inline-flex;
 	@include transitions-ease(.4s);
+
+	button{
+		background: none;
+		outline: none;
+		border: none;
+	}
 
 	.arrow-right{
 		margin-left: getvwmob(-20vw);
@@ -317,7 +322,7 @@
 	}
 	@media(min-width: 768px){	
 		margin-top: 16px;
-		margin-left: 16.666667%;
+
 		.arrow-right{
 			margin-left: -20px;
 			span{
@@ -330,7 +335,7 @@
 	}
 	@media(min-width: 1282px){
 		margin-top: getvw(16vw);
-		margin-left: 33.8333%;
+
 		.arrow-right{
 			margin-left: getvw(-20vw);
 			span{

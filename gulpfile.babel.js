@@ -117,6 +117,12 @@ gulp.task('fonts', function(){
   .pipe(gulp.dest('./public/fonts'))
 });
 
+// Tarea para exportar php en el "/root"
+gulp.task('php', function(){
+  return gulp.src('./dev/assets/*.php')
+  .pipe(gulp.dest('./public'))
+});
+
 
 //Tarea para levantar un servidor local y un watch general
 gulp.task('server', ()=>{
@@ -136,13 +142,14 @@ gulp.task('server', ()=>{
     gulp.watch('./dev/assets/img/**', gulp.series('images'))
     gulp.watch('./dev/assets/img/**', gulp.series('subimages'))
     gulp.watch('./dev/assets/fonts/**', gulp.series('fonts'))
+    gulp.watch('./dev/assets/*.php', gulp.series('php'))
 })
 
 
 // Tarea general para crear la carpeta "public" y levantar el servidor general con un watch activo
-gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'subimages', 'fonts', 'server') )
+gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'subimages', 'fonts', 'php', 'server') )
 
 
 // Tarea para exportar los archivos minificados listos para subir a servidor
-gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'subimages', 'fonts') )
+gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'subimages', 'fonts', 'php') )
 
