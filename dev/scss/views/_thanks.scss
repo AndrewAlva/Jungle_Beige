@@ -51,7 +51,6 @@
 			padding: 0;
 			cursor: pointer;
 			display: inline-block;
-			@include transitions-ease(.3s);
 
 			@media (min-width: 768px){
 				height: 18px;
@@ -64,6 +63,7 @@
 			svg{
 				fill: $brown;
 				height: 100%;
+				@include transitions-ease(.3s);
 			}
 			&:hover{
 				svg{

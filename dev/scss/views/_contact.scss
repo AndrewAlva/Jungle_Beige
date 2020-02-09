@@ -18,14 +18,16 @@
 .about-block{
 	position: relative;
 	cursor: pointer;
-	overflow: hidden;
+
 	@media(min-width: 992px){
 		padding-right: 24px;
 	}
 	.title-block{
+		pointer-events: none;
 		color: $black;
 		padding-left: 10%;
 		margin-bottom: getvwmob(20vw);
+
 		@media(min-width: 768px){
 			padding-left: 0;
 			margin-bottom: 15px;
@@ -120,8 +122,8 @@
 		.title-block{
 			@include transitions-target(color, 0s, .2s);
 			color: $cream;
-			-webkit-animation: display-text .5s cubic-bezier(.25,0,0,.15) forwards;
-			animation: display-text .5s cubic-bezier(.25,0,0,.15) forwards;
+			-webkit-animation: display-text .7s cubic-bezier(.21,0,0,1) forwards;
+			animation: display-text .7s cubic-bezier(.21,0,0,1) forwards;
 		}
 		.rectangle-arrow{
 			-webkit-animation: editRectArrow .8s cubic-bezier(.21,0,0,1) forwards; /* Safari 4.0 - 8.0 */
