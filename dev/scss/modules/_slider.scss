@@ -45,7 +45,7 @@
 			display: flex;
 
 			&.smooth-sliding{
-				@include transitions-ease(.7s);
+				@include transitions-ease(1s);
 			}
 		}
 		.slide-container{

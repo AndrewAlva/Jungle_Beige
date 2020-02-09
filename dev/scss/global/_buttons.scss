@@ -233,7 +233,8 @@ a{
 		bottom: 0;
 		right: 0;
 		margin: auto;
-		@include transitions-ease(.24s);
+		@include transitions-ease(.5s);
+
 		&.play-video{
 			width: getvwmob(17vw);
 			height: getvwmob(32vw);
@@ -246,6 +247,7 @@ a{
 			width:getvwmob(32vw); 
 			height:getvwmob(32vw);
 		}
+
 		@media(min-width: 768px){
 			&.play-video{
 				width: 17px;
@@ -283,7 +285,7 @@ a{
 	.btn-c-init{
 		width: 100%;
 		height: 100%;
-		@include transitions-ease(.4s)
+		@include transitions-ease(.6s)
 		border: solid 2px $light-brown;
 	}
 	&:hover{
@@ -303,7 +305,7 @@ a{
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		@include transitions-ease(.4s);
+		@include transitions-ease(.6s);
 		overflow: hidden;
 		&:after{
 			content: "";
@@ -313,7 +315,7 @@ a{
 			top: 100%;
 			left: 0;
 			background-color: green;
-			@include transitions-ease(.4s);
+			@include transitions-ease(.6s);
 			background-color: $cream;
 		}
 	}
@@ -326,7 +328,8 @@ a{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		opacity: 0;
-		@include transitions-ease(.4s);
+		@include transitions-ease(.6s);
+
 		@media(min-width: 768px){
 			font-size: 12px;
 		}
@@ -370,7 +373,7 @@ a{
 }
 .close-video{
 	border: solid getvwmob(2vw) rgba(203,187,162,1);
-	@include transitions-ease(.4s);
+	@include transitions-ease(.6s);
 	overflow: hidden;
 	@media(min-width: 768px){
 		border: solid 2px rgba(203,187,162,1);
@@ -387,12 +390,12 @@ a{
 		left: 50%;
 		transform-origin: center;
 		transform: translate(-50%, -50%) scale(0);
-		@include transitions-ease(.4s);
+		@include transitions-ease(.6s);
 		border-radius: 50%;
 	}
 	.icon-video{
 		z-index: 3;
-		@include transitions-ease(.4s);
+		@include transitions-ease(.6s);
 	}
 	&:hover{
 		border: solid getvwmob(1vw) rgba(203,187,162,0);
@@ -407,31 +410,25 @@ a{
 			transform: translate(-50%, -50%) scale(1);
 		}
 		.icon-video{
-			-webkit-animation: closeBtn .45s cubic-bezier(.4,0,0,.6); /* Safari 3.0 - 8.0 */
-			animation: closeBtn .45s cubic-bezier(.4,0,0,.6);
+			-webkit-animation: closeBtn .6s cubic-bezier(.21,0,0,1); /* Safari 3.0 - 8.0 */
+			animation: closeBtn .6s cubic-bezier(.21,0,0,1);
 			fill: white;
 		}
 	}
 }
 @keyframes closeBtn{
-	0%{transform:translateY(getvwmob(0vw)); opacity: 1}
-	40% {transform:translateY(getvwmob(26vw)); opacity: 0}
-	80% {transform:translateY(getvwmob(26vw)); opacity: 0}
+	0% {transform:translateY(getvwmob(32vw)); opacity: 0}
 	100% {transform:translateY(getvwmob(0vw)); opacity: 1}
 }
 @media(min-width: 768px){
 	@keyframes closeBtn{
-		0%{transform:translateY(0px); opacity: 1}
-		40% {transform:translateY(26px); opacity: 0}
-		80% {transform:translateY(26px); opacity: 0}
+		0% {transform:translateY(32px); opacity: 0}
 		100% {transform:translateY(0px); opacity: 1}
 	}
 }
 @media(min-width: 1282px){
 	@keyframes closeBtn{
-		0%{transform:translateY(getvw(0vw)); opacity: 1}
-		40% {transform:translateY(getvw(26vw)); opacity: 0}
-		80% {transform:translateY(getvw(26vw)); opacity: 0}
+		0% {transform:translateY(getvw(32vw)); opacity: 0}
 		100% {transform:translateY(getvw(0vw)); opacity: 1}
 	}
 }

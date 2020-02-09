@@ -22,11 +22,11 @@
 }
 
 @mixin transitions-ease($timing){
-	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1);
-	-moz-transition: all $timing cubic-bezier(.3,0,.2,1);
-	-ms-transition: all $timing cubic-bezier(.3,0,.2,1);
-	-o-transition: all $timing cubic-bezier(.3,0,.2,1);
-	transition: all $timing cubic-bezier(.3,0,.2,1);
+	-webkit-transition: all $timing cubic-bezier(.21,0,0,1);
+	-moz-transition: all $timing cubic-bezier(.21,0,0,1);
+	-ms-transition: all $timing cubic-bezier(.21,0,0,1);
+	-o-transition: all $timing cubic-bezier(.21,0,0,1);
+	transition: all $timing cubic-bezier(.21,0,0,1);
 }
 @mixin transitions-target($target, $timing, $delay){
 	-webkit-transition: $target $timing cubic-bezier(.3,0,.2,1) $delay;
