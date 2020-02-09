@@ -47,13 +47,15 @@
 		}
 	}
 	&:hover{
-		-webkit-animation: backgroundBtn .4s linear forwards; /* Safari 4.0 - 8.0 */
-		animation: backgroundBtn .4s linear forwards;
+		-webkit-animation: backgroundBtn .2s linear forwards; /* Safari 4.0 - 8.0 */
+		animation: backgroundBtn .2s linear forwards;
+
 		.animate-up{
-			color:$black;
+			// color:$black;
 			-webkit-animation: fade-up-btn .5s cubic-bezier(.21,0,0,1) forwards;
 			animation: fade-up-btn .5s cubic-bezier(.21,0,0,1) forwards;
 		}
+
 		svg {
 			path, rect{
 				fill: $black;

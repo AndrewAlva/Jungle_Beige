@@ -48,6 +48,9 @@
 //         return this.timeline.play();
 //     }
 // }
+
+
+
 window.animation = {
     init: function() {
         var cascadeArray = document.getElementsByClassName('jb-cascade');
@@ -56,3 +59,5 @@ window.animation = {
         }
     }
 }
+
+

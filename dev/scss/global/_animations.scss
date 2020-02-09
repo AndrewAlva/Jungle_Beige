@@ -1,7 +1,7 @@
 // Configuración general
 [data-cascade]{
 	animation-duration: $duration_inview;
-	animation-timing-function: $easeOutQuint;
+	animation-timing-function: cubic-bezier(.21,0,0,1);
 	animation-fill-mode: both;
 	opacity: 0;
 }

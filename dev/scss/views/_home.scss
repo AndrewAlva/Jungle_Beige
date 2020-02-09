@@ -249,7 +249,7 @@
 				transform-origin: 50% 50%;
 				width: 100%;
 				height: 100%;
-				@include transitions-ease(.3s);
+				@include transitions-ease(.7s);
 			}
 		}
 	}
@@ -329,8 +329,8 @@
 		}
 		.title-wrapper{
 			.span-container span{
-				-webkit-animation: display-text .55s cubic-bezier(.25,0,0,.15) forwards;
-				animation: display-text .55s cubic-bezier(.25,0,0,.15) forwards;
+				-webkit-animation: display-text 1s cubic-bezier(.21,0,0,1) forwards;
+				animation: display-text 1s cubic-bezier(.21,0,0,1) forwards;
 			}
 		}
 		.line-item{
@@ -340,8 +340,8 @@
 			}
 		}
 		.about-title{
-			-webkit-animation: display-text .55s cubic-bezier(.25,0,0,.15) forwards;
-			animation: display-text .55s cubic-bezier(.25,0,0,.15) forwards;
+			-webkit-animation: display-text 1s cubic-bezier(.21,0,0,1) forwards;
+			animation: display-text 1s cubic-bezier(.21,0,0,1) forwards;
 		}
 	}
 }
