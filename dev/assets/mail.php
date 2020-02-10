@@ -23,7 +23,6 @@
 		$mail_sent = mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 		if ($mail_sent == true){ ?>
 			<script language="javascript" type="text/javascript">
-				alert('Great! Your message was sent successfully.');
 				window.location = './thanks.html';
 			</script>
 
