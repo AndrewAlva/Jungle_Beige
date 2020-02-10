@@ -24,7 +24,7 @@
 		if ($mail_sent == true){ ?>
 			<script language="javascript" type="text/javascript">
 				alert('Great! Your message was sent successfully.');
-				window.location = './';
+				window.location = './thanks.html';
 			</script>
 
 		<?php 
