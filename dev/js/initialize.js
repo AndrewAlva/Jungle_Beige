@@ -19,8 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Trigger functions after page is completely loaded
 window.onload = function() {
     // Do something, remove preloader perhaps
-    console.log("Page fully loaded.");
-    console.log("Initialize.js");
+    // console.log("Page fully loaded.");
+    // console.log("Initialize.js");
+
+	// Remove preloader
+	Preloader.init();
+
 
     // Init request animation frame
     RAF.init();
@@ -38,7 +42,6 @@ window.onload = function() {
 		else homeSlider.next();
 	});
 
-	// Remove preloader
 	animation.init();
 
 }

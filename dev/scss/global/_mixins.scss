@@ -52,6 +52,14 @@
 	transform: translate($Xmove, $Ymove);
 }
 
+@mixin translate3d($Xmove, $Ymove, $Zmove){
+	-webkit-transform: translate3d($Xmove, $Ymove, $Zmove);
+	-moz-transform: translate3d($Xmove, $Ymove, $Zmove);
+	-ms-transform: translate3d($Xmove, $Ymove, $Zmove);
+	-o-transform: translate3d($Xmove, $Ymove, $Zmove);
+	transform: translate3d($Xmove, $Ymove, $Zmove);
+}
+
 @mixin rotate($degs){
 	-webkit-transform: -webkit-rotate($degs);
 	-webkit-transform: rotate($degs);
