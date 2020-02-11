@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		initCanvasSlideshow = new CanvasSlideshow({
 			sprites: spriteImagesSrc,
-			displacementImage: 'img/dmaps/dmap_dave_big_opt.jpg',
+			displacementImage: 'img/dmaps/clouds.jpg',
 			autoPlay: true,
 			autoPlaySpeed: [0.6, 1.3],
 			displaceScale: [100, 70],

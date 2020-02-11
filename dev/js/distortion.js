@@ -1,5 +1,8 @@
 var Page_Shader = document.getElementsByClassName('shader-container')[0];
 
+
+var displacementFilter;
+
 (function() {
 
 	window.CanvasSlideshow = function(options) {
@@ -45,7 +48,7 @@ var Page_Shader = document.getElementsByClassName('shader-container')[0];
 		var stage = new PIXI.Container();
 		var slidesContainer = new PIXI.Container();
 		var displacementSprite = new PIXI.Sprite.fromImage(options.displacementImage);
-		var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+		displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
 
 
 
@@ -132,10 +135,11 @@ var Page_Shader = document.getElementsByClassName('shader-container')[0];
 
 
 			// Accelerating distortion
-			displacementFilter.scale.x = 100;
-			displacementFilter.scale.y = 50;
-			console.log("100/50 scale");
-			console.log(displacementFilter.scale.y);
+			displacementFilter.scale.x = 120;
+			displacementFilter.scale.y = 60;
+
+			console.log("120/60 scale clouds");
+
 
 		};
 
