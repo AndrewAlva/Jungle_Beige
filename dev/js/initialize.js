@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		ProjectVideo.init();
 	}
+
+
+	// Detect if page has shifting titles
+	if(document.getElementsByClassName('shifting-imgs-container')){
+		var WorkShifter = new TitleShifter();
+		WorkShifter.init();
+	}
 });
 
 

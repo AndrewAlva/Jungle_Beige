@@ -10,7 +10,7 @@
 		1.3 los valores despues del atributo (textDelay: 0), son valores que se setean por default, por si no se agrega ningun valor
 mixin project-intro(linkTo, number, name1, name2, callTo, callTo2, dataCascade={textDelay: 0, arrowDelay: 1})
 	.project-wrapper
-		a.page_transitioner(href=linkTo)
+		a.page_transitioner.shifting-bg-trigger(href=linkTo data-shift-id=number)
 			//- 2.Aqui es donde setearemos nombre a los atributos que cambiaremos
 				2.1 en este casi nuestros atributos son:
 					(data-cascade="la animacion" data-cascade-delay-mobile="turno de entrada" data-cascade-delay="turno de entrada")
