@@ -2,7 +2,9 @@ extends _templates/layout.pug
 
 
 block content
-	.worksections-bg
+	.worksections-bg.shader-container
+		img.shader-img(src="img/ourwork_sec_bg_opt.jpg", alt="Distortioned background")
+
 
 	.sections-p-wrapper.project-bg-beams
 		+project-sections("Branding & Design", "High Beams", "01", "project-brand-beams.html")

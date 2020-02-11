@@ -2,8 +2,10 @@ extends _templates/layout.pug
 
 
 block content
-	.worksections-bg
-	//- component
+	.worksections-bg.shader-container
+		img.shader-img(src="img/ourwork_sec_bg_opt.jpg", alt="Distortioned background")
+
+			
 	.sections-p-wrapper.project-bg-puma
 		+project-sections(" Content creation & Management", "Puma", "01", "project-manage-puma.html")
 	.sections-p-wrapper.project-bg-coffee

@@ -2,7 +2,10 @@ extends _templates/layout.pug
 
 
 block content
-	.worksections-bg
+	.worksections-bg.shader-container
+		img.shader-img(src="img/ourwork_sec_bg_opt.jpg", alt="Distortioned background")
+
+
 	.sections-p-wrapper.project-bg-commerce-amongst.full-screen
 		+project-sections("E-commerce", "Amongst Few", "01", "project-commerce-amongst.html")
 	a.page_transitioner.navigation-btn.btn-pages(href="ourwork.html")

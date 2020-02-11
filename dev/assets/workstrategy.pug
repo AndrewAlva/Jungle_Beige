@@ -2,8 +2,10 @@ extends _templates/layout.pug
 
 
 block content
-	.worksections-bg
-		//- component
+	.worksections-bg.shader-container
+		img.shader-img(src="img/ourwork_sec_bg_opt.jpg", alt="Distortioned background")
+
+
 	.sections-p-wrapper.project-bg-suede
 		+project-sections("Campaign & Social Media Strategy ", "Suede Guerrillas ", "01", "project-social-suede.html")
 	.sections-p-wrapper.project-bg-power
