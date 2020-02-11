@@ -5,8 +5,13 @@
 
 // shader wrapper
 .home-bg{
-	// background-size: cover;
-	// background-image: url("../img/Desert_opt.jpg");
+	background-size: cover;
+	background-image: url("../img/Desert_Still_opt.jpg");
+	background-position: center;
+
+	.shader-img{
+		display: none;
+	}
 }
 
 // Display WE

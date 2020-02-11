@@ -12,13 +12,17 @@
 }
 .work-bg{
 	position: fixed;
-	background-image: url("../img/ourwork_bg_mob_opt.jpg");
+	background-image: url("../img/ourwork_bg_mob_color_opt.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 
 	@media(min-width: 768px){
 		background-image: url("../img/ourwork_bg_desk_opt.jpg");
+	}
+
+	.shader-img{
+		display: none;
 	}
 }
 
@@ -42,7 +46,8 @@
 .project-wrapper{
 	margin-top: getvwmob(10vw);
 	margin-bottom: getvwmob(10vw);
-	opacity: .4;
+	opacity: .8;
+
 	a{
 		color: $cream;
 	}
@@ -53,6 +58,7 @@
 		position: relative;
 	}
 	@media(min-width: 768px){
+		opacity: .4;
 		margin-top: 50px;
 		margin-bottom: 50px;
 		p.number-project{
