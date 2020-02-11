@@ -233,7 +233,7 @@ var displacementFilter;
 			isPlaying = true;
 
 
-			var baseTimeline = new TimelineMax({
+			var opacityTimeline = new TimelineMax({
 				onComplete: function() {
 					that.currentIndex = newIndex;
 					isPlaying = false;
@@ -244,28 +244,59 @@ var displacementFilter;
 				onUpdate: function() {
 
 					if (options.wacky === true) {
-						displacementSprite.rotation += baseTimeline.progress() * 0.02;
-						displacementSprite.scale.set(baseTimeline.progress() * 3);
+						displacementSprite.rotation += opacityTimeline.progress() * 0.02;
+						displacementSprite.scale.set(opacityTimeline.progress() * 3);
 					}
 
 				}
 			});
 
-			baseTimeline.clear();
+			opacityTimeline.clear();
 
-			if (baseTimeline.isActive()) {
+			if (opacityTimeline.isActive()) {
 				return;
 			}
 
-			baseTimeline
-				.to(slideImages[that.currentIndex], 0.5, {
-					ease:Power4.easeInOut,
+			opacityTimeline
+				.to(slideImages[that.currentIndex], 0.2, {
+					ease: Power2.easeInOut,
 					alpha: 0
 				})
-				.to(slideImages[newIndex], 0.5, {
-					ease:Power4.easeInOut,
+				.to(slideImages[newIndex], 0.8, {
+					ease: Power2.easeInOut,
 					alpha: 1
-				}, '-0.5');
+				}, '-0.2');
+
+
+
+			var deformTimeline = new TimelineMax({
+				onComplete: function() {
+					that.currentIndex = newIndex;
+					isPlaying = false;
+					if (options.wacky === true) {
+						displacementSprite.scale.set(1);
+					}
+				},
+				onUpdate: function() {
+
+					if (options.wacky === true) {
+						displacementSprite.rotation += deformTimeline.progress() * 0.02;
+						displacementSprite.scale.set(deformTimeline.progress() * 3);
+					}
+
+				}
+			});
+
+			deformTimeline.clear();
+
+			if (deformTimeline.isActive()) {
+				return;
+			}
+
+			deformTimeline
+				.to(displacementFilter.scale, 0.1, {ease: Power2.easeIn, x: options.displaceScaleTo[0], y: options.displaceScaleTo[1]  })
+				.to(displacementFilter.scale, 0.9, {ease: Power2.easeOut, x: options.displaceScale[0], y: options.displaceScale[1] } );
+
 
 		};
 
@@ -276,29 +307,34 @@ var displacementFilter;
 		/// ---------------------------         
 		var nav = options.navElement;
 
+		var debouncedTitlesShift = debounce(HoverTitlesShift, 150);
+
+		function HoverTitlesShift() {
+			// console.log('mouseover HoverTitlesShift triggered');
+
+			// Make sure the previous transition has ended
+			if (isPlaying) {
+				return false;
+			}
+
+			var _index = this.getAttribute('data-shift-id');
+			_index = parseInt(_index);
+			_index -= 1;
+
+			if(that.currentIndex != _index){
+				that.moveSlider(_index);
+			}
+
+
+			return false;
+		}
+
 		for (var i = 0; i < nav.length; i++) {
 
 			var navItem = nav[i];
+			// navItem.onmouseover = function(event) {}
 
-			navItem.onmouseover = function(event) {
-
-				// Make sure the previous transition has ended
-				if (isPlaying) {
-					return false;
-				}
-
-				var _index = this.getAttribute('data-shift-id');
-				_index = parseInt(_index);
-				_index -= 1;
-
-				if(that.currentIndex != _index){
-					that.moveSlider(_index);
-				}
-
-
-				return false;
-
-			}
+			navItem.addEventListener('mouseover', debouncedTitlesShift, false);
 
 		}
 

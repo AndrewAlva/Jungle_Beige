@@ -109,8 +109,8 @@
 		}
 		&:hover{		
 			span{
-				-webkit-animation: upTranslate .6s cubic-bezier(.25,0,0,.8); /* Safari 4.0 - 8.0 */
-				animation: upTranslate .6s cubic-bezier(.25,0,0,.8);
+				-webkit-animation: translate-up .6s cubic-bezier(.21,0,0,1); /* Safari 4.0 - 8.0 */
+				animation: translate-up .6s cubic-bezier(.21,0,0,1);
 			}
 		}
 		@media(min-width: 768px){

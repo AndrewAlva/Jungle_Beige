@@ -12,6 +12,7 @@ function TitleShifter(args){
 
 	this.init = function(){
 		this.addListeners();
+		this.shift(0);
 	}
 
 	this.addListeners = function(){
@@ -37,9 +38,11 @@ function TitleShifter(args){
 			// show correct image
 			this.shiftingImgs[index].classList.add('show');
 
-			setTimeout(function(){
-				_self.canShift = true;
-			}, this.shiftDuration);
+			// setTimeout(function(){
+			// 	_self.canShift = true;
+			// }, _self.shiftDuration);
+			
+			_self.canShift = true;
 
 		}
 	}

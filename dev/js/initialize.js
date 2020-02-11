@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			wacky: false
 		});
 
-		console.log("removed displacement transition");
+		// console.log("debounce shader trans 150, unlocked bg titleshift");
 	}
 
 
@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Detect if page has shifting titles
-	if(document.getElementsByClassName('shifting-imgs-container')){
+	var areShiftingTitles = document.getElementsByClassName('shifting-imgs-container')[0];
+	if(areShiftingTitles && deviceDetector.device == "desktop"){
 		var WorkShifter = new TitleShifter();
 		WorkShifter.init();
 	}
@@ -64,14 +65,17 @@ window.onload = function() {
     // Add cursor on desktop
     if (deviceDetector.device == "desktop" ) RAF.add(Cursor);
 
-    // Click interactions to move Home Slider
+    // Init projects slider
+    var projectSlider = new heroSlider();
+
+    // Click interactions to move Projects Slider
 	$('.to-slide').on('click', function(event){
-		console.log("to-slide clicked")
+		// console.log("to-slide clicked")
 		event.preventDefault();
 		var slide = $(this).data("slide");
 
-		if(slide=="prev") homeSlider.prev();
-		else homeSlider.next();
+		if(slide=="prev") projectSlider.prev();
+		else projectSlider.next();
 	});
 
 	animation.init();
