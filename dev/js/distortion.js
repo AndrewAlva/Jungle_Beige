@@ -28,12 +28,12 @@ var displacementFilter;
 		options.fullScreen = options.hasOwnProperty('fullScreen') ? options.fullScreen : true;
 		options.displaceScale = options.hasOwnProperty('displaceScale') ? options.displaceScale : [200, 70];
 		options.displacementImage = options.hasOwnProperty('displacementImage') ? options.displacementImage : '';
-		options.navElement = options.hasOwnProperty('navElement') ? options.navElement : document.querySelectorAll('.scene-nav');
+		options.navElement = options.hasOwnProperty('navElement') ? options.navElement : document.querySelectorAll('.shifting-bg-trigger');
 		options.displaceAutoFit = options.hasOwnProperty('displaceAutoFit') ? options.displaceAutoFit : false;
 		options.wacky = options.hasOwnProperty('wacky') ? options.wacky : false;
 		options.interactive = options.hasOwnProperty('interactive') ? options.interactive : false;
 		options.interactionEvent = options.hasOwnProperty('interactionEvent') ? options.interactionEvent : '';
-		options.displaceScaleTo = (options.autoPlay === false) ? [0, 0] : [200, 200];
+		options.displaceScaleTo = (options.autoPlay === false) ? [0, 0] : [1200, 600];
 		options.textColor = options.hasOwnProperty('textColor') ? options.textColor : '#fff';
 		options.displacementCenter = options.hasOwnProperty('displacementCenter') ? options.displacementCenter : false;
 		options.dispatchPointerOver = options.hasOwnProperty('dispatchPointerOver') ? options.dispatchPointerOver : false;
@@ -258,27 +258,21 @@ var displacementFilter;
 			}
 
 			baseTimeline
-				.to(displacementFilter.scale, 1, {
-					x: options.displaceScale[0],
-					y: options.displaceScale[1]
-				})
 				.to(slideImages[that.currentIndex], 0.5, {
+					ease:Power4.easeInOut,
 					alpha: 0
 				})
 				.to(slideImages[newIndex], 0.5, {
+					ease:Power4.easeInOut,
 					alpha: 1
-				})
-				.to(displacementFilter.scale, 1, {
-					x: options.displaceScaleTo[0],
-					y: options.displaceScaleTo[1]
-				});
+				}, '-0.5');
 
 		};
 
 
 
 		/// ---------------------------
-		//  CLICK HANDLERS
+		//  HOVER HANDLERS
 		/// ---------------------------         
 		var nav = options.navElement;
 
@@ -286,30 +280,21 @@ var displacementFilter;
 
 			var navItem = nav[i];
 
-			navItem.onclick = function(event) {
+			navItem.onmouseover = function(event) {
 
 				// Make sure the previous transition has ended
 				if (isPlaying) {
 					return false;
 				}
 
-				if (this.getAttribute('data-nav') === 'next') {
+				var _index = this.getAttribute('data-shift-id');
+				_index = parseInt(_index);
+				_index -= 1;
 
-					if (that.currentIndex >= 0 && that.currentIndex < slideImages.length - 1) {
-						that.moveSlider(that.currentIndex + 1);
-					} else {
-						that.moveSlider(0);
-					}
-
-				} else {
-
-					if (that.currentIndex > 0 && that.currentIndex < slideImages.length) {
-						that.moveSlider(that.currentIndex - 1);
-					} else {
-						that.moveSlider(spriteImages.length - 1);
-					}
-
+				if(that.currentIndex != _index){
+					that.moveSlider(_index);
 				}
+
 
 				return false;
 

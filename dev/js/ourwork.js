@@ -27,12 +27,20 @@ function TitleShifter(args){
 	}
 
 	this.shift = function(index){
-		// hide all images
-		for (var i = 0; i < this.shiftingImgs.length; i++) {
-			this.shiftingImgs[i].classList.remove('show');
-		}
+		if (this.canShift) {
+			this.canShift = false;
+			// hide all images
+			for (var i = 0; i < this.shiftingImgs.length; i++) {
+				this.shiftingImgs[i].classList.remove('show');
+			}
 
-		// show correct image
-		this.shiftingImgs[index].classList.add('show');
+			// show correct image
+			this.shiftingImgs[index].classList.add('show');
+
+			setTimeout(function(){
+				_self.canShift = true;
+			}, this.shiftDuration);
+
+		}
 	}
 }

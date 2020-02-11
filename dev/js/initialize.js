@@ -22,9 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			displacementImage: 'img/dmaps/clouds.jpg',
 			autoPlay: true,
 			autoPlaySpeed: [0.6, 1.3],
-			displaceScale: [100, 70],
-			wacky: true
+			displaceScale: [120, 60],
+			wacky: false
 		});
+
+		console.log("removed displacement transition");
 	}
 
 
