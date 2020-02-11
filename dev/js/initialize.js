@@ -65,9 +65,6 @@ window.onload = function() {
     // Add cursor on desktop
     if (deviceDetector.device == "desktop" ) RAF.add(Cursor);
 
-    // Init projects slider
-    var projectSlider = new heroSlider();
-
     // Click interactions to move Projects Slider
 	$('.to-slide').on('click', function(event){
 		// console.log("to-slide clicked")

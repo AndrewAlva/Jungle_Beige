@@ -1,10 +1,15 @@
-// Hero Slider (Used in Home Page)
-	// Update slides width for resizing cases
-	$(window).resize(function() {
-		projectSlider.getDeviceVersion();
-		projectSlider.getSlideWidth();
-		projectSlider.goTo(projectSlider.currentActiveSlide);
-	});
+// Hero Slider (Used in Projects Page)
+	// Init projects slider
+	if(document.getElementById('home-hero-slider-not-mobile')){
+	    window.projectSlider = new heroSlider();
+
+		// Update slides width for resizing cases
+		$(window).resize(function() {
+			projectSlider.getDeviceVersion();
+			projectSlider.getSlideWidth();
+			projectSlider.goTo(projectSlider.currentActiveSlide);
+		});
+	}
 	
 
 	// Slider class (mold)
@@ -17,6 +22,7 @@
 		// Slider values
 		this.slidingDuration = args.slidingDuration || 700;
 		this.slideWidth = null;
+		this.slidingWrapper = document.getElementById('home-hero-slider-not-mobile');
 		this.slides = $('#home-hero-slider-not-mobile').find('.slide-container');
 		this.totalSlides = this.slides.length;
 		this.firstSlide = this.slides[0];
@@ -39,6 +45,7 @@
 			this.insertClones();
 			this.updateNavTabsState(0,0);
 			this.updateSlidesState(0);
+			this.addListeners();
 			this.goTo(0);
 			// this.initialPosition();
 			// $('#sliding-wrapper-not-mobile').addClass('smooth-sliding');
@@ -148,6 +155,73 @@
 				this.currentDevice = "mobile"
 			} else {
 				this.currentDevice = "desktop"
+			}
+		}
+
+		this.addListeners = function(){
+			var _this = this;
+
+			// Swipe actions
+			this.slidingWrapper.addEventListener('touchstart', this.handleTouchStart.bind(this), false);
+			this.slidingWrapper.addEventListener('touchmove', this.handleTouchMove.bind(this), false);
+
+			// Scroll actions
+			this.slidingWrapper.addEventListener('wheel', throttle(_this.handleScroll.bind(_this), 1000));
+		}
+
+		this.getTouches = function (evt) {
+			return evt.touches;
+		}
+
+		this.handleTouchStart = function (evt) {
+			// console.log("this.handleTouchStart");
+			var firstTouch = this.getTouches(evt)[0];                                      
+			this.xDown = firstTouch.clientX;                                      
+			this.yDown = firstTouch.clientY;                                      
+		};
+
+		this.handleTouchMove = function (evt) {
+			var _this = this;
+
+			if ( ! this.xDown || ! this.yDown ) {
+				return;
+			}
+
+			var xUp = evt.touches[0].clientX;                                    
+			var yUp = evt.touches[0].clientY;
+
+			var xDiff = this.xDown - xUp;
+			var yDiff = this.yDown - yUp;
+
+			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant between vertical and horizontal*/
+				if ( xDiff > 0 ) {
+					/* left swipe */ 
+					// console.log("left swipe") ;
+					_this.next();
+				} else {
+					/* right swipe */
+					// console.log("right swipe");
+					_this.prev();
+				}                       
+			}
+			/* reset values */
+			this.xDown = null;
+			this.yDown = null;                                             
+		};
+
+		this.handleScroll = function() {
+			// console.log(event.deltaX);
+
+			var delta = {
+				x: event.deltaX
+			};
+
+			if (delta.x > 0) {
+				//user scrolled left
+				this.next();
+			} else if (delta.x < 0) {
+				//user scrolled right
+				this.prev();
 			}
 		}
 
