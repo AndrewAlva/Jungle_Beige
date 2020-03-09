@@ -238,11 +238,13 @@
 		}
 
 		.social-wrapper{
-			width: 100%;
+			// width: 100%;
+			width: 62.5%;
 			padding: getvwmob(10vw) getvwmob(6vw) 0 12.5%;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+
 			.social-link{	
 				list-style:none;
 				cursor: pointer;
@@ -266,7 +268,9 @@
 			}
 			@media(min-width: 768px){
 				padding: 10px 6px 0 12.5%;
-				width: 65.66%;
+				// width: 65.66%;
+				width: 36.86%;
+
 				.social-link{
 					height: 18px;
 				}
