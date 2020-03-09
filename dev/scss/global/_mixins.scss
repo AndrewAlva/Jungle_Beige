@@ -198,6 +198,12 @@
 	align-self: flex-start;
 }
 
+@mixin flexShrink($factor){
+	-webkit-flex-shrink: $factor;
+	-ms-flex-negative: $factor;
+	flex-shrink: $factor;
+}
+
 // mobile/Desktop animation sizes
 @mixin mobile {
 	@media (max-width: #{$mobile-max-width}) {

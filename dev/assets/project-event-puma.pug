@@ -25,21 +25,41 @@ block content
 						p Our first event with PUMA celebrated the Suede Guerrillas and their global Run the Streets campaign. The event featured a secret, tagged up entrance through a sheesha cafe, and it also marked the first time a Secret Walls mural battle ever took place in Dubai. 
 					div.paragraph-right.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="11" data-cascade-delay="6")
 						p The following year, we celebrated International Women’s Day by capturing the beautiful diversity of women in Dubai in the most inclusive way we could think of. Often brands will have target the same groups or expats because of their consumer strength in the country.
-						p For International Women’s Day, that wasn’t good enough for us. Instead, we celebrated nearly 30 different women, and their respective nationalities, as it’s this type of diversity that makes Dubai so special. Each woman was shot for their own portrait, with makeup colors from their particular country, and then displ ayed every single portrait at a party that featured an all-female DJ lineup.
+						p For International Women’s Day, that wasn’t good enough for us. Instead, we celebrated nearly 30 different women, and their respective nationalities, as it’s this type of diversity that makes Dubai so special. Each woman was shot for their own portrait, with makeup colors from their particular country, and then displayed every single portrait at a party that featured an all-female DJ lineup.
 			
 			.p-photo1
-				img(src="./img/projects/event-puma/02_puma_event.jpg", alt="")
+				img(src="./img/projects/event-puma/DSCF6253.jpg", alt="")
+				//- img(src="./img/projects/event-puma/02_puma_event.jpg", alt="")
 			.img-wrapper
 				.p-photo3
-					img(src="./img/projects/event-puma/03_puma_event.jpg", alt="")
+					img(src="./img/projects/event-puma/03.jpg", alt="")
+					//- img(src="./img/projects/event-puma/03_puma_event.jpg", alt="")
 				.p-photo2
-					img(src="./img/projects/event-puma/04_puma_event.jpg", alt="")
+					img(src="./img/projects/event-puma/04.jpg", alt="")
+					//- img(src="./img/projects/event-puma/04_puma_event.jpg", alt="")
 			
 
-			+slider-projects("./img/projects/event-puma/05_puma_event.jpg", "./img/projects/event-puma/06_puma_event.jpg", "./img/projects/event-puma/07_puma_event.jpg", "./img/projects/event-puma/08_puma_event.jpg", "", "", "", "")
+			//- +slider-projects("./img/projects/event-puma/1.jpg", "./img/projects/event-puma/2.jpg", "./img/projects/event-puma/DSCF6253.jpg", "./img/projects/event-puma/4.jpg", "", "", "", "")
+
+			+project-slider([
+				{
+					src: "./img/projects/event-puma/1.jpg",
+					alt: "portrait1"
+				},
+				{
+					src: "./img/projects/event-puma/2.jpg",
+					alt: "portrait2"
+				},
+				{
+					src: "./img/projects/event-puma/4.jpg",
+					alt: "portrait4"
+				},
+			])
+
 			//- video
 			section.video-wrapper.eventPuma-video-mini.snj-col-12
 				+video-player("./img/projects/event-puma/09_puma_event_mini.jpg","./img/projects/event-puma/09_puma_event.mp4")
+
 			//- footer
 			section.footer-project
 				.snj-col-md-1.offset-md-2.arrow-container.container-prev
