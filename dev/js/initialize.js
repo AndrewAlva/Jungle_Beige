@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			_videoPlayer.init();
 
-			console.log('_videoPlayer init')
+			// console.log('_videoPlayer init')
 		}
 	}
 
