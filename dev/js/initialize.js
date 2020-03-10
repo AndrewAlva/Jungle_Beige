@@ -31,12 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Detect if page has video
-	if (document.getElementById('videoContainer')) {
-		var ProjectVideo = new JBVideoPlayer({
-			containerID: 'videoContainer'
-		});
+	// if (document.getElementById('projectVideo01')) {
+	// 	var ProjectVideo = new JBVideoPlayer({
+	// 		containerID: 'projectVideo01'
+	// 	});
 
-		ProjectVideo.init();
+	// 	ProjectVideo.init();
+	// }
+
+	// Detect if page has videos
+	var projectVideos = document.getElementsByClassName('video-wrapper');
+	if (projectVideos && projectVideos.length > 0){
+		for (var i = 0; i < projectVideos.length; i++) {
+			var _videoPlayer = new JBVideoPlayer({
+				container: projectVideos[i]
+			});
+
+			_videoPlayer.init();
+
+			console.log('_videoPlayer init')
+		}
 	}
 
 

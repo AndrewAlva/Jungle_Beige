@@ -315,7 +315,8 @@ section.project-description{
 	}
 	@media(min-width: 768px){
 		// height: 525px;
-		// margin-bottom: 10px;
+		margin-bottom: 10px;
+
 		img{		
 			height: auto;
 		}
@@ -414,6 +415,9 @@ section.video-wrapper{
 	&.eventPuma-video-mini{
 		background-image: url("../img/projects/event-puma/09_puma_event_mini.jpg");
 	}
+	&.eventPuma-video-mini2{
+		background-image: url("../img/projects/event-puma/womens_day_mini-2.jpg");
+	}
 	&.eventAmongst-video-mini{
 		background-image: url("../img/projects/event-amongst/9-event-amongst-mini.jpg");
 	}
@@ -469,6 +473,11 @@ section.video-wrapper{
 		justify-content: center;
 		opacity: 0;
 		pointer-events: none;
+
+		&.show-video{
+			opacity: 1;
+			pointer-events: auto;
+		}
 	}
 	.timeline-controller{
 		display: flex;
@@ -598,10 +607,7 @@ section.video-wrapper{
 		}
 	}
 }
-#videoContainer.show-video{
-	opacity: 1;
-	pointer-events: auto;
-}
+
 section.footer-project{
 	width: 100%;
 	padding-top: getvwmob(76vw);

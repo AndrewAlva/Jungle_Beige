@@ -2,21 +2,22 @@ function JBVideoPlayer(args) {
     if (!args) args = {};
 
     var _self = this;
-    this.container = document.getElementById(args.containerID) || document.getElementById("videoContainer");
-    this.video = document.getElementById("projectVideo");
-    this.progressBar = document.getElementById("updatingBar");
-    this.progressBarContainer = document.getElementById("progressNav");
+    this.container = args.container || document.getElementById("projectVideo01");
+    this.videoContainer = this.container.getElementsByClassName('videoContainer')[0];
+    this.video = this.container.getElementsByClassName("projectVideo")[0];
+    this.progressBar = this.container.getElementsByClassName("updatingBar")[0];
+    this.progressBarContainer = this.container.getElementsByClassName("progressNav")[0];
     this.progressBarContainerWidth = this.progressBarContainer.offsetWidth;
     
     this.isPlaying = false;
 
-    this.buttonOpen = document.getElementById('open-video-btn');
-    this.buttonClose = document.getElementById('close-video-btn');
+    this.buttonOpen = this.container.getElementsByClassName('open-video-btn')[0];
+    this.buttonClose = this.container.getElementsByClassName('close-video-btn')[0];
 
     this.videoDuration = 0;
     this.currentSeconds = 0;
-    this.videoDurationContainers = document.getElementsByClassName("videoDurationContainer");
-    this.currentSecondsContainer = document.getElementById("currentSecondsContainer");
+    this.videoDurationContainers = this.container.getElementsByClassName("videoDurationContainer");
+    this.currentSecondsContainer = this.container.getElementsByClassName("currentSecondsContainer")[0];
 
     this.init = function(){
         this.addListeners();
@@ -70,13 +71,13 @@ function JBVideoPlayer(args) {
         });
 
         this.buttonOpen.addEventListener("click", function() {
-            _self.container.classList.add('show-video');
+            _self.videoContainer.classList.add('show-video');
             _self.video.play();
             _self.isPlaying=true;
         });
         
         this.buttonClose.addEventListener("click", function() {
-            _self.container.classList.remove('show-video');
+            _self.videoContainer.classList.remove('show-video');
             _self.video.pause();
             _self.isPlaying=false;
         });
