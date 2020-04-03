@@ -422,8 +422,8 @@ section.video-wrapper{
 		background-image: url("../img/projects/event-amongst/9-event-amongst-mini.jpg");
 	}
 
-	&.commerceAmongst-video-mini{
-		background-image: url("../img/projects/commerce-amongst/09_amongst_commerce_mini_opt.jpg");
+	&.eventAmongst2-video-mini{
+		background-image: url("../img/projects/event-amongst/10-event-amongst-mini.jpg");
 	}
 	&.fill-mini{
 		background-image: url("https://www.fillmurray.com/1920/787");
@@ -844,76 +844,76 @@ section.project-about{
 }
 
 // check photos
-@media(min-width: 768px){
-	#coffee-project{
-		.slide-container.slide-0 img{
-			top: 42%;
-		}
-	}
+// @media(min-width: 768px){
+// 	#coffee-project{
+// 		.slide-container.slide-0 img{
+// 			top: 42%;
+// 		}
+// 	}
 
-	#power-horse-project{
-		.slide-container.slide-1 img{
-			top:0;
-			transform: translate(-50%, 0%)
-		}
-	}
-}
+// 	#power-horse-project{
+// 		.slide-container.slide-1 img{
+// 			top:0;
+// 			transform: translate(-50%, 0%)
+// 		}
+// 	}
+// }
 
-#manage-puma-project{
-	.slide-container.slide-0 img{
-		top:0;
-		transform: translate(-50%, 0%)
-	}
-	@media(min-width: 552px){
-		.slide-container.slide-2 img{
-			left: 0;
-			transform: translate(0%, -50%);
-		}
-	}
-	@media(max-width: 768px){
-		.p-photo1 img{
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%)
-		}
-	}
-	@media(min-width: 1200px){
-		.p-photo1 img{
-			width: 100%;
-			top: 0;
-			transform: translate(-50%, -7%);
-		}
-	}
-}
+// #manage-puma-project{
+// 	.slide-container.slide-0 img{
+// 		top:0;
+// 		transform: translate(-50%, 0%)
+// 	}
+// 	@media(min-width: 552px){
+// 		.slide-container.slide-2 img{
+// 			left: 0;
+// 			transform: translate(0%, -50%);
+// 		}
+// 	}
+// 	@media(max-width: 768px){
+// 		.p-photo1 img{
+// 			top: 50%;
+// 			left: 50%;
+// 			transform: translate(-50%, -50%)
+// 		}
+// 	}
+// 	@media(min-width: 1200px){
+// 		.p-photo1 img{
+// 			width: 100%;
+// 			top: 0;
+// 			transform: translate(-50%, -7%);
+// 		}
+// 	}
+// }
 
-#suede-guerrilla-project{
-	.p-photo1 img{
-		top: 50%;
-		left: 0;
-		transform: translate(-10%, -50%);
-	}
-	.p-photo3 img{
-		top: 0%;
-		transform: translate(-50%, 0%)
-	}
-	@media(min-width: 768px){
-		.p-photo1 img{
-			top: 0;
-			left: 0;
-			transform: translate(-10%, 0%)
-		}
-		// .slide-container{
-		// 	img{
-		// 		top: 68%;
-		// 	}
-		// }
-	}
-	@media(min-width: 992px){
-		.p-photo1 img{
-			transform: translate(0%, 0%)
-		}
-	}
-}
+// #suede-guerrilla-project{
+// 	.p-photo1 img{
+// 		top: 50%;
+// 		left: 0;
+// 		transform: translate(-10%, -50%);
+// 	}
+// 	.p-photo3 img{
+// 		top: 0%;
+// 		transform: translate(-50%, 0%)
+// 	}
+// 	@media(min-width: 768px){
+// 		.p-photo1 img{
+// 			top: 0;
+// 			left: 0;
+// 			transform: translate(-10%, 0%)
+// 		}
+// 		// .slide-container{
+// 		// 	img{
+// 		// 		top: 68%;
+// 		// 	}
+// 		// }
+// 	}
+// 	@media(min-width: 992px){
+// 		.p-photo1 img{
+// 			transform: translate(0%, 0%)
+// 		}
+// 	}
+// }
 #event-puma-project{
 	@media(max-width: 576px){
 		// .p-photo1 img{
