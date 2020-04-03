@@ -39,7 +39,21 @@ block content
 				.p-photo2
 					img(src="./img/projects/power-horse/04_power.jpg", alt="")
 
-			+slider-projects("./img/projects/power-horse/05_power.gif", "./img/projects/power-horse/06_power.jpg", "./img/projects/power-horse/07_power.jpg", "./img/projects/power-horse/08_power.jpg", "", "", "", "")
+
+			+project-slider([
+				{
+					src: "./img/projects/power-horse/05_power.gif", 
+					alt: ""
+				},
+				{
+					src:"./img/projects/power-horse/07_power.jpg",
+					alt: ""
+				},
+				{
+					src: "./img/projects/power-horse/08_power.jpg", 
+					alt: ""
+				}
+			])
 			
 
 			section.video-wrapper.powerhorse-video-mini.snj-col-12
