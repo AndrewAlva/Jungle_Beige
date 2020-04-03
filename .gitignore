@@ -1,5 +1,9 @@
 #videos pendientes por peso
 *.mp4
+
+# Package-lock
+package-lock.json
+
 # Logs
 logs
 *.log
