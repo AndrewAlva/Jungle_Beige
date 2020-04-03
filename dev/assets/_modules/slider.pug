@@ -18,3 +18,20 @@ mixin slider-projects( slide1, slide2, slide3, slide4, slide1Title, slide2Title,
 			span.up-translate Prev
 		button.slide-controller.controller-next.to-slide(data-slide="next")
 			span.up-translate Next
+
+
+
+mixin project-slider(slides)
+	section#home-hero-slider-not-mobile.hero-slider-wrapper.not-mobile-hero-slider-wrapper
+		.slider-cards-wrapper
+			#sliding-wrapper-not-mobile.sliding-wrapper.smooth-sliding
+				each slide in slides
+					- var imgSrc = slide.src
+					- var imgAlt = slide.alt
+					.slide-container
+						img(src=imgSrc, alt=imgAlt)
+
+		button.slide-controller.controller-prev.to-slide(data-slide="prev")
+			span.up-translate Prev
+		button.slide-controller.controller-next.to-slide(data-slide="next")
+			span.up-translate Next
