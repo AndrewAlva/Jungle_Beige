@@ -236,9 +236,19 @@ section.project-description{
 		width: 100%;
 		position: relative;
 	}
+
+	.paragraph-left{
+		margin-bottom: getvwmob(15vw);
+
+		@media(min-width: 768px){
+			margin-bottom: 0;
+		}
+	}
+
 	p:not(:last-child){
 		margin-bottom: getvwmob(15vw);
 	}
+
 	a{
 		color: $cream;
 		cursor: pointer;
