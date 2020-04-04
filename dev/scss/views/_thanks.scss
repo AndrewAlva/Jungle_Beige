@@ -45,7 +45,16 @@
 		flex-direction: row;
 		justify-content: space-between;
 		padding-right: getvwmob(6vw);
-		width: 88.57%;
+		// width: 88.57%;
+		width: 54.57%;
+
+		@media(min-width: 768px){
+			padding: 0;
+			// width: 32.23%;
+			width: 18%;
+			float: right;
+		}
+
 		.social-link{
 			height: getvwmob(18vw);
 			padding: 0;
@@ -70,12 +79,6 @@
 					fill: $cream;
 				}
 			}
-		}
-
-		@media(min-width: 768px){
-			padding: 0;
-			width: 32.23%;
-			float: right;
 		}
 	}
 }

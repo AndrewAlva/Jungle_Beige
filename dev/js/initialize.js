@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Flag to determine if shader will be created or not
 	if (Page_Shader && deviceDetector.device == "desktop") {
+	// if (Page_Shader) {
 		var spriteImages = document.querySelectorAll('.shader-img');
 		var spriteImagesSrc = [];
 
