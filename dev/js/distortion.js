@@ -1,4 +1,5 @@
 var Page_Shader = document.getElementsByClassName('shader-container')[0];
+var Work_Index_Mobile = document.getElementsByClassName('worksections-bg')[0];
 
 
 var displacementFilter;

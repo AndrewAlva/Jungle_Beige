@@ -12,13 +12,13 @@
 }
 .work-bg{
 	position: fixed;
-	background-image: url("../img/ourwork_bg_mob_color_opt.jpg");
+	background-image: url("../img/shaders/mobile/Branding_Design-Background.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 
-	@media(min-width: 768px){
-		background-image: url("../img/ourwork_bg_desk_opt.jpg");
+	@media(min-width: 992px){
+		background-image: url("../img/shaders/Branding_Design-Background.jpg");
 	}
 
 	.shader-img{
@@ -41,11 +41,11 @@
 			opacity: 0;
 			transition: opacity 0s cubic-bezier(.21,0,0,1) 0.5s, transform 0s cubic-bezier(.21,0,0,1) 0.5s;
 
-			&#shifting-bg-1{background-image: url('../img/ourwork_bg_desk_opt.jpg');}
-			&#shifting-bg-2{background-image: url('../img/ourwork_bg_2_opt.jpg');}
-			&#shifting-bg-3{background-image: url('../img/ourwork_bg_3_opt.jpg');}
-			&#shifting-bg-4{background-image: url('../img/ourwork_bg_4_opt.jpg');}
-			&#shifting-bg-5{background-image: url('../img/ourwork_bg_5_opt.jpg');}
+			&#shifting-bg-1{background-image: url('../img/shaders/Branding_Design-Background.jpg');}
+			&#shifting-bg-2{background-image: url('../img/shaders/Campaign_Social-Media-Background.jpg');}
+			&#shifting-bg-3{background-image: url('../img/shaders/Content-Creation_Management-Background.jpg');}
+			&#shifting-bg-4{background-image: url('../img/shaders/Event-Curation-Background.jpg');}
+			&#shifting-bg-5{background-image: url('../img/shaders/E-commerce-Background.jpg');}
 
 
 			&.show{

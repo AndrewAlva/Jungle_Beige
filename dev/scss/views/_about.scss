@@ -15,23 +15,28 @@
 }
 
 .about-bg{
-	background-image: url("../img/about_bg.jpg");
+	background-image: url("../img/shaders/mobile/About-Background.jpg");
 	position: fixed;
 	background-repeat: no-repeat;
 	z-index: -1;
 	background-size: cover;
 
-	.shader-img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
+	@media (min-width: 992px){
+		background-image: url("../img/shaders/About-Background.jpg");
+	}
 
-		@media (min-width: 768px){
-			display: none;
-		}
+	.shader-img{
+		display: none;
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// @include translate(-50%, -50%);
+		// min-width: 100%;
+		// min-height: 100%;
+
+		// @media (min-width: 768px){
+		// 	display: none;
+		// }
 	}
 }
 

@@ -17,7 +17,7 @@ function TitleShifter(args){
 
 	this.addListeners = function(){
 		for (var i = 0; i < this.shifterTriggers.length; i++) {
-			this.shifterTriggers[i].addEventListener('mouseenter', function(e) {
+			this.shifterTriggers[i].addEventListener('mouseover', function(e) {
 				var _index = e.target.getAttribute("data-shift-id");
 				_index = parseInt(_index);
 				_index -= 1;

@@ -9,12 +9,29 @@
 	left: 0;
 }
 .worksections-bg{
-	background-image: url("../img/bg-work-section.jpg");
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
+	background-size: cover;
+	background-position: center;
+
+	&#work-sections-branding{
+		background-image: url("../img/shaders/Branding_Design-Shader-Negro.jpg");
+	}
+	&#work-sections-strategy{
+		background-image: url("../img/shaders/Campaign_Social-Media-Shader-Negro.jpg");
+	}
+	&#work-sections-management{
+		background-image: url("../img/shaders/Content-Creation_Management-Shader-Negro.jpg");
+	}
+	&#work-sections-event{
+		background-image: url("../img/shaders/Event-Curation-Shader-Negro.jpg");
+	}
+	&#work-sections-commerce{
+		background-image: url("../img/shaders/E-commerce-Shader-Negro.jpg");
+	}
 
 	.shader-img{
 		display: none;

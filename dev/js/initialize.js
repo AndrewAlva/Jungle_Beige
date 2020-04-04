@@ -8,17 +8,43 @@ document.addEventListener('DOMContentLoaded', function() {
 	deviceDetector.init();
 
 	// Flag to determine if shader will be created or not
-	if (Page_Shader && deviceDetector.device == "desktop") {
-	// if (Page_Shader) {
+	// if (Page_Shader && deviceDetector.device == "desktop") {
+	if (Page_Shader) {
+		// Detect if user is in a screen smaller than tablet,
+		// if so, don't create the shaders
+		// 'cause shader isn't visible there
+		if(window.innerWidth < 992 && Work_Index_Mobile){
+			return false;
+		}
+
+
 		var spriteImages = document.querySelectorAll('.shader-img');
 		var spriteImagesSrc = [];
 
-		for (var i = 0; i < spriteImages.length; i++) {
-			var img = spriteImages[i];
-			spriteImagesSrc.push(img.getAttribute('src'));
+		var _spriteSize = {
+			width: 820,
+			height: 1458
+		};
+
+		if (window.innerWidth < 992) {
+			for (var i = 0; i < spriteImages.length; i++) {
+				var img = spriteImages[i];
+				spriteImagesSrc.push(img.getAttribute('mobsrc'));
+			}
+
+		} else {
+			for (var i = 0; i < spriteImages.length; i++) {
+				var img = spriteImages[i];
+				spriteImagesSrc.push(img.getAttribute('src'));
+			}
+
+			_spriteSize.width = 1920;
+			_spriteSize.height = 1080;
 		}
 
 		initCanvasSlideshow = new CanvasSlideshow({
+			stageWidth: _spriteSize.width,
+			stageHeight: _spriteSize.height,
 			sprites: spriteImagesSrc,
 			displacementImage: 'img/dmaps/clouds.jpg',
 			autoPlay: true,
