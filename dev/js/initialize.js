@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Detect if page has videos
 	var projectVideos = document.getElementsByClassName('video-wrapper');
-	if (projectVideos && projectVideos.length > 0){
+	var _videoTag = document.getElementsByTagName('video');
+
+	if (projectVideos && projectVideos.length > 0 && _videoTag.length > 0){
 		for (var i = 0; i < projectVideos.length; i++) {
 			var _videoPlayer = new JBVideoPlayer({
 				container: projectVideos[i]
