@@ -35,9 +35,8 @@ html(class='no-js' lang="en")
 		//- .testing.a
 		//- .testing.b
 
-		
+		//- Pug mixins
 		include ../_modules/icons.pug
-		include ../_modules/header-nav.pug
 		include ../_modules/footer-nav.pug
 		include ../_modules/project-mixin.pug
 		include ../_modules/about-mixin.pug
@@ -47,10 +46,13 @@ html(class='no-js' lang="en")
 		include ../_modules/slider.pug
 		include ../_modules/video.pug
 
+		
+
 		//- include ../_modules/grid-lines.pug
 		//- include ../_modules/grid-lines-full.pug
 
 		//- include ../_modules/intro.pug
+
 		
 		//- tester
 		.img-tester
@@ -82,6 +84,9 @@ html(class='no-js' lang="en")
 		//- content
 		block preloader
 			include ../_modules/preloader.pug
+
+		block header_nav
+			include ../_modules/header-nav.pug
 
 		#main-wrapper
 			block content

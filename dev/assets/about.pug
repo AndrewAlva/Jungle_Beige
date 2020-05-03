@@ -5,6 +5,20 @@ block title
 	title Jungle Beige | About us
 
 
+block header_nav
+	header#header-nav.snj-container-fluid
+		.header-wrapper.snj-col-12
+			a.logo-wrapper.page_transitioner.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1" href="index.html")
+				+logo-jb
+
+
+			include _modules/side-nav.pug
+			include _modules/nav-menu.pug
+
+
+			.activePage.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") About us
+
+
 block content
 	.about-section.snj-container-fluid.flex-column
 		.row
@@ -23,4 +37,4 @@ block content
 
 
 block footer
-	+footer('')
+	+footer()

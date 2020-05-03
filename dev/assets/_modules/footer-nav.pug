@@ -1,4 +1,4 @@
-mixin footer(scroll)
+mixin footer(scroll, activePage)
 	footer.snj-container-fluid
 		//- .row
 		#footer-wrapper.snj-col-12
@@ -9,5 +9,9 @@ mixin footer(scroll)
 			else
 				span.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") .
 
-			a.link-pages.page_transitioner.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1" href="contact.html" color="brown")
-				span.line-link Contact us
+			if (activePage == 'contact')
+				.activePage.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1") Contact us
+
+			else
+				a.link-pages.page_transitioner.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="1" data-cascade-delay="1" href="contact.html" color="brown")
+					span.line-link Contact us

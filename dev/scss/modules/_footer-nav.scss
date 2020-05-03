@@ -17,13 +17,16 @@ footer{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
 	span, a{
 		color: $cream;
 	}
+
 	@media (min-width: 768px){
 		height: 94px;
 		padding: 40px 5px;
 	}
+	
 	@media(min-width: 1282px){
 		height: getvw(94vw);
 		padding: getvw(40vw) getvw(5vw);

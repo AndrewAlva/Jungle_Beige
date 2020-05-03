@@ -42,3 +42,44 @@ canvas{
 		mix-blend-mode: overlay;
 	}
 }
+
+.activePage{
+	display: none;
+	
+
+	@media(min-width: 768px){
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		font-family: 'TitlingGothicFB light';
+		height: 1.15em;
+		color: $cream;
+		font-size: 12px;
+	}
+	
+	@media(min-width: 1282px){
+		font-size: getvw(12vw);
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		bottom: getvwmob(-2vw);
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $cream;
+
+		@media(min-width: 768px){
+			bottom: -2px;
+		}
+		
+		@media(min-width: 1282px){
+			bottom: getvw(-2vw);
+		}
+	}
+}
+
+
+
+
