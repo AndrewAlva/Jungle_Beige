@@ -123,6 +123,12 @@ gulp.task('php', function(){
   .pipe(gulp.dest('./public'))
 });
 
+// Tarea para exportar favicons y 'share image' en el "/root" 
+gulp.task('sharegraph', function(){
+  return gulp.src('./dev/assets/*.+(png|ico|svg|xml|webmanifest)')
+  .pipe(gulp.dest('./public'))
+});
+
 
 //Tarea para levantar un servidor local y un watch general
 gulp.task('server', ()=>{
@@ -147,9 +153,9 @@ gulp.task('server', ()=>{
 
 
 // Tarea general para crear la carpeta "public" y levantar el servidor general con un watch activo
-gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'subimages', 'fonts', 'php', 'server') )
+gulp.task('default', gulp.series('pug', 'stylesDev', 'babel', 'images', 'subimages', 'fonts', 'php', 'sharegraph', 'server') )
 
 
 // Tarea para exportar los archivos minificados listos para subir a servidor
-gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'subimages', 'fonts', 'php') )
+gulp.task('build', gulp.series('pug-min', 'stylesProd', 'babel-min', 'images', 'subimages', 'fonts', 'php', 'sharegraph') )
 

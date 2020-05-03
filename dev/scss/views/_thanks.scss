@@ -3,8 +3,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #cdbda5;
+	background-color: $dark-cream;
 	color: $dark-brown;
+	
 	.title-block{
 		color: $black;
 		margin-bottom: getvwmob(16vw);

@@ -1,6 +1,14 @@
 extends _templates/layout.pug
 
 
+block title
+	title Jungle Beige | E-commerce
+
+
+block preloader
+	include _modules/preloader.pug
+
+
 block content
 	#work-sections-commerce.worksections-bg.shader-container
 		img.shader-img(src="img/shaders/E-commerce-Shader-Negro.jpg", mobsrc="img/shaders/E-commerce-Shader-Negro.jpg", alt="Distortioned background")

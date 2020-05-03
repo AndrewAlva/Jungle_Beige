@@ -4,7 +4,8 @@ html(class='no-js' lang="en")
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1')
 		meta(name='viewport', content='shrink-to-fit=no, initial-scale=1.0, minimum-scale=1, width=device-width, height=device-height')
-		title Jungle Beige
+		block title
+			title Jungle Beige | We Create & Consult
 
 		//- metatags
 		meta(name='description', content='We create and consult for lifestyle rooted companies and organizations.')
@@ -19,6 +20,14 @@ html(class='no-js' lang="en")
 		meta(property="og:image" 		content="https://andrew.studio/clients/junglebeige-updated/Share-Graph.png")
 		meta(name="twitter:card", content="summary")
 
+		//- Favicon
+		link(rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png")
+		link(rel="mask-icon" href="safari-pinned-tab.svg" color="#000000")
+		meta(name="msapplication-TileColor" content="#da532c")
+		meta(name="theme-color" content="#ffffff")
+
 		//- stylesheets
 		link(rel='stylesheet', href='css/app.css')
 
@@ -26,7 +35,7 @@ html(class='no-js' lang="en")
 		//- .testing.a
 		//- .testing.b
 
-		//- include ../_modules/preloader.pug
+		
 		include ../_modules/icons.pug
 		include ../_modules/header-nav.pug
 		include ../_modules/footer-nav.pug
@@ -72,8 +81,7 @@ html(class='no-js' lang="en")
 
 		//- content
 		block preloader
-			#preload_intro.preloader.color-1
-			#preload_outro.preloader.color-1
+			include ../_modules/preloader.pug
 
 		#main-wrapper
 			block content

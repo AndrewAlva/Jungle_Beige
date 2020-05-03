@@ -15,8 +15,13 @@ var Preloader = {
 		this.hideIntro();
 	},
 
-	showOutro: function() {
-		this.outro.classList.add('show');
+	showOutro: function(color) {
+		var _this = this;
+
+		if(color) _this.outro.classList.add(color);
+		setTimeout(function(){
+			_this.outro.classList.add('show');
+		}, 50);
 	},
 
 	hideIntro: function() {
@@ -30,7 +35,8 @@ var Preloader = {
 			this.transitioners[i].addEventListener("click", function(e){
 				e.preventDefault();
 				var _href = e.target.getAttribute("href");
-				_this.showOutro();
+				var _color = e.target.getAttribute("color");
+				_this.showOutro(_color);
 
 				setTimeout(function(){
 					window.location.href = _href;

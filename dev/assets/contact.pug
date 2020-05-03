@@ -1,12 +1,21 @@
 extends _templates/layout.pug
 
 
+block title
+	title Jungle Beige | Contact us
+
+
+block preloader
+	#preload_intro.preloader.brown
+	#preload_outro.preloader
+
+
 block content
 	.contact-section.snj-container-fluid
 		//- .snj-row
 		.row
 			.center-wrapper
-				a.page_transitioner.about-block.offset-1.snj-col-10.offset-md-2.snj-col-md-5(href="message.html")
+				a.page_transitioner.about-block.offset-1.snj-col-10.offset-md-2.snj-col-md-5(href="message.html" color="light-orange")
 					h2.subtitle-block.sub-1.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") Get in touch
 
 					h2.subtitle-block.sub-2.jb-cascade(data-cascade="fade-up" data-cascade-delay-mobile="0" data-cascade-delay="0") Contact Us
