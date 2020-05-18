@@ -56,3 +56,7 @@ foo@bar:~$ gulp build
 ```
 
 Esto crea los archivos minificados listos para subir al servidor.
+
+
+### Old htaccess file
+AddHandler application/x-httpd-php72 .php
