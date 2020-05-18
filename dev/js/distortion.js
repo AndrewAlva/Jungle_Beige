@@ -139,7 +139,7 @@ var displacementFilter;
 			displacementFilter.scale.x = 120;
 			displacementFilter.scale.y = 60;
 
-			console.log("120/60 scale clouds");
+			// console.log("120/60 scale clouds");
 
 
 		};
