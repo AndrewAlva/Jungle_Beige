@@ -24,14 +24,14 @@ mixin project-intro(linkTo, number, name1, name2, callTo, callTo2, dataCascade={
 
 			//- 4 llamar en el mixin del archivo correspondiente:
 
-				+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
+				+project-intro("campaign-and-social-media.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
 
 				4.1 los valores en este caso deben ser llamados dentro de {nombre: valor}, como en cada uno especificamos que pertenecian a un objeto, esto hará que solo llame sin los elementos dentro de este
 
 			//- 5 De esta forma lo que logramos es poder editar nuestros atributos
 				5.1 Resumen
 					-crear objeto
-					-dentro+project-intro("workstrategy.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
+					-dentro+project-intro("campaign-and-social-media.html", "02","Campaign"," & Social Media Strategy","See case studies", "See case", {textDelay: 2, arrowDelay: 3} )
 					- en los atributos, despues de nuestros tags, debemos usar el nombre del objeto seguido del nombre del valor, eso es equivalente al #{valor} que usamos en los otros
 					- poner los atributos ya en el html correspondiente
 

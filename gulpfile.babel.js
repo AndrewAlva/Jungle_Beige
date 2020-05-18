@@ -5,6 +5,7 @@ import babel from "gulp-babel"
 import concat from "gulp-concat"
 import uglify from "gulp-uglify"
 import plumber from "gulp-plumber"
+import replace from "gulp-replace"
 
 import postcss from "gulp-postcss"
 import autoprefixer from "autoprefixer"
@@ -73,6 +74,7 @@ gulp.task('pug-min', ()=>{
     return gulp.src('./dev/assets/*.pug')
     .pipe(plumber())
     .pipe(pug())
+    .pipe(replace('.html', ''))
     .pipe(gulp.dest('./public/'))
 })
 

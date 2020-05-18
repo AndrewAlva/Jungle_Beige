@@ -4,6 +4,7 @@
 }
 
 body{
+	background-color: $black;
 	color: $black;
 	font-size: getvwmob(12vw);
 	@media(min-width: 768px){

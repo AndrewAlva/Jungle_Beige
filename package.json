@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Fantasma",
+  "author": "Andrew & Fantasma",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
@@ -24,5 +24,8 @@
     "postcss-nth-child-fix": "^2.0.0",
     "postcss-pseudoelements": "^5.0.0",
     "postcss-zindex": "^4.0.1"
+  },
+  "dependencies": {
+    "gulp-replace": "^1.0.0"
   }
 }
